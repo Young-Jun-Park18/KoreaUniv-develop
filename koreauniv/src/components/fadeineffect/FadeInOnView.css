@@ -1,0 +1,41 @@
+/* BEFORE 상태 클래스들 */
+.before-fade-in-up {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.before-slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+/* 애니메이션들 */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 1s ease-in-out forwards;
+}

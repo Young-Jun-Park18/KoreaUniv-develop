@@ -1,0 +1,820 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* 메인 영역 */
+.scroll-section.section-member {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: calc(100vh - 70px); /* 네비바 높이 제외 */
+  background-color: #fff;
+  box-sizing: border-box;
+  overflow-x: hidden; /* 가로 스크롤 방지 */
+  overflow-y: auto; /* 최상위 스크롤만 허용 */
+  margin-top: 70px; /* 네비바 높이만큼 마진 */
+}
+
+/* 상단 Hero 영역 */
+.section-hero {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 5;
+  background-image: url('/images/Holographic.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 35rem; /* 상단 이미지 크기 확대 */
+  max-width: 100vw; /* 뷰포트 너비 초과 방지 */
+}
+
+/* 어두운 오버레이 + 텍스트 */
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text {
+  color: white;
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* 3개 버튼 영역 */
+.hero-button-container {
+  display: flex;
+  width: 100%;
+  height: 4.5rem;
+  position: relative;
+  top: -4.5rem;
+  z-index: 2;
+}
+
+.hero-button-container .hero-button {
+  flex: 1;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  outline: none;
+  cursor: pointer;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  color: white;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.hero-button-container .hero-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-out;
+  background-color: rgba(124, 0, 26, 0.9); /* 브랜드 컬러 */
+}
+
+.hero-button-container .hero-button span {
+  position: relative;
+  z-index: 2;
+}
+
+/* 첫 번째 버튼 (CEO) 활성화 */
+.hero-button-container .hero-button:first-child.active {
+  color: white;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.hero-button-container .hero-button:first-child.active::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* 두 번째 버튼 (Research Staff) 활성화 */
+.hero-button-container .hero-button:nth-child(2).active {
+  color: white;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.hero-button-container .hero-button:nth-child(2).active::before {
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
+/* 세 번째 버튼 (Employee) 활성화 */
+.hero-button-container .hero-button:last-child.active {
+  color: white;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.hero-button-container .hero-button:last-child.active::before {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+/* ✅ 멤버 콘텐츠 영역 */
+.member-content {
+  width: 100%;
+  max-width: 100vw; /* 뷰포트 너비 초과 방지 */
+  padding: 4rem 2rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible; /* 내부 스크롤 방지 */
+  box-sizing: border-box; /* 패딩 포함 크기 계산 */
+}
+
+/* === CEO 콘텐츠 스타일 === */
+.ceo-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: visible; /* 중첩 스크롤 방지 */
+}
+
+/* CEO 프로필 섹션 */
+.ceo-profile-section {
+  margin-bottom: 4rem;
+  overflow: visible;
+}
+
+/* CEO 멤버 카드 */
+.ceo-member-card {
+  width: 100%;
+  max-width: 100%; /* 부모 컨테이너 초과 방지 */
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 2px solid rgba(124, 0, 26, 0.2); /* 브랜드 컬러 */
+  box-shadow: 0 15px 15px rgba(124, 0, 26, 0.12); /* 브랜드 컬러 */
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* 패딩/보더 포함 크기 계산 */
+  overflow: visible;
+}
+
+.ceo-member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(124, 0, 26, 0.18); /* 브랜드 컬러 */
+  border: 2px solid #7C001A; /* 브랜드 컬러 */
+}
+
+/* 좌측 섹션: 사진 + 이름/직책 */
+.ceo-left-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  padding-right: 1.5rem;
+  border-right: 1px solid rgba(124, 0, 26, 0.1); /* 브랜드 컬러 */
+}
+
+.ceo-member-image {
+  width: 180px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.ceo-name-info {
+  text-align: center;
+}
+
+.ceo-name-info .ceo-member-role {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #7C001A; /* 브랜드 컬러 */
+  margin-bottom: 0.4rem;
+}
+
+.ceo-name-info .ceo-member-name {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: black;
+  margin: 0;
+}
+
+/* 우측 정보 섹션 */
+.ceo-member-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.4rem;
+  flex: 1;
+  min-width: 0;
+}
+
+/* CEO 카드 내 학력 섹션 */
+.ceo-education {
+  width: 100%;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(124, 0, 26, 0.1); /* 브랜드 컬러 */
+  margin-right: -1.5rem;
+  padding-right: 1.5rem;
+}
+
+.ceo-education-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #7C001A; /* 브랜드 컬러 */
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ceo-education-content {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.ceo-education-content p {
+  margin: 0.5rem 0;
+}
+
+.ceo-education-content p:first-child {
+  margin-top: 0;
+}
+
+.ceo-education-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* CEO 카드 내 연락처 섹션 */
+.ceo-contact-section {
+  width: 100%;
+  padding-top: 1rem;
+}
+
+.ceo-contact-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #7C001A; /* 브랜드 컬러 */
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ceo-contact-content {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.ceo-contact-content p {
+  margin: 0.5rem 0;
+}
+
+.ceo-contact-content p:first-child {
+  margin-top: 0;
+}
+
+.ceo-contact-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* CEO Timeline Section */
+.ceo-timeline-section {
+  width: 100%;
+  overflow: visible; /* 중첩 스크롤 방지 */
+}
+
+.ceo-timeline-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #7C001A; /* 브랜드 컬러 */
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.ceo-timeline-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  text-align: left;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin: 0 0 3rem 0;
+}
+
+.ceo-timeline-grid {
+  display: grid;
+  gap: 2rem;
+  width: 100%;
+  overflow: visible; /* 중첩 스크롤 방지 */
+}
+
+.ceo-timeline-item {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(124, 0, 26, 0.1); /* 브랜드 컬러 */
+  border: 1px solid rgba(124, 0, 26, 0.1); /* 브랜드 컬러 */
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: visible; /* 스크롤 방지 */
+  box-sizing: border-box;
+}
+
+.ceo-timeline-item.highlight {
+  background: linear-gradient(135deg, #7C001A, #A61B3D); /* 브랜드 컬러 그라데이션 */
+  color: white;
+  box-shadow: 0 20px 50px rgba(124, 0, 26, 0.3); /* 브랜드 컬러 */
+  border: none;
+  transform: scale(1.02);
+}
+
+.ceo-timeline-item:hover {
+  border-radius: 20px 20px 40px 20px;
+  transform: translateY(-5px);
+  box-shadow: 0 2px 4px #7C001A; /* 브랜드 컬러 */
+}
+
+.ceo-timeline-item.highlight:hover {
+  border-radius: 20px 20px 40px 20px;
+  box-shadow: 0 25px 55px rgba(124, 0, 26, 0.4); /* 브랜드 컬러 */
+}
+
+.ceo-timeline-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  overflow: visible;
+}
+
+.ceo-timeline-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.ceo-timeline-period {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.8rem 1.2rem;
+  border-radius: 25px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.ceo-timeline-item:not(.highlight) .ceo-timeline-period {
+  color: #7C001A; /* 브랜드 컬러 */
+  background-color: rgba(124, 0, 26, 0.1); /* 브랜드 컬러 배경 */
+}
+
+.ceo-timeline-item.highlight .ceo-timeline-period {
+  color: #fff;
+  background-color: rgba(255,255,255,0.2);
+}
+
+.ceo-timeline-institution {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.ceo-timeline-item:not(.highlight) .ceo-timeline-institution {
+  color: #7C001A; /* 브랜드 컬러 */
+}
+
+.ceo-timeline-item.highlight .ceo-timeline-institution {
+  color: white;
+}
+
+.ceo-timeline-position {
+  font-size: 1rem;
+  margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.ceo-timeline-item:not(.highlight) .ceo-timeline-position {
+  color: #7C001A; /* 브랜드 컬러 */
+  opacity: 0.8;
+}
+
+.ceo-timeline-item.highlight .ceo-timeline-position {
+  color: white;
+  opacity: 0.9;
+}
+
+.ceo-timeline-star {
+  text-align: right;
+  font-size: 1.5rem;
+}
+
+.ceo-timeline-item:not(.highlight) .ceo-timeline-star {
+  color: transparent;
+  -webkit-text-stroke: 2px #7C001A; /* 브랜드 컬러 */
+  text-stroke: 2px #7C001A; /* 브랜드 컬러 */
+}
+
+/* === Research Staff & Employee 멤버 리스트 스타일 === */
+.member-list {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* 카드 개별 */
+.member-card {
+  width: 100%;
+  max-width: 100%; /* 부모 컨테이너 초과 방지 */
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 2px solid rgba(124, 0, 26, 0.2); /* 브랜드 컬러 */
+  box-shadow: 0 15px 15px rgba(124, 0, 26, 0.12); /* 브랜드 컬러 */
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: visible;
+  box-sizing: border-box; /* 패딩/보더 포함 크기 계산 */
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(124, 0, 26, 0.18); /* 브랜드 컬러 */
+  border: 2px solid #7C001A; /* 브랜드 컬러 */
+}
+
+.member-image {
+  width: 180px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.member-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.member-info h3 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: black;
+  margin-bottom: 1.3rem;
+}
+
+.member-info .role {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #7C001A; /* 브랜드 컬러 */
+  margin-bottom: 0.4rem;
+}
+
+.member-info .contact {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.4;
+  white-space: pre-line;
+  margin-bottom: 0.8rem;
+}
+
+/* 버튼 스타일 */
+.hero-button-container .hero-button:first-child::before {
+  transform-origin: left;
+  background-color: rgba(124, 0, 26, 0.9); /* 브랜드 컬러 */
+}
+
+.hero-button-container .hero-button:nth-child(2)::before {
+  transform-origin: center;
+  background-color: rgba(124, 0, 26, 0.9); /* 브랜드 컬러 */
+}
+
+.hero-button-container .hero-button:last-child::before {
+  transform-origin: right;
+  background-color: rgba(124, 0, 26, 0.9); /* 브랜드 컬러 */
+}
+
+/* 스크롤바 숨기기 */
+.scroll-section.section-member::-webkit-scrollbar,
+.ceo-content::-webkit-scrollbar,
+.ceo-profile-section::-webkit-scrollbar,
+.ceo-timeline-section::-webkit-scrollbar,
+.ceo-timeline-grid::-webkit-scrollbar {
+  display: none; /* Chrome, Safari에서 스크롤바 숨김 */
+}
+
+.scroll-section.section-member,
+.ceo-content,
+.ceo-profile-section,
+.ceo-timeline-section,
+.ceo-timeline-grid {
+  -ms-overflow-style: none; /* IE, Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* 태블릿 반응형 */
+@media (max-width: 1400px) {
+  .section-hero {
+    min-height: 32rem; /* 태블릿에서 상단 이미지 크기 확대 */
+  }
+
+  .hero-text {
+    font-size: 2.2rem;
+  }
+
+  .hero-button-container .hero-button {
+    font-size: 1rem;
+  }
+
+  .ceo-member-card {
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+  
+  .ceo-member-image {
+    width: 140px;
+    height: 180px;
+  }
+
+  .ceo-name-info .ceo-member-name {
+    font-size: 1.8rem;
+  }
+
+  .ceo-name-info .ceo-member-role {
+    font-size: 1rem;
+  }
+
+  .ceo-education-title,
+  .ceo-contact-title {
+    font-size: 1.2rem;
+  }
+
+  .ceo-education-content,
+  .ceo-contact-content {
+    font-size: 0.9rem;
+  }
+
+  .ceo-timeline-item {
+    padding: 2rem;
+  }
+
+  .member-image {
+    width: 150px;
+    height: 200px;
+  }
+
+  .member-info h3 {
+    margin-bottom: 1rem;
+  }
+
+  .member-info p {
+    margin-bottom: 0.4rem;
+  }
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+  .hero-button-container .hero-button {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text {
+    font-size: 1.8rem;
+  }
+
+  .section-hero {
+    min-height: 25rem; /* 모바일에서 상단 이미지 크기 확대 */
+    aspect-ratio: 16 / 7; /* 더 넓은 비율로 조정 */
+  }
+
+  .hero-button-container {
+    height: 3.5rem;
+    top: -3.5rem;
+  }
+
+  .hero-button-container .hero-button {
+    height: 3.5rem;
+    font-size: 0.8rem;
+    padding: 0 0.3rem;
+  }
+
+  .member-content {
+    padding: 2rem 1rem;
+  }
+
+  /* CEO 모바일 스타일 */
+  .ceo-timeline-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .ceo-member-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .ceo-left-part {
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(124, 0, 26, 0.1); /* 브랜드 컬러 */
+    padding-bottom: 1.5rem;
+    width: 100%;
+  }
+  
+  .ceo-member-image {
+    width: 150px;
+    height: 200px;
+  }
+
+  .ceo-name-info .ceo-member-name {
+    font-size: 1.8rem;
+  }
+
+  .ceo-member-info {
+    width: 100%;
+    gap: 1.2rem;
+    text-align: center;
+  }
+
+  .ceo-education {
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  .ceo-education-title,
+  .ceo-contact-title {
+    font-size: 1.1rem;
+    justify-content: center;
+  }
+
+  .ceo-education-content,
+  .ceo-contact-content {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .ceo-timeline-subtitle {
+    text-align: center;
+    margin: 0 auto 2rem auto;
+  }
+  
+  .ceo-timeline-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem; /* 간격 축소 */
+    overflow: visible;
+  }
+  
+  .ceo-timeline-item {
+    padding: 1rem;
+    overflow: visible;
+  }
+  
+  .ceo-timeline-content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.8rem;
+    text-align: center;
+    align-items: center;
+    overflow: visible;
+  }
+  
+  .ceo-timeline-star {
+    display: none;
+  }
+
+  .ceo-timeline-period {
+    font-size: 0.8rem !important;
+    padding: 0.4rem 0.6rem !important;
+    white-space: normal !important;
+    word-wrap: break-word;
+    text-align: center;
+  }
+
+  .ceo-timeline-institution {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+  }
+
+  .ceo-timeline-position {
+    font-size: 0.85rem;
+    text-align: center;
+    margin: 0;
+  }
+
+  /* Research Staff & Employee 모바일 스타일 */
+  .member-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.2rem;
+  }
+
+  .member-image {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .member-info {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0.4rem;
+    width: 100%;
+  }
+
+  .member-info h3 {
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .member-info .role {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .member-info .contact {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 0.3rem;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .member-info .contact:last-child {
+    margin-bottom: 0;
+  }
+
+  .label {
+    display: none;
+  }
+}
+
+/* 더 작은 화면을 위한 추가 조정 */
+@media (max-width: 360px) {
+  .member-image {
+    width: 120px;
+    height: 160px;
+  }
+  
+  .member-info h3 {
+    font-size: 1.8rem;
+  }
+}
+
+/* 매우 작은 화면 (320px 이하) */
+@media (max-width: 320px) {
+  .hero-button-container .hero-button {
+    font-size: 0.7rem;
+    padding: 0 0.2rem;
+  }
+  
+  .member-image {
+    width: 100px;
+    height: 130px;
+  }
+}
