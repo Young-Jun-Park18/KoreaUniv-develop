@@ -35,20 +35,44 @@ a {
 .leftGroup {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 
-.icon {
-  width: 30px;
-  height: 30px;
+.logo-img {
+  width: 60px;
+  height: 70px;
   object-fit: contain;
-  filter: brightness(0) saturate(100%) invert(21%) sepia(21%) saturate(3168%) hue-rotate(183deg) brightness(95%) contrast(94%);
 }
 
 .pgName {
-  font-size: 24px;
-  font-weight: 700;
-  color: #003153;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.lab-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #262626;
+  line-height: 1.2;
+  transition: color 0.3s ease;
+}
+
+.lab-subtitle {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+  line-height: 1.2;
+}
+
+.logo-link:hover .lab-title {
+  color: #7C001A;
 }
 
 .navBar .navList {
@@ -65,7 +89,7 @@ a {
 }
 
 .navElement a {
-  color: #003153;
+  color: #000000;
   font-weight: 500;
   transition: color 0.35s ease-in-out;
 }
@@ -78,7 +102,7 @@ a {
   left: 50%;
   width: 0;
   height: 2px;
-  background-color: #003153;
+  background-color: #7C001A;
   transition: width 0.2s ease-in-out, left 0.2s ease-in-out;
 }
 
@@ -89,7 +113,7 @@ a {
 
 /* Hover 텍스트 색상 강조 */
 .navElement a:hover {
-  color: #001F3F;
+  color: #7C001A;
   font-weight: 700;
 }
 
@@ -99,20 +123,40 @@ a {
   display: none;
 }
 
-/* ========== 태블릿 (481px ~ 768px) ========== */
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .pgName {
-    font-size: 20px;
+/* ========== 태블릿 (481px ~ 1400px) ========== */
+@media screen and (min-width: 481px) and (max-width: 1400px) {
+  .lab-title {
+    font-size: 18px;
+  }
+
+  .lab-subtitle {
+    display: none; /* 태블릿에서 부제목 숨김 */
   }
 
   .navBar .navList {
     font-size: 16px;
-    gap: 24px;
+    gap: 20px;
   }
 
-  .icon {
-    width: 26px;
-    height: 26px;
+  .logo-img {
+    width: 50px;
+    height: 60px;
+  }
+
+  .leftGroup {
+    gap: 12px;
+  }
+}
+
+/* ========== 중간 태블릿 (481px ~ 768px) ========== */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .navBar .navList {
+    font-size: 15px;
+    gap: 16px;
+  }
+  
+  .lab-title {
+    font-size: 16px;
   }
 }
 
@@ -132,36 +176,56 @@ a {
     background-color: white;
   }
 
-  .mobileNav .icon {
-    width: 28px;
-    height: 28px;
+  .mobileNav .mobile-logo-img {
+    width: 40px;
+    height: 47px;
     object-fit: contain;
   }
 
   .hamburger {
     font-size: 26px;
-    color: #003153;
+    color: #7C001A;
     background: none;
     border: none;
     cursor: pointer;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    padding: 8px;
+    border-radius: 4px;
+  }
+
+  .hamburger:hover {
+    color: #5A0013;
+    transform: scale(1.1);
   }
 
   .hamburger.active {
-    color: #003153;
+    color: #7C001A;
+    transform: rotate(90deg);
   }
 
   .mobileHome {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
     text-decoration: none;
   }
 
-  .mobileTitle {
-    font-size: 16px;
+  .mobile-logo-img {
+    width: 45px;
+    height: 52px;
+    object-fit: contain;
+  }
+
+  .mobile-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-title {
+    font-size: 14px;
     font-weight: 600;
-    color: #003153;
+    color: #262626;
+    line-height: 1.2;
   }
 
   .mobileMenu {
@@ -182,7 +246,7 @@ a {
   }
 
   .mobileMenu a {
-    color: #003153;
+    color: #000000;
     font-size: 16px;
     margin-bottom: 10px;
     transition: font-size 0.2s ease-in-out;

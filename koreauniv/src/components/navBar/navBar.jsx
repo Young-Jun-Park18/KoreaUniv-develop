@@ -2,7 +2,6 @@ import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import fdIcon from "../../assets/fd_icon.avif";
 import "./navBar.css";
 
 const NavBar = () => {
@@ -41,18 +40,22 @@ const NavBar = () => {
       {/* PC/태블릿용 */}
       <div className="headerInner">
         <div className="leftGroup">
-          <img src={fdIcon} alt="logo" className="icon" />
+          <img src="/images/mark_.png" alt="Logo" className="logo-img" />
           <div className="pgName">
-            <Link to="/">Fifth Dimension</Link>
+            <Link to="/" className="logo-link">
+              <h4 className="lab-title">Indoor Positioning Laboratory</h4>
+              <h6 className="lab-subtitle">Indoor Positioning Laboratory</h6>
+            </Link>
           </div>
         </div>
         <div className="navBar">
           <ul className="navList">
-            <li className="navElement"><Link to="/services">Services</Link></li>
-            <li className="navElement"><Link to="/quotation">Quote</Link></li>
-            <li className="navElement"><Link to="/member">Members</Link></li>
-            <li className="navElement"><Link to="/news">News</Link></li>
-            <li className="navElement"><Link to="/about">About Us</Link></li>
+            <li className="navElement"><Link to="/">Home</Link></li>
+            <li className="navElement"><Link to="/research">Research</Link></li>
+            <li className="navElement"><Link to="/members">Members</Link></li>
+            <li className="navElement"><Link to="/publications">Publications</Link></li>
+            <li className="navElement"><Link to="/courses">Courses</Link></li>
+            <li className="navElement"><Link to="/boards">Boards</Link></li>
           </ul>
         </div>
       </div>
@@ -60,8 +63,10 @@ const NavBar = () => {
       {/* 모바일용 */}
       <div className="mobileNav">
         <Link to="/" className="mobileHome" onClick={handleLinkClick}>
-          <img src={fdIcon} alt="logo" className="icon" />
-          <span className="mobileTitle">Fifth Dimension</span>
+          <img src="/images/mark_.png" alt="Logo" className="mobile-logo-img" />
+          <div className="mobile-text">
+            <span className="mobile-title">Indoor Positioning Laboratory</span>
+          </div>
         </Link>
         <button
           ref={buttonRef} // ✅ 버튼 ref 지정
@@ -74,11 +79,12 @@ const NavBar = () => {
 
       {/* 모바일 메뉴 영역 */}
       <div ref={menuRef} className={`mobileMenu ${menuOpen ? "show" : ""}`}>
-        <Link to="/services" onClick={handleLinkClick}>Services</Link>
-        <Link to="/quotation" onClick={handleLinkClick}>Quote</Link>
-        <Link to="/member" onClick={handleLinkClick}>Members</Link>
-        <Link to="/news" onClick={handleLinkClick}>News</Link>
-        <Link to="/about" onClick={handleLinkClick}>About Us</Link>
+        <Link to="/" onClick={handleLinkClick}>Home</Link>
+        <Link to="/research" onClick={handleLinkClick}>Research</Link>
+        <Link to="/members" onClick={handleLinkClick}>Members</Link>
+        <Link to="/publications" onClick={handleLinkClick}>Publications</Link>
+        <Link to="/courses" onClick={handleLinkClick}>Courses</Link>
+        <Link to="/boards" onClick={handleLinkClick}>Boards</Link>
       </div>
     </div>
   );

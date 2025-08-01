@@ -1,0 +1,16 @@
+.boards-container {
+  min-height: 100vh;
+  padding-top: 70px;
+  padding: 70px 20px 20px;
+}
+
+.boards-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.boards-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
