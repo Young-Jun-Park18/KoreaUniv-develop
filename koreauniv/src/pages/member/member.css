@@ -1,23 +1,12 @@
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-}
-
 /* 메인 영역 */
 .scroll-section.section-member {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 100vw; /* Full viewport width */
   min-height: calc(100vh - 70px); /* 네비바 높이 제외 */
   background-color: #fff;
-  box-sizing: border-box;
-  overflow-x: hidden; /* 가로 스크롤 방지 */
-  overflow-y: auto; /* 최상위 스크롤만 허용 */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-y: auto; /* Allow vertical scroll for main container */
   margin-top: 70px; /* 네비바 높이만큼 마진 */
 }
 
@@ -30,8 +19,7 @@ html, body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  min-height: 35rem; /* 상단 이미지 크기 확대 */
-  max-width: 100vw; /* 뷰포트 너비 초과 방지 */
+  min-height: 35rem;
 }
 
 /* 어두운 오버레이 + 텍스트 */
@@ -95,90 +83,68 @@ html, body {
   z-index: 2;
 }
 
-/* 첫 번째 버튼 (CEO) 활성화 */
-.hero-button-container .hero-button:first-child.active {
+/* 버튼 활성화 스타일 */
+.hero-button-container .hero-button.active {
   color: white;
   font-weight: 700;
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.hero-button-container .hero-button:first-child.active::before {
+.hero-button-container .hero-button.active::before {
   transform: scaleX(1);
+}
+
+.hero-button-container .hero-button:first-child::before {
   transform-origin: left;
 }
 
-/* 두 번째 버튼 (Research Staff) 활성화 */
-.hero-button-container .hero-button:nth-child(2).active {
-  color: white;
-  font-weight: 700;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-.hero-button-container .hero-button:nth-child(2).active::before {
-  transform: scaleX(1);
+.hero-button-container .hero-button:nth-child(2)::before {
   transform-origin: center;
 }
 
-/* 세 번째 버튼 (Employee) 활성화 */
-.hero-button-container .hero-button:last-child.active {
-  color: white;
-  font-weight: 700;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-.hero-button-container .hero-button:last-child.active::before {
-  transform: scaleX(1);
+.hero-button-container .hero-button:last-child::before {
   transform-origin: right;
 }
 
 /* ✅ 멤버 콘텐츠 영역 */
 .member-content {
   width: 100%;
-  max-width: 100vw; /* 뷰포트 너비 초과 방지 */
   padding: 4rem 2rem;
   background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: visible; /* 내부 스크롤 방지 */
-  box-sizing: border-box; /* 패딩 포함 크기 계산 */
+  box-sizing: border-box;
 }
 
 /* === CEO 콘텐츠 스타일 === */
 .ceo-content {
   width: 100%;
-  max-width: 1200px;
+  max-width: 100%; /* Remove max-width constraint to fill space */
   margin: 0 auto;
-  overflow: visible; /* 중첩 스크롤 방지 */
+  overflow: hidden; /* Prevent nested scrolling */
 }
 
 /* CEO 프로필 섹션 */
 .ceo-profile-section {
   margin-bottom: 4rem;
-  overflow: visible;
+  width: 100%;
+  max-width: 1200px; /* Constrain content width */
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* CEO 멤버 카드 */
+/* CEO 멤버 카드 - hover 효과와 그림자 제거 */
 .ceo-member-card {
   width: 100%;
-  max-width: 100%; /* 부모 컨테이너 초과 방지 */
   display: flex;
   align-items: flex-start;
   gap: 3rem;
   background-color: white;
   padding: 2rem;
   border-radius: 12px;
-  border: 2px solid rgba(124, 0, 26, 0.2); /* 브랜드 컬러 */
-  box-shadow: 0 15px 15px rgba(124, 0, 26, 0.12); /* 브랜드 컬러 */
-  transition: all 0.3s ease;
-  box-sizing: border-box; /* 패딩/보더 포함 크기 계산 */
-  overflow: visible;
-}
-
-.ceo-member-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(124, 0, 26, 0.18); /* 브랜드 컬러 */
-  border: 2px solid #7C001A; /* 브랜드 컬러 */
+  border: 2px solid rgba(124, 0, 26, 0.2);
+  box-sizing: border-box;
 }
 
 /* 좌측 섹션: 사진 + 이름/직책 */
@@ -188,7 +154,7 @@ html, body {
   align-items: center;
   flex-shrink: 0;
   padding-right: 1.5rem;
-  border-right: 1px solid rgba(124, 0, 26, 0.1); /* 브랜드 컬러 */
+  border-right: 1px solid rgba(124, 0, 26, 0.1);
 }
 
 .ceo-member-image {
@@ -206,7 +172,7 @@ html, body {
 .ceo-name-info .ceo-member-role {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #7C001A; /* 브랜드 컬러 */
+  color: #7C001A;
   margin-bottom: 0.4rem;
 }
 
@@ -232,7 +198,7 @@ html, body {
 .ceo-education {
   width: 100%;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(124, 0, 26, 0.1); /* 브랜드 컬러 */
+  border-bottom: 1px solid rgba(124, 0, 26, 0.1);
   margin-right: -1.5rem;
   padding-right: 1.5rem;
 }
@@ -240,7 +206,7 @@ html, body {
 .ceo-education-title {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #7C001A; /* 브랜드 컬러 */
+  color: #7C001A;
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
@@ -276,7 +242,7 @@ html, body {
 .ceo-contact-title {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #7C001A; /* 브랜드 컬러 */
+  color: #7C001A;
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
@@ -306,13 +272,16 @@ html, body {
 /* CEO Timeline Section */
 .ceo-timeline-section {
   width: 100%;
-  overflow: visible; /* 중첩 스크롤 방지 */
+  max-width: 1200px; /* Constrain content width */
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden; /* Prevent nested scrolling */
 }
 
 .ceo-timeline-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #7C001A; /* 브랜드 컬러 */
+  color: #7C001A;
   text-align: left;
   margin-bottom: 1rem;
 }
@@ -323,45 +292,29 @@ html, body {
   text-align: left;
   margin-bottom: 3rem;
   max-width: 600px;
-  margin: 0 0 3rem 0;
 }
 
 .ceo-timeline-grid {
   display: grid;
   gap: 2rem;
   width: 100%;
-  overflow: visible; /* 중첩 스크롤 방지 */
+  overflow: hidden; /* Prevent nested scrolling */
 }
 
+/* CEO 타임라인 아이템 - hover 효과와 그림자 제거 */
 .ceo-timeline-item {
   background: white;
   padding: 2.5rem;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(124, 0, 26, 0.1); /* 브랜드 컬러 */
-  border: 1px solid rgba(124, 0, 26, 0.1); /* 브랜드 컬러 */
-  transition: all 0.4s ease;
+  border: 1px solid rgba(124, 0, 26, 0.1);
   position: relative;
-  overflow: visible; /* 스크롤 방지 */
-  box-sizing: border-box;
 }
 
 .ceo-timeline-item.highlight {
-  background: linear-gradient(135deg, #7C001A, #A61B3D); /* 브랜드 컬러 그라데이션 */
+  background: linear-gradient(135deg, #7C001A, #A61B3D);
   color: white;
-  box-shadow: 0 20px 50px rgba(124, 0, 26, 0.3); /* 브랜드 컬러 */
   border: none;
   transform: scale(1.02);
-}
-
-.ceo-timeline-item:hover {
-  border-radius: 20px 20px 40px 20px;
-  transform: translateY(-5px);
-  box-shadow: 0 2px 4px #7C001A; /* 브랜드 컬러 */
-}
-
-.ceo-timeline-item.highlight:hover {
-  border-radius: 20px 20px 40px 20px;
-  box-shadow: 0 25px 55px rgba(124, 0, 26, 0.4); /* 브랜드 컬러 */
 }
 
 .ceo-timeline-content {
@@ -370,7 +323,6 @@ html, body {
   align-items: center;
   gap: 2rem;
   width: 100%;
-  overflow: visible;
 }
 
 .ceo-timeline-details {
@@ -388,13 +340,13 @@ html, body {
 }
 
 .ceo-timeline-item:not(.highlight) .ceo-timeline-period {
-  color: #7C001A; /* 브랜드 컬러 */
-  background-color: rgba(124, 0, 26, 0.1); /* 브랜드 컬러 배경 */
+  color: #7C001A;
+  background-color: rgba(124, 0, 26, 0.1);
 }
 
 .ceo-timeline-item.highlight .ceo-timeline-period {
   color: #fff;
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .ceo-timeline-institution {
@@ -406,7 +358,7 @@ html, body {
 }
 
 .ceo-timeline-item:not(.highlight) .ceo-timeline-institution {
-  color: #7C001A; /* 브랜드 컬러 */
+  color: #7C001A;
 }
 
 .ceo-timeline-item.highlight .ceo-timeline-institution {
@@ -421,7 +373,7 @@ html, body {
 }
 
 .ceo-timeline-item:not(.highlight) .ceo-timeline-position {
-  color: #7C001A; /* 브랜드 컬러 */
+  color: #7C001A;
   opacity: 0.8;
 }
 
@@ -437,42 +389,31 @@ html, body {
 
 .ceo-timeline-item:not(.highlight) .ceo-timeline-star {
   color: transparent;
-  -webkit-text-stroke: 2px #7C001A; /* 브랜드 컬러 */
-  text-stroke: 2px #7C001A; /* 브랜드 컬러 */
+  -webkit-text-stroke: 2px #7C001A;
+  text-stroke: 2px #7C001A;
 }
 
 /* === Research Staff & Employee 멤버 리스트 스타일 === */
 .member-list {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1200px; /* Constrain content width */
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 
-/* 카드 개별 */
+/* 카드 개별 - hover 효과와 그림자 제거 */
 .member-card {
   width: 100%;
-  max-width: 100%; /* 부모 컨테이너 초과 방지 */
-  margin: 0 auto;
   display: flex;
   align-items: flex-start;
   gap: 3rem;
   background-color: white;
   padding: 2rem;
   border-radius: 12px;
-  border: 2px solid rgba(124, 0, 26, 0.2); /* 브랜드 컬러 */
-  box-shadow: 0 15px 15px rgba(124, 0, 26, 0.12); /* 브랜드 컬러 */
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: visible;
-  box-sizing: border-box; /* 패딩/보더 포함 크기 계산 */
-}
-
-.member-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(124, 0, 26, 0.18); /* 브랜드 컬러 */
-  border: 2px solid #7C001A; /* 브랜드 컬러 */
+  border: 2px solid rgba(124, 0, 26, 0.2);
 }
 
 .member-image {
@@ -501,7 +442,7 @@ html, body {
 .member-info .role {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #7C001A; /* 브랜드 컬러 */
+  color: #7C001A;
   margin-bottom: 0.4rem;
 }
 
@@ -513,44 +454,10 @@ html, body {
   margin-bottom: 0.8rem;
 }
 
-/* 버튼 스타일 */
-.hero-button-container .hero-button:first-child::before {
-  transform-origin: left;
-  background-color: rgba(124, 0, 26, 0.9); /* 브랜드 컬러 */
-}
-
-.hero-button-container .hero-button:nth-child(2)::before {
-  transform-origin: center;
-  background-color: rgba(124, 0, 26, 0.9); /* 브랜드 컬러 */
-}
-
-.hero-button-container .hero-button:last-child::before {
-  transform-origin: right;
-  background-color: rgba(124, 0, 26, 0.9); /* 브랜드 컬러 */
-}
-
-/* 스크롤바 숨기기 */
-.scroll-section.section-member::-webkit-scrollbar,
-.ceo-content::-webkit-scrollbar,
-.ceo-profile-section::-webkit-scrollbar,
-.ceo-timeline-section::-webkit-scrollbar,
-.ceo-timeline-grid::-webkit-scrollbar {
-  display: none; /* Chrome, Safari에서 스크롤바 숨김 */
-}
-
-.scroll-section.section-member,
-.ceo-content,
-.ceo-profile-section,
-.ceo-timeline-section,
-.ceo-timeline-grid {
-  -ms-overflow-style: none; /* IE, Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
 /* 태블릿 반응형 */
 @media (max-width: 1400px) {
   .section-hero {
-    min-height: 32rem; /* 태블릿에서 상단 이미지 크기 확대 */
+    min-height: 32rem;
   }
 
   .hero-text {
@@ -565,7 +472,7 @@ html, body {
     gap: 2rem;
     padding: 1.5rem;
   }
-  
+
   .ceo-member-image {
     width: 140px;
     height: 180px;
@@ -607,22 +514,14 @@ html, body {
   }
 }
 
-/* 모바일 반응형 */
-@media (max-width: 768px) {
-  .hero-button-container .hero-button {
-    font-size: 0.9rem;
-    padding: 0 0.5rem;
-  }
-}
-
 @media (max-width: 480px) {
   .hero-text {
     font-size: 1.8rem;
   }
 
   .section-hero {
-    min-height: 25rem; /* 모바일에서 상단 이미지 크기 확대 */
-    aspect-ratio: 16 / 7; /* 더 넓은 비율로 조정 */
+    min-height: 25rem;
+    aspect-ratio: 16 / 7;
   }
 
   .hero-button-container {
@@ -656,11 +555,11 @@ html, body {
   .ceo-left-part {
     padding-right: 0;
     border-right: none;
-    border-bottom: 1px solid rgba(124, 0, 26, 0.1); /* 브랜드 컬러 */
+    border-bottom: 1px solid rgba(124, 0, 26, 0.1);
     padding-bottom: 1.5rem;
     width: 100%;
   }
-  
+
   .ceo-member-image {
     width: 150px;
     height: 200px;
@@ -697,36 +596,32 @@ html, body {
     text-align: center;
     margin: 0 auto 2rem auto;
   }
-  
+
   .ceo-timeline-grid {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 1rem; /* 간격 축소 */
-    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
-  
+
   .ceo-timeline-item {
     padding: 1rem;
-    overflow: visible;
   }
-  
+
   .ceo-timeline-content {
-    display: flex !important;
-    flex-direction: column !important;
+    flex-direction: column;
     gap: 0.8rem;
     text-align: center;
     align-items: center;
-    overflow: visible;
   }
-  
+
   .ceo-timeline-star {
     display: none;
   }
 
   .ceo-timeline-period {
-    font-size: 0.8rem !important;
-    padding: 0.4rem 0.6rem !important;
-    white-space: normal !important;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.6rem;
+    white-space: normal;
     word-wrap: break-word;
     text-align: center;
   }
@@ -755,8 +650,6 @@ html, body {
   .member-image {
     width: 150px;
     height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
   }
 
   .member-info {
@@ -791,30 +684,5 @@ html, body {
 
   .label {
     display: none;
-  }
-}
-
-/* 더 작은 화면을 위한 추가 조정 */
-@media (max-width: 360px) {
-  .member-image {
-    width: 120px;
-    height: 160px;
-  }
-  
-  .member-info h3 {
-    font-size: 1.8rem;
-  }
-}
-
-/* 매우 작은 화면 (320px 이하) */
-@media (max-width: 320px) {
-  .hero-button-container .hero-button {
-    font-size: 0.7rem;
-    padding: 0 0.2rem;
-  }
-  
-  .member-image {
-    width: 100px;
-    height: 130px;
   }
 }
