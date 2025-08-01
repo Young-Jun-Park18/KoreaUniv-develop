@@ -143,7 +143,7 @@
   background-color: white;
   padding: 2rem;
   border-radius: 12px;
-  border: 2px solid rgba(124, 0, 26, 0.2);
+  border: 2px solid rgba(124, 0, 26, 0.3);
   box-sizing: border-box;
 }
 
@@ -296,7 +296,7 @@
 
 .ceo-timeline-grid {
   display: grid;
-  gap: 2rem;
+  gap: 1.5rem;
   width: 100%;
   overflow: hidden; /* Prevent nested scrolling */
 }
@@ -306,15 +306,15 @@
   background: white;
   padding: 2.5rem;
   border-radius: 20px;
-  border: 1px solid rgba(124, 0, 26, 0.1);
+  border: 2px solid rgba(124, 0, 26, 0.3);
   position: relative;
 }
 
 .ceo-timeline-item.highlight {
   background: linear-gradient(135deg, #7C001A, #A61B3D);
   color: white;
-  border: none;
-  transform: scale(1.02);
+  border: 2px solid rgba(124, 0, 26, 0.3);
+  border-radius: 20px;
 }
 
 .ceo-timeline-content {
@@ -337,6 +337,8 @@
   border-radius: 25px;
   text-align: center;
   white-space: nowrap;
+  min-width: 180px;
+  flex-shrink: 0;
 }
 
 .ceo-timeline-item:not(.highlight) .ceo-timeline-period {
@@ -373,8 +375,7 @@
 }
 
 .ceo-timeline-item:not(.highlight) .ceo-timeline-position {
-  color: #7C001A;
-  opacity: 0.8;
+  color: black;
 }
 
 .ceo-timeline-item.highlight .ceo-timeline-position {
@@ -401,7 +402,7 @@
   margin-right: auto;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 /* 카드 개별 - hover 효과와 그림자 제거 */
@@ -413,7 +414,7 @@
   background-color: white;
   padding: 2rem;
   border-radius: 12px;
-  border: 2px solid rgba(124, 0, 26, 0.2);
+  border: 2px solid rgba(124, 0, 26, 0.3);
 }
 
 .member-image {
@@ -537,6 +538,7 @@
 
   .member-content {
     padding: 2rem 1rem;
+    overflow-y: hidden; /* Prevent nested vertical scrolling */
   }
 
   /* CEO 모바일 스타일 */
@@ -639,6 +641,10 @@
   }
 
   /* Research Staff & Employee 모바일 스타일 */
+  .member-list {
+    overflow-y: hidden; /* Prevent nested vertical scrolling */
+  }
+
   .member-card {
     flex-direction: column;
     text-align: center;
