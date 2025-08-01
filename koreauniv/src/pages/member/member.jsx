@@ -4,7 +4,7 @@ import FadeInOnView from '../../components/fadeineffect/FadeInOnView';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGraduationCap, faEnvelopeOpenText, faFileLines } from '@fortawesome/free-solid-svg-icons';
 
-/* Research Staff (박사과정, 석사과정, 연구인턴) */
+/* Current Members (박사과정, 석사과정, 연구인턴) */
 const researchStaff = [
   {
     name: '손원준',
@@ -80,13 +80,13 @@ const researchStaff = [
   },
 ];
 
-/* Employee (일반 직원) */
+/* Alumni (일반 직원) */
 const employees = [
   {
     name: '김형석',
     role: '3D 그래픽 디자이너',
     email: 'wellrice@nate.com',
-    position: 'Employee',
+    position: 'Alumnus',
     areaOfExpertise: '3D Graphic Design, Unity 엔진',
     image: '/images/KimHyungSeok.jpg',
   },
@@ -94,7 +94,7 @@ const employees = [
     name: '최사라',
     role: 'UI/UX 디자이너',
     email: 'csl7776@naver.com',
-    position: 'Employee',
+    position: 'Alumnus',
     areaOfExpertise: '3D Graphic Design, UI/UX Design',
     image: '/images/ChoiSaRa.jpg',
   },
@@ -102,7 +102,7 @@ const employees = [
     name: '박영준',
     role: '프론트엔드 개발자',
     email: 'dudwns4619@naver.com',
-    position: 'Employee',
+    position: 'Alumnus',
     areaOfExpertise: 'Web/App Front-end 개발',
     image: '/images/ParkYoungJun.jpg',
   },
@@ -114,13 +114,13 @@ function Member() {
   const getHeroTitle = () => {
     switch (activeTab) {
       case 'ceo':
-        return 'CEO';
+        return 'Professor';
       case 'research':
-        return 'Research Staff';
+        return 'Current Members';
       case 'employee':
-        return 'Employee';
+        return 'Alumni';
       default:
-        return 'Research Staff';
+        return 'Current Members';
     }
   };
 
@@ -144,7 +144,7 @@ function Member() {
               <p className="contact">
                 <FontAwesomeIcon icon={faFileLines} fixedWidth style={{ marginRight: '2px' }} />
                 <span className="label">
-                  {isEmployee ? 'Area of Expertise: ' : 'Research Areas: '}
+                  {isEmployee ? 'Previous Area of Expertise: ' : 'Research Areas: '}
                 </span>
                 {isEmployee ? member.areaOfExpertise : member.researchAreas}
               </p>
@@ -163,11 +163,11 @@ function Member() {
             <div className="ceo-left-part">
               <img 
                 src="/images/ceo.jpg" 
-                alt="대표이사" 
+                alt="교수" 
                 className="ceo-member-image"
               />
               <div className="ceo-name-info">
-                <p className="ceo-member-role">사내이사</p>
+                <p className="ceo-member-role">교수</p>
                 <h3 className="ceo-member-name">최 린</h3>
               </div>
             </div>
@@ -204,7 +204,7 @@ function Member() {
           
           <div className="ceo-timeline-grid">
             {[
-              { period: 'FEB.2024 - PRESENT', institution: 'Fifth Dimension', position: 'Lynn Choi, CEO of Fifth Dimension Inc.', highlight: true },
+              { period: 'FEB.2024 - PRESENT', institution: 'Fifth Dimension', position: 'Lynn Choi, Professor', highlight: true },
               { period: 'SEP.2000 - PRESENT', institution: 'Korea University', position: 'School of Electrical Engineering, Professor', highlight: true },
               { period: '1998 ~ 2000', institution: 'University of California at Irvine', position: '컴퓨터공학 조교수' },
               { period: '1996 ~ 1998', institution: 'Intel Corporation', position: 'Itanium 64비트 CPU 설계팀 선임 연구원' },
@@ -255,19 +255,19 @@ function Member() {
             className={`hero-button ${activeTab === 'ceo' ? 'active' : ''}`}
             onClick={() => setActiveTab('ceo')}
           >
-            <span>CEO</span>
+            <span>Professor</span>
           </button>
           <button
             className={`hero-button ${activeTab === 'research' ? 'active' : ''}`}
             onClick={() => setActiveTab('research')}
           >
-            <span>Research Staff</span>
+            <span>Current Members</span>
           </button>
           <button
             className={`hero-button ${activeTab === 'employee' ? 'active' : ''}`}
             onClick={() => setActiveTab('employee')}
           >
-            <span>Employee</span>
+            <span>Alumni</span>
           </button>
         </div>
       </div>
