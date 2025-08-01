@@ -55,7 +55,6 @@ const NavBar = () => {
             <li className="navElement"><Link to="/members">Members</Link></li>
             <li className="navElement"><Link to="/publications">Publications</Link></li>
             <li className="navElement"><Link to="/courses">Courses</Link></li>
-            <li className="navElement"><Link to="/boards">Boards</Link></li>
           </ul>
         </div>
       </div>
@@ -84,7 +83,6 @@ const NavBar = () => {
         <Link to="/members" onClick={handleLinkClick}>Members</Link>
         <Link to="/publications" onClick={handleLinkClick}>Publications</Link>
         <Link to="/courses" onClick={handleLinkClick}>Courses</Link>
-        <Link to="/boards" onClick={handleLinkClick}>Boards</Link>
       </div>
     </div>
   );
