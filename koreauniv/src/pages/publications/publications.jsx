@@ -66,21 +66,71 @@ function Publications() {
           lang: 'en',
           tags: [{ text: 'International', type: 'primary' }],
         },
-        // ... 나머지 데이터는 기존과 동일
       ],
     },
-    // ... 나머지 년도 데이터는 기존과 동일
   ];
 
+  const conferencePublications = [
+    {
+      year: '2020 - Present',
+      items: [
+        {
+          title: 'Magnetic Field-based Indoor Positioning using Deep Learning',
+          desc: 'Conference on Indoor Positioning and Indoor Navigation (IPIN), 2021',
+          lang: 'en',
+          tags: [{ text: 'Conference', type: 'warning' }],
+        },
+      ],
+    },
+  ];
+
+  const patents = [
+    {
+      year: '2019 - Present',
+      items: [
+        {
+          title: '실내 위치 측정 방법 및 장치',
+          desc: '대한민국 특허청, 출원번호: 10-2019-0123456',
+          lang: 'ko',
+          tags: [{ text: 'Patent', type: 'success' }],
+        },
+      ],
+    },
+  ];
+
+  const getCurrentData = () => {
+    switch (activeTab) {
+      case 'journal':
+        return journalPublications;
+      case 'conference':
+        return conferencePublications;
+      case 'patents':
+        return patents;
+      default:
+        return journalPublications;
+    }
+  };
+
+  const getHeroTitle = () => {
+    switch (activeTab) {
+      case 'journal':
+        return 'Journal Publications';
+      case 'conference':
+        return 'Conference Papers';
+      case 'patents':
+        return 'Patents';
+      default:
+        return 'Publications';
+    }
+  };
+
   return (
-    <div className="publications-page-wrapper">
+    <div className="page-wrapper">
       <div className="publications-timeline-page">
-        {/* 기존 NavBar 사용으로 자체 navbar 제거 */}
-        
         {/* Hero Section */}
-        <div className="publications-hero-section">
+        <section className="publications-hero-section">
           <div className="publications-hero-overlay">
-            <h1 className="publications-hero-text">Publications</h1>
+            <h1 className="publications-hero-text">{getHeroTitle()}</h1>
             <h2 className="publications-hero-subtitle">Indoor Positioning Laboratory</h2>
             <p className="publications-hero-description">
               Explore our research contributions in indoor positioning, sensor networks, and related fields through our published journals, conference papers, and patents.
@@ -106,19 +156,21 @@ function Publications() {
               <span>Patents</span>
             </button>
           </div>
-        </div>
+        </section>
 
         {/* Content Area */}
         <div className="publications-split-timeline-container">
           {/* Left Half - Year Display */}
           <div className="publications-left-year-section">
-            <div className="publications-year-display" id="publicationsCurrentYearDisplay">{currentYear}</div>
+            <div className="publications-year-display" id="publicationsCurrentYearDisplay">
+              {currentYear}
+            </div>
           </div>
 
           {/* Right Half - Cards */}
           <div className="publications-right-cards-section">
             <div className="publications-cards-container">
-              {activeTab === 'journal' && journalPublications.map((yearBlock) => (
+              {getCurrentData().map((yearBlock) => (
                 <div
                   key={yearBlock.year}
                   className="publications-year-section"
@@ -151,24 +203,12 @@ function Publications() {
                   </div>
                 </div>
               ))}
-              {activeTab === 'conference' && (
-                <div className="publications-year-section" data-year="Coming Soon">
-                  <div className="publications-section-header">Conference Papers</div>
-                  <p>Content for conference papers will be added soon.</p>
-                </div>
-              )}
-              {activeTab === 'patents' && (
-                <div className="publications-year-section" data-year="Coming Soon">
-                  <div className="publications-section-header">Patents</div>
-                  <p>Content for patents will be added soon.</p>
-                </div>
-              )}
             </div>
           </div>
         </div>
 
         {/* Footer */}
-        <div className="publications-footer">
+        <footer className="publications-footer">
           <div className="publications-footer-content">
             <hr />
             <h3>Indoor Positioning Laboratory</h3>
@@ -178,7 +218,7 @@ function Publications() {
               Tel: +82-2-3290-3896
             </p>
           </div>
-        </div>
+        </footer>
 
         {/* Back to Top */}
         <a href="#" className="publications-back-to-top">
