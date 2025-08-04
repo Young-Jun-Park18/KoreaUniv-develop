@@ -1,19 +1,19 @@
 /* ===== GLOBAL STYLES ===== */
 .home-wrapper {
-  width: 100vw; /* 100% → 100vw로 변경 */
+  width: 100vw;
   min-height: 100vh;
   background-color: white;
   color: #333;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* 가로 스크롤 방지 */
+  overflow-x: hidden;
 }
 
 .content-container {
-  max-width: none; /* max-width 제거 */
-  width: 100%; /* 전체 너비 사용 */
+  max-width: none;
+  width: 100%;
   margin: 0;
-  padding: 0 5%; /* 좌우 5% 패딩 */
+  padding: 0 5%;
   box-sizing: border-box;
 }
 
@@ -21,7 +21,7 @@
 .hero-carousel-section {
   width: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
-  margin-top: 10vh; /* 네비바 높이에 맞춤 */
+  margin-top: 10vh;
 }
 
 .carousel-container {
@@ -89,12 +89,12 @@
 .carousel-caption {
   position: absolute;
   bottom: 4rem;
-  left: 10%;
-  right: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 1000px;
   color: white;
   text-align: left;
-  max-width: 1000px;
-  margin: 0 auto;
 }
 
 .carousel-caption h3 {
@@ -127,7 +127,7 @@
   text-decoration: none;
 }
 
-/* Carousel Indicators */
+/* Carousel Indicators - 수정된 중앙 정렬 */
 .carousel-indicators {
   position: absolute;
   bottom: 1rem;
@@ -136,6 +136,11 @@
   display: flex;
   gap: 0.5rem;
   z-index: 10;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .carousel-indicators button {
@@ -146,6 +151,9 @@
   background-color: transparent;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
 }
 
 .carousel-indicators button.active,
@@ -210,9 +218,11 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2.5rem; /* 2rem → 2.5rem으로 확장 */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2.5rem;
   margin: 0 auto;
+  max-width: 1400px;
 }
 
 .project-card {
@@ -272,55 +282,6 @@
   text-decoration: none;
 }
 
-/* ===== DEMO VIDEO SECTION ===== */
-.demo-section {
-  padding: 5rem 0;
-  background-color: #F9F9F9;
-  text-align: center;
-}
-
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 1200px; /* 900px → 1200px로 확장 */
-  padding-bottom: 50.625%; /* 16:9 aspect ratio */
-  height: 0;
-  margin: 3rem auto 1.5rem;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.demo-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.demo-btn {
-  background-color: #7C001A;
-  color: white;
-  padding: 12px 15px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
-}
-
-.demo-btn:hover {
-  background-color: #5A0013;
-}
-
 /* ===== INFORMATION SECTION ===== */
 .info-section {
   padding: 5rem 0;
@@ -330,8 +291,8 @@
 .info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 4rem; /* 3rem → 4rem으로 확장 */
-  max-width: 1400px; /* 900px → 1400px로 확장 */
+  gap: 4rem;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -419,15 +380,15 @@
 .footer {
   background-color: #1E1E1E;
   padding: 3rem 0;
-  width: 100vw; /* 100% → 100vw로 변경 */
-  margin-left: calc(-50vw + 50%); /* 컨테이너를 벗어나 전체 너비 사용 */
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 .footer-content {
-  max-width: none; /* max-width 제거 */
+  max-width: none;
   width: 100%;
   margin: 0;
-  padding: 0 5%; /* 좌우 5% 패딩 */
+  padding: 0 5%;
 }
 
 .footer-divider {
@@ -457,7 +418,7 @@
 /* Tablet (1400px 이하) */
 @media (max-width: 1400px) {
   .content-container {
-    padding: 0 1.5rem;
+    padding: 0 3%;
   }
 
   .carousel-container {
@@ -465,8 +426,9 @@
   }
 
   .projects-grid {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
   }
 
   .video-container iframe {
@@ -475,8 +437,7 @@
   }
 
   .carousel-caption {
-    left: 8%;
-    right: 8%;
+    width: 85%;
   }
 
   .carousel-caption h3 {
@@ -522,8 +483,9 @@
 
   .carousel-caption {
     bottom: 1rem;
-    left: 3%;
-    right: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
   }
 
   .carousel-caption h3 {
@@ -569,7 +531,8 @@
   }
 
   .projects-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* 모바일에서 1열 */
+    grid-template-rows: repeat(6, 1fr); /* 6행 */
     gap: 1.2rem;
   }
 
@@ -593,27 +556,6 @@
   }
 
   .project-btn {
-    padding: 10px 12px;
-    font-size: 0.9rem;
-  }
-
-  .demo-section {
-    padding: 2.5rem 0;
-  }
-
-  .video-wrapper {
-    margin: 2rem auto 1rem;
-  }
-
-  .demo-buttons {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
-  }
-
-  .demo-btn {
-    width: 100%;
-    max-width: 280px;
     padding: 10px 12px;
     font-size: 0.9rem;
   }
@@ -706,7 +648,6 @@
 
 /* ===== ACCESSIBILITY IMPROVEMENTS ===== */
 .carousel-control:focus,
-.demo-btn:focus,
 .project-btn:focus,
 .info-btn:focus,
 .view-more-btn:focus {

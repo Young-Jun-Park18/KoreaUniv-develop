@@ -3,13 +3,19 @@ import './home.css';
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [currentVideo, setCurrentVideo] = useState({
-    src: 'https://www.youtube.com/embed/k-OBdaatTNc?si=25hXtLVMUZNfjBmG',
-    title: 'Technical Introduction Video'
-  });
 
-  // 슬라이드 데이터
+  // 슬라이드 데이터 - 맨 앞과 두 번째에 새 영상 추가
   const slides = [
+    {
+      type: 'video',
+      src: 'https://www.youtube.com/embed/-lI_BdjyUqY?si=kDU6XSvLLeBZ1g4r',
+      title: '새로운 실내 측위 기술 소개 영상'
+    },
+    {
+      type: 'video',
+      src: 'https://www.youtube.com/embed/Z_yduvIs0ss?si=kDU6XSvLLeBZ1g4r',
+      title: '실내 측위 기술 데모 영상'
+    },
     {
       type: 'video',
       src: 'https://www.youtube.com/embed/k-OBdaatTNc?si=kDU6XSvLLeBZ1g4r&start=28',
@@ -115,7 +121,7 @@ const Home = () => {
       title: '위치기반 마케팅 플랫폼 개발을 위한 실내 측위 시스템 구축',
       client: 'TA9',
       period: '2021.08.13~2023~12.31',
-      image: '/images/ta9_logo.png',
+      image: '/images/main2_5.jpg',
       link: '/project'
     },
     {
@@ -125,22 +131,6 @@ const Home = () => {
       period: '2021.02.01~2021.11.26',
       image: '/images/main2_6.jpg',
       link: '/project'
-    }
-  ];
-
-  // 데모 비디오 버튼 데이터
-  const demoVideos = [
-    {
-      src: 'https://www.youtube.com/embed/k-OBdaatTNc?si=25hXtLVMUZNfjBmG',
-      title: 'Technical Introduction Video'
-    },
-    {
-      src: 'https://www.youtube.com/embed/UYy8lXMozDA?si=lqf9UIGyuV3Nsx4X',
-      title: 'Hanasquare Demo Video'
-    },
-    {
-      src: 'https://www.youtube.com/embed/_2ag0gWkJLc?si=8C-4sFT8wMmenlql',
-      title: 'SK Future Hall Demo Video'
     }
   ];
 
@@ -162,10 +152,6 @@ const Home = () => {
 
   const goToSlide = (index) => {
     setCurrentSlide(index);
-  };
-
-  const changeVideo = (src, title) => {
-    setCurrentVideo({ src, title });
   };
 
   return (
@@ -247,33 +233,6 @@ const Home = () => {
                   </a>
                 </div>
               </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Demo Video Section */}
-        <section className="demo-section">
-          <h2 className="section-title">{currentVideo.title}</h2>
-          <h4 className="section-subtitle">Indoor Positioning Laboratory video</h4>
-          
-          <div className="video-wrapper">
-            <iframe
-              src={currentVideo.src}
-              title={currentVideo.title}
-              frameBorder="0"
-              allowFullScreen
-            />
-          </div>
-          
-          <div className="demo-buttons">
-            {demoVideos.map((video, index) => (
-              <button
-                key={index}
-                onClick={() => changeVideo(video.src, video.title)}
-                className="demo-btn"
-              >
-                {video.title}
-              </button>
             ))}
           </div>
         </section>
