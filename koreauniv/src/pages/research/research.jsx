@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './research.css';
 
 const Research = () => {
   const [activeTab, setActiveTab] = useState('area');
+  const [currentYear, setCurrentYear] = useState('Current');
 
   const getHeroTitle = () => {
     switch (activeTab) {
@@ -61,6 +62,281 @@ const Research = () => {
     }
   ];
 
+  // 프로젝트 데이터 (태그 추가)
+  const projectData = [
+    {
+      year: 'Current',
+      items: [
+        {
+          title: 'LG화학 여수 화학 단지 측위시스템 Pilot 구축',
+          date: '2022.11.22 ~ 2022.12.31',
+          link: '/project_1',
+          tags: [
+            { text: 'Pilot', type: 'primary' },
+            { text: 'LG화학', type: '' }
+          ]
+        },
+        {
+          title: '미래도전국방기술 연구 개발',
+          date: '2022.11.25 ~ 2025.10.31',
+          link: '/project_2',
+          tags: [
+            { text: 'R&D', type: 'primary' },
+            { text: '산학연', type: '' }
+          ]
+        },
+        {
+          title: '교통약자를 위한 도시철도 역사내 맞춤형 스마트 내비게이션 개발',
+          date: '2022.05.01 ~ 2023.12.31',
+          link: '/project_3',
+          tags: [
+            { text: 'R&D', type: 'primary' },
+            { text: '지구자기장 기반', type: 'warning' }
+          ]
+        },
+        {
+          title: '디지털기반 건축시공 및 안전감리 기술개발',
+          date: '2022.04.01 ~ 2026.12.31',
+          link: '/project_4',
+          tags: [
+            { text: 'R&D', type: 'primary' },
+            { text: '국토교통부', type: '' }
+          ]
+        },
+        {
+          title: '위치기반 마케팅 플랫폼 개발을 위한 실내 측위 시스템 구축',
+          date: '2021.08.13 ~ 2023.12.31',
+          link: '/project_5',
+          tags: [
+            { text: 'R&D', type: 'primary' },
+            { text: '마케팅', type: '' }
+          ]
+        }
+      ]
+    },
+    {
+      year: 'Past',
+      items: [
+        {
+          title: '블록체인 기반 KU Mobile ID 체계 수립 및 구축',
+          date: '2019.03.01 ~ 2021.12.31',
+          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=4061',
+          tags: [
+            { text: '블록체인', type: 'warning' },
+            { text: 'KU', type: '' }
+          ]
+        },
+        {
+          title: '스마트 공장 안전 및 관제 시스템을 위한 지구 자기장 기반 실내측위 기술의 포스코 현장 성능 검증',
+          date: '2021.02.01 ~ 2021.11.26',
+          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=4239',
+          tags: [
+            { text: '포스코', type: '' },
+            { text: '지구자기장 기반', type: 'warning' }
+          ]
+        },
+        {
+          title: '장애인 실내 길안내 내비게이션 서비스',
+          date: '2020.07.01 ~ 2020.12.31',
+          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=4053',
+          tags: [
+            { text: '내비게이션', type: 'primary' },
+            { text: '장애인', type: '' }
+          ]
+        },
+        {
+          title: '실내 측위를 위한 저전력 웨어러블 소형 태그 보드 설계 및 시작품 제작',
+          date: '2019.06.01 ~ 2020.08.31',
+          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=4048',
+          tags: [
+            { text: '웨어러블', type: 'warning' },
+            { text: '설계', type: '' }
+          ]
+        },
+        {
+          title: '미래창조과학부 정보통신산업진흥원',
+          date: '2015.06.01 ~ 2020.12.31',
+          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2982',
+          tags: [
+            { text: 'R&D', type: 'primary' },
+            { text: '미래창조과학부', type: '' }
+          ]
+        },
+        {
+          title: '원퍼스트, 현대 모비스',
+          date: '2018.06.01 ~ 2019.05.31',
+          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=3724',
+          tags: [
+            { text: '현대 모비스', type: '' }
+          ]
+        },
+        {
+          title: '한국연구재단 선도연구과제',
+          date: '2017.03.01 ~ 2020.02.28',
+          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2984',
+          tags: [
+            { text: 'R&D', type: 'primary' },
+            { text: '한국연구재단', type: '' }
+          ]
+        },
+        {
+          title: '현대엘리베이터',
+          date: '2016.08.01 ~ 2017.12.31',
+          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2983',
+          tags: [
+            { text: '현대엘리베이터', type: '' }
+          ]
+        },
+        {
+          title: '미래창조과학부 X-Project',
+          date: '2015.12.01 ~ 2016.11.31',
+          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2981',
+          tags: [
+            { text: 'R&D', type: 'primary' },
+            { text: 'X-Project', type: '' }
+          ]
+        },
+        {
+          title: '정보통신산업진흥원',
+          date: '2015.06.01 ~ 2018.12.31',
+          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=4094',
+          tags: [
+            { text: 'R&D', type: 'primary' },
+            { text: '정보통신산업진흥원', type: '' }
+          ]
+        },
+        {
+          title: '정보통신산업진흥원',
+          date: '2013.05.01 ~ 2014.04.30',
+          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2980',
+          tags: [
+            { text: 'R&D', type: 'primary' },
+            { text: '정보통신산업진흥원', type: '' }
+          ]
+        },
+        {
+          title: '한국IT서비스산업협회',
+          date: '2010.03.01 ~ 2014.02.28',
+          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2979',
+          tags: [
+            { text: '협회', type: '' }
+          ]
+        },
+        {
+          title: '한국연구재단',
+          date: '2010.05.01 ~ 2013.04.30',
+          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2978',
+          tags: [
+            { text: 'R&D', type: 'primary' },
+            { text: '한국연구재단', type: '' }
+          ]
+        },
+        {
+          title: 'ETRI',
+          date: '2009.10.01 ~ 2010.03.31',
+          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2976',
+          tags: [
+            { text: 'ETRI', type: '' }
+          ]
+        },
+        {
+          title: '삼성전자',
+          date: '2009.09.01 ~ 2009.12.31',
+          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2977',
+          tags: [
+            { text: '삼성전자', type: '' }
+          ]
+        },
+        {
+          title: 'ETRI',
+          date: '2008.12.05 ~ 2009.03.31',
+          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2975',
+          tags: [
+            { text: 'ETRI', type: '' }
+          ]
+        },
+        {
+          title: '삼성전자',
+          date: '2007.01.01 ~ 2007.12.31',
+          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2974',
+          tags: [
+            { text: '삼성전자', type: '' }
+          ]
+        },
+        {
+          title: '한국과학재단',
+          date: '2007.09.01 ~ 2012.08.31',
+          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2973',
+          tags: [
+            { text: 'R&D', type: 'primary' },
+            { text: '한국과학재단', type: '' }
+          ]
+        },
+        {
+          title: 'ETRI',
+          date: '2006.08.01 ~ 2007.03.01',
+          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2972',
+          tags: [
+            { text: 'ETRI', type: '' }
+          ]
+        },
+        {
+          title: '한국소프트웨어진흥원',
+          date: '2005.03.01 ~ 2006.02.01',
+          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2971',
+          tags: [
+            { text: 'R&D', type: 'primary' },
+            { text: '한국소프트웨어진흥원', type: '' }
+          ]
+        },
+        {
+          title: '한국학술진흥재단',
+          date: '2003.12.01 ~ 2005.11.01',
+          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2970',
+          tags: [
+            { text: 'R&D', type: 'primary' },
+            { text: '한국학술진흥재단', type: '' }
+          ]
+        },
+        {
+          title: '한국학술진흥재단',
+          date: '2003.12.01 ~ 2004.11.01',
+          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_yUcq93&document_srl=933',
+          tags: [
+            { text: 'R&D', type: 'primary' },
+            { text: '한국학술진흥재단', type: '' }
+          ]
+        },
+        {
+          title: '삼성종합연구소',
+          date: '2003.07.01 ~ 2004.06.30',
+          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2968',
+          tags: [
+            { text: '삼성종합연구소', type: '' }
+          ]
+        },
+        {
+          title: '시스템집적반도체기반기술 개발사업',
+          date: '2001.07.01 ~ 2003.06.30',
+          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2965',
+          tags: [
+            { text: 'R&D', type: 'primary' },
+            { text: '시스템집적', type: '' }
+          ]
+        },
+        {
+          title: '과학기술부',
+          date: '2001.09.01 ~ 2004.08.30',
+          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2961',
+          tags: [
+            { text: 'R&D', type: 'primary' },
+            { text: '과학기술부', type: '' }
+          ]
+        }
+      ]
+    }
+  ];
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -68,10 +344,51 @@ const Research = () => {
     }
   };
 
+  useEffect(() => {
+    if (activeTab === 'projects') {
+      const handleScroll = () => {
+        const sections = document.querySelectorAll('.research-project-year-section');
+        const scrollTop = window.pageYOffset;
+        const windowHeight = window.innerHeight;
+        const triggerPoint = scrollTop + windowHeight * 0.4;
+
+        let activeYear = 'Current';
+
+        sections.forEach(section => {
+          const rect = section.getBoundingClientRect();
+          const sectionTop = scrollTop + rect.top;
+
+          if (triggerPoint >= sectionTop) {
+            const year = section.getAttribute('data-year');
+            if (year) activeYear = year;
+          }
+        });
+
+        if (activeYear !== currentYear) {
+          setCurrentYear(activeYear);
+          const yearDisplay = document.getElementById('researchProjectYearDisplay');
+          if (yearDisplay) {
+            yearDisplay.classList.add('active');
+            setTimeout(() => {
+              yearDisplay.classList.remove('active');
+            }, 300);
+          }
+        }
+      };
+
+      handleScroll();
+      window.addEventListener('scroll', handleScroll, { passive: true });
+
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }
+  }, [activeTab, currentYear]);
+
   return (
-    <div className="research-scroll-section research-section">
+    <div className="research-timeline-page">
       {/* Hero Section with Background Image and Tabs */}
-      <div className="research-hero-section">
+      <section className="research-hero-section">
         <div className="research-hero-overlay">
           <h1 className="research-hero-text">Introduction</h1>
           <h3 className="research-hero-subtitle">고려대학교 실내측위 연구실</h3>
@@ -99,7 +416,7 @@ const Research = () => {
             <span>Projects</span>
           </button>
         </div>
-      </div>
+      </section>
 
       {/* Research Area Content */}
       {activeTab === 'area' && (
@@ -212,12 +529,50 @@ const Research = () => {
         </div>
       )}
 
-      {/* Projects Content (placeholder) */}
+      {/* Projects Content */}
       {activeTab === 'projects' && (
-        <div className="research-projects-content">
-          <div className="research-projects-placeholder">
-            <h2>Projects</h2>
-            <p>프로젝트 내용이 여기에 표시됩니다.</p>
+        <div className="research-split-timeline-container">
+          {/* Left Half - Year Display */}
+          <div className="research-project-left-year-section">
+            <div className="research-project-year-display" id="researchProjectYearDisplay">{currentYear}</div>
+          </div>
+
+          {/* Right Half - Project Cards */}
+          <div className="research-project-right-cards-section">
+            <div className="research-project-cards-container">
+              {projectData.map((yearBlock) => (
+                <div 
+                  key={yearBlock.year} 
+                  className="research-project-year-section" 
+                  data-year={yearBlock.year}
+                >
+                  <div className="research-project-section-header">
+                    {yearBlock.year === 'Current' ? '진행 중인 프로젝트' : '완료된 프로젝트'}
+                  </div>
+                  <div className="research-project-cards-column">
+                    {yearBlock.items.map((item, idx) => (
+                      <div className="research-project-card-item" key={idx}>
+                        <a href={item.link} className="research-project-card">
+                          <div className="research-project-card-tags">
+                            {item.tags?.map((tag, tagIdx) => (
+                              <span 
+                                key={tagIdx} 
+                                className={`research-project-card-tag ${tag.type}`}
+                              >
+                                {tag.text}
+                              </span>
+                            ))}
+                          </div>
+                          <h3 className="research-project-card-title">{item.title}</h3>
+                          <p className="research-project-card-date">{item.date}</p>
+                          <div className="research-project-card-hover-indicator">자세히 보기 →</div>
+                        </a>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       )}
