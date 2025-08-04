@@ -1,0 +1,571 @@
+:root {
+  --brand-blue: #7C001A;
+  --brand-gradient: linear-gradient(120deg, #7C001A 70%, #FF6B6B 100%);
+  --brand-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.20);
+}
+
+/* 전체 컨테이너 - viewport width 문제 완전 해결 */
+.publications-page-wrapper {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Publications 페이지 전용 */
+.publications-timeline-page {
+  min-height: 100vh;
+  width: 100%;
+  background: #ffffff;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding-top: 10vh; /* 기존 NavBar 높이만큼 패딩 추가 */
+}
+
+/* ===== HERO SECTION ===== */
+.publications-hero-section {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 5;
+  background-image: url('/images/image_19.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  min-height: 25rem;
+  z-index: 5;
+}
+
+.publications-hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--brand-gradient);
+  opacity: 0.45;
+  z-index: 1;
+}
+
+.publications-hero-overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  padding: 0 2rem;
+}
+
+.publications-hero-text {
+  color: white;
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: 'Open-sans';
+}
+
+.publications-hero-subtitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  font-family: 'Open-sans';
+}
+
+.publications-hero-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ffffff;
+  text-align: left;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: 'Open-sans';
+}
+
+.publications-hero-button-container {
+  display: flex;
+  width: 100%;
+  height: 4.5rem;
+  position: relative;
+  top: -4.5rem;
+  z-index: 2;
+}
+
+.publications-hero-button {
+  flex: 1;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  outline: none;
+  cursor: pointer;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  color: white;
+  transition: all 0.3s ease;
+  z-index: 1;
+  font-family: 'Pretendard-Regular';
+}
+
+.publications-hero-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-out;
+  background-color: var(--brand-blue);
+}
+
+.publications-hero-button span {
+  position: relative;
+  z-index: 2;
+}
+
+.publications-hero-button.active {
+  color: white;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.publications-hero-button.active::before {
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
+/* ===== Publications 전용 반반 나누기 타임라인 컨테이너 ===== */
+.publications-split-timeline-container {
+  display: flex;
+  min-height: calc(100vh - 4.5rem);
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* ===== Publications 전용 왼쪽 절반 - 연도 영역 ===== */
+.publications-left-year-section {
+  width: 50%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 10vh; /* 기존 NavBar 아래로 위치 조정 */
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 50; /* NavBar보다 낮게 설정 */
+}
+
+.publications-year-display {
+  color: var(--brand-blue);
+  font-size: 6rem;
+  font-weight: 900;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-family: 'Open-sans';
+}
+
+.publications-year-display.active {
+  transform: scale(1.05);
+}
+
+/* ===== Publications 전용 오른쪽 절반 - 카드 영역 ===== */
+.publications-right-cards-section {
+  width: 50%;
+  margin-left: 50%;
+  background: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+
+.publications-cards-container {
+  padding: 40px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.publications-year-section {
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.publications-year-section:last-child {
+  margin-bottom: 0;
+}
+
+.publications-section-header {
+  margin-bottom: 30px;
+  opacity: 0.7;
+  font-size: 1.1rem;
+  color: var(--brand-blue);
+  font-weight: 600;
+  font-family: 'Pretendard-Regular';
+}
+
+.publications-cards-column {
+  position: relative;
+}
+
+.publications-card-item {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.publications-card-floating-category {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  box-shadow: var(--brand-shadow);
+  position: relative;
+  border: 1px solid #f1f5f9;
+  border-left: 5px solid var(--brand-blue);
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.publications-card-floating-category:hover {
+  transform: translateY(-8px) translateX(8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.publications-card-tags {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.publications-card-tag {
+  background: #f1f5f9;
+  color: #475569;
+  padding: 3px 7px;
+  border-radius: 10px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.publications-card-tag.primary {
+  background: #ffe4e6;
+  color: #9f1239;
+}
+
+.publications-card-tag.success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.publications-card-tag.warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.publications-card-floating-category:hover .publications-card-tag {
+  transform: translateY(-2px);
+}
+
+.publications-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--brand-blue);
+  line-height: 1.4;
+  font-family: 'Pretendard-Regular';
+}
+
+.publications-card-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin-bottom: 10px;
+  font-family: 'Pretendard-Regular';
+}
+
+.publications-card-hover-indicator {
+  position: absolute;
+  bottom: 20px;
+  right: 25px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+  color: var(--brand-blue);
+  font-weight: 600;
+  background: #f8fafc;
+  padding: 6px 12px;
+  border-radius: 15px;
+  border: 1px solid #e2e8f0;
+  font-family: 'Pretendard-Regular';
+}
+
+.publications-card-floating-category:hover .publications-card-hover-indicator {
+  opacity: 1;
+  transform: translateX(-5px);
+  border-color: var(--brand-blue);
+}
+
+/* ===== FOOTER ===== */
+.publications-footer {
+  height: 17rem;
+  background-color: #1E1E1E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.publications-footer-content {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.publications-footer-content hr {
+  border: none;
+  border-top: 2px solid #ffffff;
+  margin-bottom: 1rem;
+}
+
+.publications-footer-content h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 1rem;
+  font-family: 'Open-sans';
+}
+
+.publications-footer-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+  font-family: 'Open-sans';
+}
+
+/* ===== BACK TO TOP ===== */
+.publications-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 20px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.publications-back-to-top:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1400px) {
+  .publications-hero-section {
+    min-height: 30rem;
+  }
+
+  .publications-hero-text {
+    font-size: 2.2rem;
+  }
+
+  .publications-hero-button {
+    font-size: 1rem;
+  }
+
+  .publications-year-display {
+    font-size: 5rem;
+  }
+
+  .publications-cards-container {
+    padding: 30px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .publications-timeline-page {
+    padding-top: 0; /* 모바일에서는 NavBar 높이 패딩 제거 */
+  }
+
+  .publications-hero-text {
+    font-size: 1.8rem;
+  }
+
+  .publications-hero-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .publications-hero-description {
+    display: none;
+  }
+
+  .publications-hero-section {
+    height: 25vh;
+  }
+
+  .publications-hero-button-container {
+    height: 3.5rem;
+    top: -3.5rem;
+  }
+
+  .publications-hero-button {
+    height: 3.5rem;
+    font-size: 0.8rem;
+    padding: 0 0.3rem;
+  }
+
+  .publications-split-timeline-container {
+    flex-direction: column;
+  }
+
+  .publications-left-year-section {
+    display: none !important;
+  }
+
+  .publications-right-cards-section {
+    width: 100% !important;
+    margin-left: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .publications-cards-container {
+    padding: 15px 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .publications-card-floating-category {
+    padding: 18px;
+    border-radius: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  .publications-card-title {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  .publications-card-desc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .publications-card-tag {
+    font-size: 0.55rem;
+    padding: 2px 4px;
+  }
+
+  .publications-card-hover-indicator {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    bottom: 15px;
+    right: 18px;
+  }
+
+  .publications-section-header {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    padding-left: 5px;
+  }
+
+  .publications-card-floating-category:hover {
+    transform: translateY(-3px) translateX(0px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .publications-year-section {
+    margin-bottom: 40px;
+  }
+
+  .publications-year-section:last-child {
+    margin-bottom: 20px;
+  }
+
+  .publications-footer {
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .publications-footer-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .publications-footer-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .publications-hero-button {
+    font-size: 0.7rem;
+    padding: 0 0.2rem;
+  }
+}
+
+/* ===== FONTS ===== */
+:lang(en) {
+  font-family: 'Open-sans';
+}
+
+:lang(ko) {
+  font-family: 'Pretendard-Regular';
+}
+
+/* ===== ACCESSIBILITY IMPROVEMENTS ===== */
+.publications-hero-button:focus,
+.publications-card-floating-category:focus {
+  outline: 2px solid var(--brand-blue);
+  outline-offset: 2px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes publicationsFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.publications-card-floating-category {
+  animation: publicationsFadeIn 0.6s ease-out;
+}
+
+/* ===== PERFORMANCE OPTIMIZATIONS ===== */
+.publications-hero-section {
+  will-change: background-position;
+}
+
+.publications-card-floating-category {
+  will-change: transform;
+}

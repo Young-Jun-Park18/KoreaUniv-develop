@@ -386,196 +386,198 @@ const Research = () => {
   }, [activeTab, currentYear]);
 
   return (
-    <div className="research-timeline-page">
-      {/* Hero Section with Background Image and Tabs */}
-      <section className="research-hero-section">
-        <div className="research-hero-overlay">
-          <h1 className="research-hero-text">Introduction</h1>
-          <h3 className="research-hero-subtitle">고려대학교 실내측위 연구실</h3>
-          <p className="research-hero-description">
-            고려대학교 컴퓨터시스템 연구실은 IoT, 실내 위치 인식, 무선 애드 혹 저전력 통신 프로토콜, 멀티코어 CPU 칩 설계 등 컴퓨터 시스템
-            전반에서의 다양한 아키텍처 및 알고리즘 분야를 폭넓게 연구하고 있다.<br /><br />
-            본 연구실의 지도 교수인 최린 교수는 Intel 사에서 고성능 64 비트 마이크로프로세서인 Itanium 프로세서 개발 팀에서 코어 파이프라인의
-            설계 및 검증을 다 년간 수행한 개발 경험이 있으며 University of Illinois at Urbana-Champaign 대학 및
-            University of California at Irvine 대학에서 슈퍼컴퓨터, 병렬 프로세서 구조, 병렬 컴파일러, 고성능 마이크로프로세서
-            구조 연구 등 컴퓨터 시스템 분야에서의 연구 및 개발 경험을 바탕으로 연구를 지도해 나가고 있다. 본 연구실에서 현재 수행하고 있는 연구 내용은
-            다음과 같다.
-          </p>
-        </div>
-        <div className="research-hero-button-container">
-          <button
-            className={`research-hero-button ${activeTab === 'area' ? 'active' : ''}`}
-            onClick={() => setActiveTab('area')}
-          >
-            <span>Research Area</span>
-          </button>
-          <button
-            className={`research-hero-button ${activeTab === 'projects' ? 'active' : ''}`}
-            onClick={() => setActiveTab('projects')}
-          >
-            <span>Projects</span>
-          </button>
-        </div>
-      </section>
+    <div className="page-wrapper"> {/* 추가 */}
+      <div className="research-timeline-page">
+        {/* Hero Section with Background Image and Tabs */}
+        <section className="research-hero-section">
+          <div className="research-hero-overlay">
+            <h1 className="research-hero-text">Introduction</h1>
+            <h3 className="research-hero-subtitle">고려대학교 실내측위 연구실</h3>
+            <p className="research-hero-description">
+              고려대학교 컴퓨터시스템 연구실은 IoT, 실내 위치 인식, 무선 애드 혹 저전력 통신 프로토콜, 멀티코어 CPU 칩 설계 등 컴퓨터 시스템
+              전반에서의 다양한 아키텍처 및 알고리즘 분야를 폭넓게 연구하고 있다.<br /><br />
+              본 연구실의 지도 교수인 최린 교수는 Intel 사에서 고성능 64 비트 마이크로프로세서인 Itanium 프로세서 개발 팀에서 코어 파이프라인의
+              설계 및 검증을 다 년간 수행한 개발 경험이 있으며 University of Illinois at Urbana-Champaign 대학 및
+              University of California at Irvine 대학에서 슈퍼컴퓨터, 병렬 프로세서 구조, 병렬 컴파일러, 고성능 마이크로프로세서
+              구조 연구 등 컴퓨터 시스템 분야에서의 연구 및 개발 경험을 바탕으로 연구를 지도해 나가고 있다. 본 연구실에서 현재 수행하고 있는 연구 내용은
+              다음과 같다.
+            </p>
+          </div>
+          <div className="research-hero-button-container">
+            <button
+              className={`research-hero-button ${activeTab === 'area' ? 'active' : ''}`}
+              onClick={() => setActiveTab('area')}
+            >
+              <span>Research Area</span>
+            </button>
+            <button
+              className={`research-hero-button ${activeTab === 'projects' ? 'active' : ''}`}
+              onClick={() => setActiveTab('projects')}
+            >
+              <span>Projects</span>
+            </button>
+          </div>
+        </section>
 
-      {/* Research Area Content */}
-      {activeTab === 'area' && (
-        <div className="research-content">
-          {/* Introduction Section */}
-          <section className="research-intro-section">
-            <div className="research-intro-content">
-              <h2 className="research-intro-title">Introduction</h2>
-              <h3 className="research-intro-subtitle">고려대학교 실내측위 연구실</h3>
-              <p className="research-intro-description">
-                고려대학교 컴퓨터시스템 연구실은 IoT, 실내 위치 인식, 무선 애드 혹 저전력 통신 프로토콜, 멀티코어 CPU 칩 설계 등 컴퓨터 시스템
-                전반에서의 다양한 아키텍처 및 알고리즘 분야를 폭넓게 연구하고 있다.<br /><br />
-                본 연구실의 지도 교수인 최린 교수는 Intel 사에서 고성능 64 비트 마이크로프로세서인 Itanium 프로세서 개발 팀에서 코어 파이프라인의
-                설계 및 검증을 다 년간 수행한 개발 경험이 있으며 University of Illinois at Urbana-Champaign 대학 및
-                University of California at Irvine 대학에서 슈퍼컴퓨터, 병렬 프로세서 구조, 병렬 컴파일러, 고성능 마이크로프로세서
-                구조 연구 등 컴퓨터 시스템 분야에서의 연구 및 개발 경험을 바탕으로 연구를 지도해 나가고 있다. 본 연구실에서 현재 수행하고 있는 연구 내용은
-                다음과 같다.
-              </p>
-            </div>
-          </section>
-
-          {/* Research Overview */}
-          <section className="research-overview">
-            <div className="research-overview-content">
-              <h2 className="research-section-title">Research</h2>
-              <h4 className="research-section-subtitle">Indoor Positioning Laboratory Research</h4>
-              
-              <div className="research-buttons">
-                <div className="research-button-row">
-                  <div className="research-button-col">
-                    <button 
-                      className="research-button"
-                      onClick={() => scrollToSection('section1')}
-                    >
-                      <div className="research-button-icon">
-                        <img src="/images/icon1.png" alt="Research Icon 1" />
-                      </div>
-                      <div className="research-button-text">
-                        실내 위치 인식 <br />알고리즘
-                      </div>
-                    </button>
-                  </div>
-                  <div className="research-button-col">
-                    <button 
-                      className="research-button"
-                      onClick={() => scrollToSection('section2')}
-                    >
-                      <div className="research-button-icon">
-                        <img src="/images/icon2.png" alt="Research Icon 2" />
-                      </div>
-                      <div className="research-button-text">
-                        무선 센서 네트워크에서의<br />저전력 고성능 통신 프로토콜 연구
-                      </div>
-                    </button>
-                  </div>
-                </div>
-                <div className="research-button-row">
-                  <div className="research-button-col">
-                    <button 
-                      className="research-button"
-                      onClick={() => scrollToSection('section3')}
-                    >
-                      <div className="research-button-icon">
-                        <img src="/images/icon3.png" alt="Research Icon 3" />
-                      </div>
-                      <div className="research-button-text">
-                        방화벽 및 라우터에서의<br />고속 패킷 분류 알고리즘 연구
-                      </div>
-                    </button>
-                  </div>
-                  <div className="research-button-col">
-                    <button 
-                      className="research-button"
-                      onClick={() => scrollToSection('section4')}
-                    >
-                      <div className="research-button-icon">
-                        <img src="/images/icon4.png" alt="Research Icon 4" />
-                      </div>
-                      <div className="research-button-text">
-                        버퍼 오버플로우 공격 차단 및 복구를 위한<br />안전한 프로세서 마이크로구조 연구
-                      </div>
-                    </button>
-                  </div>
-                </div>
+        {/* Research Area Content */}
+        {activeTab === 'area' && (
+          <div className="research-content">
+            {/* Introduction Section */}
+            <section className="research-intro-section">
+              <div className="research-intro-content">
+                <h2 className="research-intro-title">Introduction</h2>
+                <h3 className="research-intro-subtitle">고려대학교 실내측위 연구실</h3>
+                <p className="research-intro-description">
+                  고려대학교 컴퓨터시스템 연구실은 IoT, 실내 위치 인식, 무선 애드 혹 저전력 통신 프로토콜, 멀티코어 CPU 칩 설계 등 컴퓨터 시스템
+                  전반에서의 다양한 아키텍처 및 알고리즘 분야를 폭넓게 연구하고 있다.<br /><br />
+                  본 연구실의 지도 교수인 최린 교수는 Intel 사에서 고성능 64 비트 마이크로프로세서인 Itanium 프로세서 개발 팀에서 코어 파이프라인의
+                  설계 및 검증을 다 년간 수행한 개발 경험이 있으며 University of Illinois at Urbana-Champaign 대학 및
+                  University of California at Irvine 대학에서 슈퍼컴퓨터, 병렬 프로세서 구조, 병렬 컴파일러, 고성능 마이크로프로세서
+                  구조 연구 등 컴퓨터 시스템 분야에서의 연구 및 개발 경험을 바탕으로 연구를 지도해 나가고 있다. 본 연구실에서 현재 수행하고 있는 연구 내용은
+                  다음과 같다.
+                </p>
               </div>
-            </div>
-          </section>
+            </section>
 
-          {/* Research Details */}
-          {researchAreas.map((area) => (
-            <section key={area.id} id={area.id} className="research-detail">
-              <div className="research-detail-content">
-                <h4 className="research-detail-number">Research.{area.number}</h4>
-                <h3 className="research-detail-title">{area.title}</h3>
+            {/* Research Overview */}
+            <section className="research-overview">
+              <div className="research-overview-content">
+                <h2 className="research-section-title">Research</h2>
+                <h4 className="research-section-subtitle">Indoor Positioning Laboratory Research</h4>
                 
-                {area.image && (
-                  <div className="research-detail-image">
-                    <img src={area.image} alt={`Research ${area.number} Image`} />
+                <div className="research-buttons">
+                  <div className="research-button-row">
+                    <div className="research-button-col">
+                      <button 
+                        className="research-button"
+                        onClick={() => scrollToSection('section1')}
+                      >
+                        <div className="research-button-icon">
+                          <img src="/images/icon1.png" alt="Research Icon 1" />
+                        </div>
+                        <div className="research-button-text">
+                          실내 위치 인식 <br />알고리즘
+                        </div>
+                      </button>
+                    </div>
+                    <div className="research-button-col">
+                      <button 
+                        className="research-button"
+                        onClick={() => scrollToSection('section2')}
+                      >
+                        <div className="research-button-icon">
+                          <img src="/images/icon2.png" alt="Research Icon 2" />
+                        </div>
+                        <div className="research-button-text">
+                          무선 센서 네트워크에서의<br />저전력 고성능 통신 프로토콜 연구
+                        </div>
+                      </button>
+                    </div>
                   </div>
-                )}
-                
-                <div className="research-detail-description">
-                  {area.description.map((paragraph, index) => (
-                    <p key={index}>{paragraph}</p>
-                  ))}
+                  <div className="research-button-row">
+                    <div className="research-button-col">
+                      <button 
+                        className="research-button"
+                        onClick={() => scrollToSection('section3')}
+                      >
+                        <div className="research-button-icon">
+                          <img src="/images/icon3.png" alt="Research Icon 3" />
+                        </div>
+                        <div className="research-button-text">
+                          방화벽 및 라우터에서의<br />고속 패킷 분류 알고리즘 연구
+                        </div>
+                      </button>
+                    </div>
+                    <div className="research-button-col">
+                      <button 
+                        className="research-button"
+                        onClick={() => scrollToSection('section4')}
+                      >
+                        <div className="research-button-icon">
+                          <img src="/images/icon4.png" alt="Research Icon 4" />
+                        </div>
+                        <div className="research-button-text">
+                          버퍼 오버플로우 공격 차단 및 복구를 위한<br />안전한 프로세서 마이크로구조 연구
+                        </div>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </section>
-          ))}
-        </div>
-      )}
 
-      {/* Projects Content */}
-      {activeTab === 'projects' && (
-        <div className="research-split-timeline-container">
-          {/* Left Half - Year Display */}
-          <div className="research-project-left-year-section">
-            <div className="research-project-year-display" id="researchProjectYearDisplay">{currentYear}</div>
-          </div>
-
-          {/* Right Half - Project Cards */}
-          <div className="research-project-right-cards-section">
-            <div className="research-project-cards-container">
-              {projectData.map((yearBlock) => (
-                <div 
-                  key={yearBlock.year} 
-                  className="research-project-year-section" 
-                  data-year={yearBlock.year}
-                >
-                  <div className="research-project-section-header">
-                    {yearBlock.year === 'Current' ? '진행 중인 프로젝트' : '완료된 프로젝트'}
-                  </div>
-                  <div className="research-project-cards-column">
-                    {yearBlock.items.map((item, idx) => (
-                      <div className="research-project-card-item" key={idx}>
-                        <a href={item.link} className="research-project-card">
-                          <div className="research-project-card-tags">
-                            {item.tags?.map((tag, tagIdx) => (
-                              <span 
-                                key={tagIdx} 
-                                className={`research-project-card-tag ${tag.type}`}
-                              >
-                                {tag.text}
-                              </span>
-                            ))}
-                          </div>
-                          <h3 className="research-project-card-title">{item.title}</h3>
-                          <p className="research-project-card-date">{item.date}</p>
-                          <div className="research-project-card-hover-indicator">자세히 보기 →</div>
-                        </a>
-                      </div>
+            {/* Research Details */}
+            {researchAreas.map((area) => (
+              <section key={area.id} id={area.id} className="research-detail">
+                <div className="research-detail-content">
+                  <h4 className="research-detail-number">Research.{area.number}</h4>
+                  <h3 className="research-detail-title">{area.title}</h3>
+                  
+                  {area.image && (
+                    <div className="research-detail-image">
+                      <img src={area.image} alt={`Research ${area.number} Image`} />
+                    </div>
+                  )}
+                  
+                  <div className="research-detail-description">
+                    {area.description.map((paragraph, index) => (
+                      <p key={index}>{paragraph}</p>
                     ))}
                   </div>
                 </div>
-              ))}
+              </section>
+            ))}
+          </div>
+        )}
+
+        {/* Projects Content */}
+        {activeTab === 'projects' && (
+          <div className="research-split-timeline-container">
+            {/* Left Half - Year Display */}
+            <div className="research-project-left-year-section">
+              <div className="research-project-year-display" id="researchProjectYearDisplay">{currentYear}</div>
+            </div>
+
+            {/* Right Half - Project Cards */}
+            <div className="research-project-right-cards-section">
+              <div className="research-project-cards-container">
+                {projectData.map((yearBlock) => (
+                  <div 
+                    key={yearBlock.year} 
+                    className="research-project-year-section" 
+                    data-year={yearBlock.year}
+                  >
+                    <div className="research-project-section-header">
+                      {yearBlock.year === 'Current' ? '진행 중인 프로젝트' : '완료된 프로젝트'}
+                    </div>
+                    <div className="research-project-cards-column">
+                      {yearBlock.items.map((item, idx) => (
+                        <div className="research-project-card-item" key={idx}>
+                          <a href={item.link} className="research-project-card">
+                            <div className="research-project-card-tags">
+                              {item.tags?.map((tag, tagIdx) => (
+                                <span 
+                                  key={tagIdx} 
+                                  className={`research-project-card-tag ${tag.type}`}
+                                >
+                                  {tag.text}
+                                </span>
+                              ))}
+                            </div>
+                            <h3 className="research-project-card-title">{item.title}</h3>
+                            <p className="research-project-card-date">{item.date}</p>
+                            <div className="research-project-card-hover-indicator">자세히 보기 →</div>
+                          </a>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };

@@ -15,7 +15,7 @@
 /* ===== HERO SECTION ===== */
 .research-hero-section {
   position: relative;
-  width: 100vw;
+  width: 100%;
   aspect-ratio: 16 / 5;
   background-image: url('/images/image_19.png');
   background-size: cover;
@@ -140,7 +140,7 @@
 
 /* ===== CONTENT AREA ===== */
 .research-content {
-  width: 100vw;
+  width: 100%;
   background-color: white;
   padding: 4rem 2rem;
   display: flex;
