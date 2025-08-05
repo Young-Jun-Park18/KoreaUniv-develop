@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './publications.css';
 
 function Publications() {
-  const [activeTab, setActiveTab] = useState('journal');
+  const [activeTab, setActiveTab] = useState('journals');
   const [currentYear, setCurrentYear] = useState('2015 - Present');
 
   // 탭이 변경될 때 즉시 년도 업데이트
@@ -67,10 +67,9 @@ function Publications() {
 
 
   
-  // ----------------- journal -----------------
   const journalPublications = [
     {
-      year: '2015 - Present',
+      year: '2021',
       items: [
         {
           title: 'Low-Memory Indoor Positioning System for Standalone Embedded Hardware',
@@ -78,11 +77,27 @@ function Publications() {
           lang: 'en',
           tags: [{ text: 'International', type: 'primary' }],
         },
+      ],
+    },
+      {
+      year: '2020',
+      items: [
         {
           title: 'Filter cache: filtering useless cache blocks for a small but efficient shared last-level cache',
           desc: 'Han Jun Bae and Lynn Choi<br>The Journal of Supercomputing, Vol 76, No.10, pp 7521-7544, OCT 2020',
           lang: 'en',
           tags: [{ text: 'International', type: 'primary' }],
+        },
+      ],
+    },
+    {
+      year: '2018',
+      items: [
+        {
+          title: '순환신경망을 이용한 자기장 기반 실내측위시스템',
+          desc: '배한준, 최 린, 박병준<br>한국차세대컴퓨팅학회 논문지 2018년 12월, 페이지 57-65, 2018년',
+          lang: 'ko',
+          tags: [{ text: 'Domestic', type: 'warning' }],
         },
         {
           title: 'Dynamic directory table with victim cache: on‑demand allocation of directory entries for active shared cache blocks',
@@ -90,12 +105,40 @@ function Publications() {
           lang: 'en',
           tags: [{ text: 'International', type: 'primary' }],
         },
+      ],
+    },
+    {
+      year: '2017',
+      items: [
         {
           title: 'ZeroMAC: Toward a zero sleep delay and zero idle listening media access control protocol with ultralow power radio frequency wakeup sensor',
           desc: 'Sang Hoon Lee and Lynn Choi<br>International Journal of Distributed Sensor Networks, Vol 13, No.8, APR 2017',
           lang: 'en',
           tags: [{ text: 'International', type: 'primary' }],
         },
+        {
+          title: '동적 디렉터리 테이블 : 공유 캐시 블록의 디렉터리 엔트리 동적 할당',
+          desc: '배한준, 최 린<br>정보과학회논문지, 제44권 12호, 페이지 1245-1251, 2017년',
+          lang: 'ko',
+          tags: [{ text: 'Domestic', type: 'warning' }],
+        },
+        {
+          title: '지구 자기장 기반 지문인식 및 추측항법을 결합한 실시간 실내 위치정보 서비스',
+          desc: '장호준, 최린<br>정보과학회 컴퓨팅의 실제 논문지, 제23권 4호, 페이지 210-216, 2017년',
+          lang: 'ko',
+          tags: [{ text: 'Domestic', type: 'warning' }],
+        },
+        {
+          title: '보행자 추측 항법 성능 향상을 위한 스마트폰 전용 모션 센서 보정 알고리즘',
+          desc: '김도윤, 최린<br>정보과학회 컴퓨팅의 실제 논문지, 제23권 3호, 페이지 148-155, 2017년',
+          lang: 'ko',
+          tags: [{ text: 'Domestic', type: 'warning' }],
+        },
+      ],
+    },
+    {
+      year: '2016',
+      items: [
         {
           title: 'The Design of a Ultra-Low Power RF Wakeup Sensor for Wireless Sensor Networks',
           desc: 'Sang Hoon Lee, Yong Soo Bae and Lynn Choi<br>Journal of Communications and Networks, Vol 18, No.2, pp 201-209, APR 2016',
@@ -114,15 +157,14 @@ function Publications() {
           lang: 'en',
           tags: [{ text: 'International', type: 'primary' }],
         },
+      ],
+    },
+    {
+      year: '2015',
+      items: [
         {
           title: 'Introduction to the special issue on software technologies for embedded and ubiquitous systems',
           desc: 'Lynn Choi and Kirner, Raimund<br>Computing, Vol 97, No.3, pp 203-204, MAR 2015',
-          lang: 'en',
-          tags: [{ text: 'International', type: 'primary' }],
-        },
-        {
-          title: 'On-Demand Radio Wave Sensor for Wireless Sensor Networks: Towards a Zero Idle Listening and Zero Sleep Delay MAC Protocol',
-          desc: 'Sang Hoon Lee, Yong Soo Bae and Lynn Choi<br>Journal of Communications and Networks',
           lang: 'en',
           tags: [{ text: 'International', type: 'primary' }],
         },
@@ -141,7 +183,7 @@ function Publications() {
       ],
     },
     {
-      year: '2010 - 2014',
+      year: '2013',
       items: [
         {
           title: 'A+MAC A Streamlined Variable Duty-Cycle MAC Protocol for Wireless Sensor Networks',
@@ -156,6 +198,17 @@ function Publications() {
           tags: [{ text: 'International', type: 'primary' }],
         },
         {
+          title: '센서 네트워크 환경에서 비동기식 MAC 프로토콜을 위한 충돌해결 알고리즘',
+          desc: '이상훈, 배용수, 최 린<br>정보과학회논문지, 제 19권 제 1호, 페이지 41-45, 2013년 1월',
+          lang: 'ko',
+          tags: [{ text: 'Domestic', type: 'warning' }],
+        },
+      ],
+    },
+    {
+      year: '2012',
+      items: [
+        {
           title: 'Transient Coordinator a Collision Resolution Algorithm for Asynchronous MAC protocols in Wireless Sensor Networks',
           desc: 'Sang Hoon Lee and Lynn Choi<br>KSII TRANSACTIONS ON INTERNET AND INFORMATIONS SYSTEMS VOL 6, No.12, Dec 2012, pp 3152-3165',
           lang: 'en',
@@ -164,7 +217,222 @@ function Publications() {
       ],
     },
     {
-      year: '2005 - 2009',
+      year: '2011',
+      items: [
+        {
+          title: '모바일 센서 네트워크를 위한 트래픽 적응형 라우팅 프로토콜',
+          desc: '홍기섭, 이상훈, 최 린<br>정보과학회논문지: 컴퓨팅의 실제 및 레터, 제 17권 제 1호, 페이지 46-50, 2011년 1월',
+          lang: 'ko',
+          tags: [{ text: 'Domestic', type: 'warning' }],
+        },
+      ],
+    },
+    {
+      year: '2009',
+      items: [
+        {
+          title: 'Scalable Packet Classification Through Rulebase Partitioning Using the Maximum Entropy Hashing',
+          desc: 'Lynn Choi, Hyogon Kim, Sunil Kim, Moon Hae Kim<br>IEEE/ACM Transactions on Networking, Vol. 17, Issue 6, Dec. 2009, pp. 1926~1935',
+          lang: 'en',
+          tags: [{ text: 'International', type: 'primary' }],
+        },
+      ],
+    },
+    {
+      year: '2008',
+      items: [
+        {
+          title: '링 연결구조 기반의 멀티코어 프로세서를 위한 캐시 일관성 유지 기법',
+          desc: '박진영, 최 린<br>정보과학회논문지, 제 14권 제 8호, 페이지 768-772, 2008년 11월',
+          lang: 'ko',
+          tags: [{ text: 'Domestic', type: 'warning' }],
+        },
+      ],
+    },
+    {
+      year: '2006',
+      items: [
+        {
+          title: 'A High-Throughput System Architecture for Deep Packet Filtering in Network Intrusion Prevention',
+          desc: 'Dae Y. Kim, Sunil Kim, Lynn Choi, and Hyogon Kim<br>ARCS 2006, LNCS 3894, pp. 407.421, 2006',
+          lang: 'en',
+          tags: [{ text: 'International', type: 'primary' }],
+        },
+        {
+          title: '다수 혹은 긴 워드 연산을 위한 레지스터 파일 확장을 통한 대칭 및 비대칭 암호화 알고리즘의 가속화',
+          desc: '이상훈, 최 린<br>2006년 3월 전자공학회 논문지 제 43권 CI 편 제 2호',
+          lang: 'ko',
+          tags: [{ text: 'Domestic', type: 'warning' }],
+        },
+        {
+          title: '버퍼 오버플로우 공격에 대한 마이크로구조적 방어 및 복구 기법',
+          desc: '최 린, 신 용, 이상훈<br>정보과학회논문지: 시스템 및 이론 제 33권 제 3호(2006.4)',
+          lang: 'ko',
+          tags: [{ text: 'Domestic', type: 'warning' }],
+        },
+      ],
+    },
+    {
+      year: '2005',
+      items: [
+        {
+          title: 'Searching Color Images by Emotional Concepts',
+          desc: 'Sungyong Hong, Chulbum Ahn, Yunmook Nah, Lynn Choi<br>LNCS 3597, Springer Verlag 2005, pp.361-365. (Proc. HSI 2005, July 2005, Tokyo, Japan)',
+          lang: 'en',
+          tags: [{ text: 'International', type: 'primary' }],
+        },
+        {
+          title: 'Virtual Sink Rotation Low Energy Scalable Routing Protocol for Ubiquitous Sensor Networks',
+          desc: 'Lynn Choi, Kwangseok Choi, Jungsun Kim, Byung Joon Park<br>The USN 2005 (LNCS), The 1st International Workshop on RFID and Ubiquitous Sensor Networks, Dec. 2005, Nagasaki, Japan',
+          lang: 'en',
+          tags: [{ text: 'International', type: 'primary' }],
+        },
+      ],
+    },
+    {
+      year: '2004',
+      items: [
+        {
+          title: 'Packet_Classification_through_Hierarchical_Rulebase Partitioning',
+          desc: 'Lynn Choi, S.W. Kim, J. Joung<br>IEE Electronics Letters, Vol. 40, Issue. 18, Page(s):1158-1159, 2nd September, 2004',
+          lang: 'en',
+          tags: [{ text: 'International', type: 'primary' }],
+        },
+        {
+          title: 'Scalable Packet Classification Through Maximum Entropy Hashing',
+          desc: 'Lynn Choi, Jaesung Heo, Hygon Kim, Sunil Kim (2004)<br>Lecture Notes in Computer Science, NETWORKING 2004: Networking Technologies, Services, and Protocols; Performance of Computer and Communication Networks; Mobile and Wireless Communications, vol. 3042, pages 296-307, Athens, Greece, May 2004',
+          lang: 'en',
+          tags: [{ text: 'International', type: 'primary' }],
+        },
+        {
+          title: 'Enforcement of Architectural Safety Guards to Deter Malicious Code Attacks Thorough Buffer Overflow Vulnerabilities',
+          desc: 'Lynn Choi, Yong Shin (2004)<br>Lecture Notes in Computer Science, Organic and Pervasive Computing - ARCS 2004, vol. 2981, pages 47-60, Augsburg, Germany, March 2004',
+          lang: 'en',
+          tags: [{ text: 'International', type: 'primary' }],
+        },
+      ],
+    },
+    {
+      year: '2003',
+      items: [
+        {
+          title: 'Taming Large Classifiers with Rule Reference Locality',
+          desc: 'Hyogon Kim, Jaesung Heo, Lynn Choi, Inhye Kang, Sunil Kim<br>Lecture Notes in Computer Science, Information Networking: Networking Technologies for Enhanced Internet Services, Vol. 2662, pages 928-937, Feb. 2003',
+          lang: 'en',
+          tags: [{ text: 'International', type: 'primary' }],
+        },
+        {
+          title: 'Characterization and Modeling of a New Via Structure in Multilayered Printed Circuit Boards',
+          desc: 'D.H. Kwon, J.W. Kim, K.I. Kw, S.C. Choi, J.H. Lim, J.H Park, Lynn Choi, S. W. Hwang, S.H. Lee<br>IEEE Transactions on Components and Packaging Technologies, 26권 2호, 2003',
+          lang: 'en',
+          tags: [{ text: 'International', type: 'primary' }],
+        },
+      ],
+    },
+    {
+      year: '2002',
+      items: [
+        {
+          title: 'WDM SCM Multiple Access Protocol with High Throughput and Low Packet Delay for Passive Double Star Networks',
+          desc: 'Jintae Yu, Myungmoon Lee, Yongbum Kim, Yongwon Lee, Sangrok Lee, Lynn Choi, Jinwoo Park<br>Computer Networks, 39권 2호, 151 ~ 164, 2002',
+          lang: 'en',
+          tags: [{ text: 'International', type: 'primary' }],
+        },
+        {
+          title: 'Adaptive and Automatic Creation of Hierarchical WML Decks for Efficient Access of Wireless Internet under Wirless Application Protocol',
+          desc: 'Lynn Choi, Dae Gun Kim, Seung Jin Lee, Chul Hee Kang<br>Lecture Notes in Computer Science, Vol. 2524, pages 453-460, Springer-Verlag Press, November 2002',
+          lang: 'en',
+          tags: [{ text: 'International', type: 'primary' }],
+        },
+        {
+          title: 'Efficient Access Using Hierarchical WML Decks for Multimedia Services under Wireless and Mobile networks',
+          desc: 'D. K. Kim, S. J. Lee, L. Choi, C. H. Kang<br>Lecture Notes in Computer Science, Springer Press, Vol. 2496, pp.289-301, 2002',
+          lang: 'en',
+          tags: [{ text: 'International', type: 'primary' }],
+        },
+      ],
+    },
+    {
+      year: '2001',
+      items: [
+        {
+          title: '차세대 마이크로프로세서 기술 동향',
+          desc: '최린<br>대한전자공학회, 대한전자공학회지 Vol.28, No.7, pp.750-758, 2001',
+          lang: 'ko',
+          tags: [{ text: 'Domestic', type: 'warning' }],
+        },
+      ],
+    },
+    {
+      year: '2000',
+      items: [
+        {
+          title: 'Compiler Analysis for Cache Coherence Interprocedural Array Data-Flow Analysis',
+          desc: 'Lynn Choi, P. C. Yew<br>IEEE Transactions on Parallel and Distributed Systems, Vol.11, No.9, September 2000',
+          lang: 'en',
+          tags: [{ text: 'International', type: 'primary' }],
+        },
+        {
+          title: 'Hardware and Compiler-Directed Cache_Coherence in Large Scale Multiprocessors: Design Considerations and Performance Study',
+          desc: 'Lynn Choi, P. C. Yew<br>IEEE Transactions on Parallel and Distributes Systems, Vol.11, No.4, April 2000',
+          lang: 'en',
+          tags: [{ text: 'International', type: 'primary' }],
+        },
+      ],
+    },
+    {
+      year: '1996',
+      items: [
+        {
+          title: 'Techniques for Compiler-Directed Cache Coherence',
+          desc: 'Lynn Choi, Hock-Beng Lim, and Pen-Chung Yew<br>IEEE Parallel and Distributed Technology, Vol. 4, No. 4, pages 23-34, Winter 1996',
+          lang: 'en',
+          tags: [{ text: 'International', type: 'primary' }],
+        },
+        {
+          title: 'The Design and Performance Evaluation of the DI-multicomputer',
+          desc: 'Lynn Choi, Andrew A. Chien<br>Journal of Parallel and Distributed Computing,Vol. 36, No. 2, pages 119-143, 1996',
+          lang: 'en',
+          tags: [{ text: 'International', type: 'primary' }],
+        },
+      ],
+    },
+    {
+      year: '1995',
+      items: [
+        {
+          title: 'Interprocedural Array Data-Flow Analysis for Cache Coherence',
+          desc: 'Lynn Choi, P. C. Yew<br>Languages and Compilers for Parallel Computing, Lecture Notes in Computer Science, Springer-Verlag Press, pages 81-95, 1995',
+          lang: 'en',
+          tags: [{ text: 'International', type: 'primary' }],
+        },
+      ],
+    },
+    {
+      year: '2021',
+      items: [
+        {
+          title: 'Low-Memory Indoor Positioning System for Standalone Embedded Hardware',
+          desc: 'Han Jun Bae and Lynn Choi<br>Electronics (Special Issue: Real-Time Control of Embedded Systems), Vol 10, No.9, 1059, 29 April 2021',
+          lang: 'en',
+          tags: [{ text: 'International', type: 'primary' }],
+        },
+      ],
+    },
+    {
+      year: '2020',
+      items: [
+        {
+          title: 'Filter cache: filtering useless cache blocks for a small but efficient shared last-level cache',
+          desc: 'Han Jun Bae and Lynn Choi<br>The Journal of Supercomputing, Vol 76, No.10, pp 7521-7544, OCT 2020',
+          lang: 'en',
+          tags: [{ text: 'International', type: 'primary' }],
+        },
+      ],
+    },
+    // 누락된 논문들 추가
+    {
+      year: 'undated',
       items: [
         {
           title: 'An effective tool for recommending opinion leaders in SNS',
@@ -185,214 +453,13 @@ function Publications() {
           tags: [{ text: 'International', type: 'primary' }],
         },
         {
-          title: 'Scalable Packet Classification Through Rulebase Partitioning Using the Maximum Entropy Hashing',
-          desc: 'Lynn Choi, Hyogon Kim, Sunil Kim, Moon Hae Kim<br>IEEE/ACM Transactions on Networking, Vol. 17, Issue 6, Dec. 2009, pp. 1926~1935',
-          lang: 'en',
-          tags: [{ text: 'International', type: 'primary' }],
-        },
-        {
-          title: 'A High-Throughput System Architecture for Deep Packet Filtering in Network Intrusion Prevention',
-          desc: 'Dae Y. Kim, Sunil Kim, Lynn Choi, and Hyogon Kim<br>ARCS 2006, LNCS 3894, pp. 407.421, 2006',
-          lang: 'en',
-          tags: [{ text: 'International', type: 'primary' }],
-        },
-        {
-          title: 'Searching Color Images by Emotional Concepts',
-          desc: 'Sungyong Hong, Chulbum Ahn, Yunmook Nah, Lynn Choi<br>LNCS 3597, Springer Verlag 2005, pp.361-365. (Proc. HSI 2005, July 2005, Tokyo, Japan)',
-          lang: 'en',
-          tags: [{ text: 'International', type: 'primary' }],
-        },
-        {
-          title: 'Virtual Sink Rotation Low Energy Scalable Routing Protocol for Ubiquitous Sensor Networks',
-          desc: 'Lynn Choi, Kwangseok Choi, Jungsun Kim, Byung Joon Park<br>The USN 2005 (LNCS), The 1st International Workshop on RFID and Ubiquitous Sensor Networks, Dec. 2005, Nagasaki, Japan',
+          title: 'On-Demand Radio Wave Sensor for Wireless Sensor Networks: Towards a Zero Idle Listening and Zero Sleep Delay MAC Protocol',
+          desc: 'Sang Hoon Lee, Yong Soo Bae and Lynn Choi<br>Journal of Communications and Networks',
           lang: 'en',
           tags: [{ text: 'International', type: 'primary' }],
         },
       ],
     },
-    {
-      year: '2000 - 2004',
-      items: [
-        {
-          title: 'Packet_Classification_through_Hierarchical_Rulebase Partitioning',
-          desc: 'Lynn Choi, S.W. Kim, J. Joung<br>IEE Electronics Letters, Vol. 40, Issue. 18, Page(s):1158-1159, 2nd September, 2004',
-          lang: 'en',
-          tags: [{ text: 'International', type: 'primary' }],
-        },
-        {
-          title: 'Scalable Packet Classification Through Maximum Entropy Hashing',
-          desc: 'Lynn Choi, Jaesung Heo, Hygon Kim, Sunil Kim (2004)<br>Lecture Notes in Computer Science, NETWORKING 2004: Networking Technologies, Services, and Protocols; Performance of Computer and Communication Networks; Mobile and Wireless Communications, vol. 3042, pages 296-307, Athens, Greece, May 2004',
-          lang: 'en',
-          tags: [{ text: 'International', type: 'primary' }],
-        },
-        {
-          title: 'Enforcement of Architectural Safety Guards to Deter Malicious Code Attacks Thorough Buffer Overflow Vulnerabilities',
-          desc: 'Lynn Choi, Yong Shin (2004)<br>Lecture Notes in Computer Science, Organic and Pervasive Computing - ARCS 2004, vol. 2981, pages 47-60, Augsburg, Germany, March 2004',
-          lang: 'en',
-          tags: [{ text: 'International', type: 'primary' }],
-        },
-        {
-          title: 'Taming Large Classifiers with Rule Reference Locality',
-          desc: 'Hyogon Kim, Jaesung Heo, Lynn Choi, Inhye Kang, Sunil Kim<br>Lecture Notes in Computer Science, Information Networking: Networking Technologies for Enhanced Internet Services, Vol. 2662, pages 928-937, Feb. 2003',
-          lang: 'en',
-          tags: [{ text: 'International', type: 'primary' }],
-        },
-        {
-          title: 'Characterization and Modeling of a New Via Structure in Multilayered Printed Circuit Boards',
-          desc: 'D.H. Kwon, J.W. Kim, K.I. Kw, S.C. Choi, J.H. Lim, J.H Park, Lynn Choi, S. W. Hwang, S.H. Lee<br>IEEE Transactions on Components and Packaging Technologies, 26권 2호, 2003',
-          lang: 'en',
-          tags: [{ text: 'International', type: 'primary' }],
-        },
-        {
-          title: 'WDM SCM Multiple Access Protocol with High Throughput and Low Packet Delay for Passive Double Star Networks',
-          desc: 'Jintae Yu, Myungmoon Lee, Yongbum Kim, Yongwon Lee, Sangrok Lee, Lynn Choi, Jinwoo Park<br>Computer Networks, 39권 2호, 151 ~ 164, 2002',
-          lang: 'en',
-          tags: [{ text: 'International', type: 'primary' }],
-        },
-        {
-          title: 'Adaptive and Automatic Creation of Hierarchical WML Decks for Efficient Access of Wireless Internet under Wirless Application Protocol',
-          desc: 'Lynn Choi, Dae Gun Kim, Seung Jin Lee, Chul Hee Kang<br>Lecture Notes in Computer Science, Vol. 2524, pages 453-460, Springer-Verlag Press, November 2002',
-          lang: 'en',
-          tags: [{ text: 'International', type: 'primary' }],
-        },
-        {
-          title: 'Efficient Access Using Hierarchical WML Decks for Multimedia Services under Wireless and Mobile networks',
-          desc: 'D. K. Kim, S. J. Lee, L. Choi, C. H. Kang<br>Lecture Notes in Computer Science, Springer Press, Vol. 2496, pp.289-301, 2002',
-          lang: 'en',
-          tags: [{ text: 'International', type: 'primary' }],
-        },
-        {
-          title: 'Compiler Analysis for Cache Coherence Interprocedural Array Data-Flow Analysis',
-          desc: 'Lynn Choi, P. C. Yew<br>IEEE Transactions on Parallel and Distributed Systems, Vol.11, No.9, September 2000',
-          lang: 'en',
-          tags: [{ text: 'International', type: 'primary' }],
-        },
-        {
-          title: 'Hardware and Compiler-Directed Cache_Coherence in Large Scale Multiprocessors: Design Considerations and Performance Study',
-          desc: 'Lynn Choi, P. C. Yew<br>IEEE Transactions on Parallel and Distributes Systems, Vol.11, No.4, April 2000',
-          lang: 'en',
-          tags: [{ text: 'International', type: 'primary' }],
-        },
-      ],
-    },
-    {
-      year: '1995 - 1999',
-      items: [
-        {
-          title: 'Techniques for Compiler-Directed Cache Coherence',
-          desc: 'Lynn Choi, Hock-Beng Lim, and Pen-Chung Yew<br>IEEE Parallel and Distributed Technology, Vol. 4, No. 4, pages 23-34, Winter 1996',
-          lang: 'en',
-          tags: [{ text: 'International', type: 'primary' }],
-        },
-        {
-          title: 'The Design and Performance Evaluation of the DI-multicomputer',
-          desc: 'Lynn Choi, Andrew A. Chien<br>Journal of Parallel and Distributed Computing,Vol. 36, No. 2, pages 119-143, 1996',
-          lang: 'en',
-          tags: [{ text: 'International', type: 'primary' }],
-        },
-        {
-          title: 'Interprocedural Array Data-Flow Analysis for Cache Coherence',
-          desc: 'Lynn Choi, P. C. Yew<br>Languages and Compilers for Parallel Computing, Lecture Notes in Computer Science, Springer-Verlag Press, pages 81-95, 1995',
-          lang: 'en',
-          tags: [{ text: 'International', type: 'primary' }],
-        },
-      ],
-    },
-    {
-      year: '2018',
-      items: [
-        {
-          title: '순환신경망을 이용한 자기장 기반 실내측위시스템',
-          desc: '배한준, 최 린, 박병준<br>한국차세대컴퓨팅학회 논문지 2018년 12월, 페이지 57-65, 2018년',
-          lang: 'ko',
-          tags: [{ text: 'Domestic', type: 'warning' }],
-        }
-      ],
-    },
-    {
-      year: '2017',
-      items: [
-        {
-          title: '동적 디렉터리 테이블 : 공유 캐시 블록의 디렉터리 엔트리 동적 할당',
-          desc: '배한준, 최 린<br>정보과학회논문지, 제44권 12호, 페이지 1245-1251, 2017년',
-          lang: 'ko',
-          tags: [{ text: 'Domestic', type: 'warning' }],
-        },
-        {
-          title: '지구 자기장 기반 지문인식 및 추측항법을 결합한 실시간 실내 위치정보 서비스',
-          desc: '장호준, 최린<br>정보과학회 컴퓨팅의 실제 논문지, 제23권 4호, 페이지 210-216, 2017년',
-          lang: 'ko',
-          tags: [{ text: 'Domestic', type: 'warning' }],
-        },
-        {
-          title: '보행자 추측 항법 성능 향상을 위한 스마트폰 전용 모션 센서 보정 알고리즘',
-          desc: '김도윤, 최린<br>정보과학회 컴퓨팅의 실제 논문지, 제23권 3호, 페이지 148-155, 2017년',
-          lang: 'ko',
-          tags: [{ text: 'Domestic', type: 'warning' }],
-        }
-      ],
-    },
-    {
-      year: '2013',
-      items: [
-        {
-          title: '센서 네트워크 환경에서 비동기식 MAC 프로토콜을 위한 충돌해결 알고리즘',
-          desc: '이상훈, 배용수, 최 린<br>정보과학회논문지, 제 19권 제 1호, 페이지 41-45, 2013년 1월',
-          lang: 'ko',
-          tags: [{ text: 'Domestic', type: 'warning' }],
-        }
-      ],
-    },
-    {
-      year: '2011',
-      items: [
-        {
-          title: '모바일 센서 네트워크를 위한 트래픽 적응형 라우팅 프로토콜',
-          desc: '홍기섭, 이상훈, 최 린<br>정보과학회논문지: 컴퓨팅의 실제 및 레터, 제 17권 제 1호, 페이지 46-50, 2011년 1월',
-          lang: 'ko',
-          tags: [{ text: 'Domestic', type: 'warning' }],
-        }
-      ],
-    },
-    {
-      year: '2008',
-      items: [
-        {
-          title: '링 연결구조 기반의 멀티코어 프로세서를 위한 캐시 일관성 유지 기법',
-          desc: '박진영, 최 린<br>정보과학회논문지, 제 14권 제 8호, 페이지 768-772, 2008년 11월',
-          lang: 'ko',
-          tags: [{ text: 'Domestic', type: 'warning' }],
-        }
-      ],
-    },
-    {
-      year: '2006',
-      items: [
-        {
-          title: '다수 혹은 긴 워드 연산을 위한 레지스터 파일 확장을 통한 대칭 및 비대칭 암호화 알고리즘의 가속화',
-          desc: '이상훈, 최 린<br>2006년 3월 전자공학회 논문지 제 43권 CI 편 제 2호',
-          lang: 'ko',
-          tags: [{ text: 'Domestic', type: 'warning' }],
-        },
-        {
-          title: '버퍼 오버플로우 공격에 대한 마이크로구조적 방어 및 복구 기법',
-          desc: '최 린, 신 용, 이상훈<br>정보과학회논문지: 시스템 및 이론 제 33권 제 3호(2006.4)',
-          lang: 'ko',
-          tags: [{ text: 'Domestic', type: 'warning' }],
-        }
-      ],
-    },
-    {
-      year: '2001',
-      items: [
-        {
-          title: '차세대 마이크로프로세서 기술 동향',
-          desc: '최린<br>대한전자공학회, 대한전자공학회지 Vol.28, No.7, pp.750-758, 2001',
-          lang: 'ko',
-          tags: [{ text: 'Domestic', type: 'warning' }],
-        }
-      ],
-    }
   ];
 
 
@@ -1350,9 +1417,9 @@ function Publications() {
 
 const getCurrentData = () => {
   switch (activeTab) {
-    case 'journal':
+    case 'journals':  // 'journal' → 'journals'
       return journalPublications;
-    case 'conference':
+    case 'conferences':  // 'conference' → 'conferences'
       return conferencePublications;
     case 'patents':
       return patents;
@@ -1363,10 +1430,10 @@ const getCurrentData = () => {
 
   const getHeroTitle = () => {
     switch (activeTab) {
-      case 'journal':
-        return 'Journal Publications';
-      case 'conference':
-        return 'Conference Papers';
+      case 'journals':  // 'journal' → 'journals'
+        return 'Journals';  // 'Journal Publications' → 'Journals'
+      case 'conferences':  // 'conference' → 'conferences'
+        return 'Conferences';  // 'Conference Papers' → 'Conferences'
       case 'patents':
         return 'Patents';
       default:
@@ -1388,16 +1455,16 @@ const getCurrentData = () => {
           </div>
           <div className="publications-hero-button-container">
             <button
-              className={`publications-hero-button ${activeTab === 'journal' ? 'active' : ''}`}
-              onClick={() => handleTabChange('journal')}
+              className={`publications-hero-button ${activeTab === 'journals' ? 'active' : ''}`}  // 'journal' → 'journals'
+              onClick={() => handleTabChange('journals')}  // 'journal' → 'journals'
             >
-              <span>Journal</span>
+              <span>Journals</span>  {/* Journal → Journals */}
             </button>
             <button
-              className={`publications-hero-button ${activeTab === 'conference' ? 'active' : ''}`}
-              onClick={() => handleTabChange('conference')}
+              className={`publications-hero-button ${activeTab === 'conferences' ? 'active' : ''}`}  // 'conference' → 'conferences'
+              onClick={() => handleTabChange('conferences')}  // 'conference' → 'conferences'
             >
-              <span>Conference</span>
+              <span>Conferences</span>  {/* Conference → Conferences */}
             </button>
             <button
               className={`publications-hero-button ${activeTab === 'patents' ? 'active' : ''}`}
