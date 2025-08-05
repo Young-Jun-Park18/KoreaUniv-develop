@@ -387,41 +387,48 @@
   color: #5a0012;
 }
 
-/* ===== FOOTER ===== */
-.footer {
+/* ===== COURSES FOOTER ===== */
+.courses-footer {
+  min-height: 17rem;
   background-color: #1E1E1E;
-  padding: 3rem 0;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-}
-
-.footer-content {
-  max-width: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  position: relative;
+  z-index: 10;
   width: 100%;
-  margin: 0;
-  padding: 0 5%;
+  padding: 2rem 0;
 }
 
-.footer-divider {
+.courses-footer-content {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.courses-footer-divider {
   border: none;
-  border-top: 2px solid #FFFFFF;
-  margin-bottom: 2rem;
-}
-
-.footer-title {
-  color: #FFFFFF;
-  font-size: 1.8rem;
-  font-weight: bold;
+  border-top: 2px solid #ffffff;
   margin-bottom: 1rem;
-  text-align: left;
 }
 
-.footer-text {
-  color: #FFFFFF;
+.courses-footer-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-family: 'Open-sans', sans-serif;
+}
+
+.courses-footer-text {
   font-size: 1rem;
   line-height: 1.6;
   text-align: left;
+  color: #ffffff;
   margin: 0;
+  font-family: 'Open-sans', sans-serif;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -653,11 +660,32 @@
     font-size: 0.85rem;
     line-height: 1.5;
   }
-}
+  
+  /* Courses Footer 모바일 스타일 (480px 이하에서 courses 스타일) */
+  .courses-footer {
+    padding: 1.8rem 0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
 
-/* ===== SMOOTH SCROLLING ===== */
-html {
-  scroll-behavior: smooth;
+  .courses-footer-content {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0 1rem;
+  }
+
+  .courses-footer-title {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 0.8rem;
+  }
+
+  .courses-footer-text {
+    text-align: center;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
 }
 
 /* ===== ACCESSIBILITY IMPROVEMENTS ===== */
