@@ -551,6 +551,14 @@ const Research = () => {
           </div>
         )}
       </div>
+      {/* Back to Top 버튼 */}
+      <a href="#" className="research-back-to-top">
+        ↑
+      </a>
+
+      {/* Research Footer - Full Width */}
+      <footer className="research-footer"></footer>
+
       {/* Research Footer - Full Width */}
       <footer className="research-footer">
         <div className="research-footer-content">
