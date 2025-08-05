@@ -438,6 +438,19 @@ function People() {
       <a href="#" className="people-back-to-top">
         ↑
       </a>
+      
+      {/* People Footer - Full Width */}
+      <footer className="people-footer">
+        <div className="people-footer-content">
+          <hr className="people-footer-divider" />
+          <h3 className="people-footer-title">Indoor Positioning Laboratory</h3>
+          <p className="people-footer-text">
+            Industry-Academy Building 236, Korea University, 145 Anam-ro, Seongbuk-gu, Seoul, Republic of Korea. 02841
+            <br />Professor : lchoi@korea.ac.kr · swj8905@korea.ac.kr
+            <br />Tel : +82-2-3290-3896
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }

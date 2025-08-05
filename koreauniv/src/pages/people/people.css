@@ -516,6 +516,50 @@
   margin-right: 1rem; /* Course:와 M.S. 2023 사이에 한 칸 추가 */
 }
 
+/* ===== PEOPLE FOOTER ===== */
+.people-footer {
+  min-height: 17rem;
+  background-color: #1E1E1E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.people-footer-content {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.people-footer-divider {
+  border: none;
+  border-top: 2px solid #ffffff;
+  margin-bottom: 1rem;
+}
+
+.people-footer-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-family: 'Open-sans', sans-serif;
+}
+
+.people-footer-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+  color: #ffffff;
+  margin: 0;
+  font-family: 'Open-sans', sans-serif;
+}
+
 /* 태블릿 반응형 */
 @media (max-width: 1400px) {
   .section-hero {
@@ -775,6 +819,32 @@
 
   .label {
     display: none;
+  }
+
+  /* People Footer 모바일 스타일 (480px 이하에서 courses 스타일) */
+  .people-footer {
+    padding: 1.8rem 0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
+
+  .people-footer-content {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0 1rem;
+  }
+
+  .people-footer-title {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 0.8rem;
+  }
+
+  .people-footer-text {
+    text-align: center;
+    font-size: 0.85rem;
+    line-height: 1.5;
   }
 }
 
