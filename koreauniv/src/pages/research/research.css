@@ -131,8 +131,6 @@
   flex-direction: column;
   align-items: center;
   z-index: 5;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .research-area-content {
@@ -148,7 +146,7 @@
 }
 
 .research-overview-content {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -234,7 +232,7 @@
 }
 
 .research-detail-content {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -259,8 +257,9 @@
 }
 
 .research-detail-image img {
+  width: 80%;
   height: auto;
-  max-width: 1200px;
+  max-width: 600px;
 }
 
 .research-detail-description {
@@ -477,7 +476,7 @@
 }
 
 .research-footer-content {
-  max-width: 1200px;
+  max-width: 800px;
   width: 100%;
   padding: 0 2rem;
 }
@@ -728,7 +727,7 @@
     width: 100vw;
     max-width: 100vw;
   }
-  
+
   /* Research Footer 모바일 스타일 (480px 이하에서 courses 스타일) */
   .research-footer {
     padding: 1.8rem 0;
