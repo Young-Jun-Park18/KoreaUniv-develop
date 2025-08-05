@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react'; // useEffect 제거
 import './home.css';
 
 const Home = () => {
@@ -134,13 +134,7 @@ const Home = () => {
     }
   ];
 
-  // 슬라이드 자동 재생
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [slides.length]);
+  // 자동 슬라이드 useEffect 제거됨
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -167,6 +161,7 @@ const Home = () => {
               >
                 {slide.type === 'video' ? (
                   <div className="video-container">
+                    <h3 className="slide-title">{slide.title}</h3>
                     <iframe
                       src={slide.src}
                       title={slide.title}
@@ -177,21 +172,15 @@ const Home = () => {
                   </div>
                 ) : (
                   <div className="image-container">
+                    <h3 className="slide-title">{slide.title}</h3>
                     <img src={slide.src} alt={slide.title} />
-                    <div className="carousel-caption">
-                      <h3>{slide.title}</h3>
-                      <p>{slide.description}</p>
-                      <a href={slide.link} className="view-more-btn">
-                        View More &raquo;
-                      </a>
-                    </div>
                   </div>
                 )}
               </div>
             ))}
           </div>
 
-          {/* Carousel Indicators - 접근성 개선 */}
+          {/* Carousel Indicators - 막대 모양으로 변경 */}
           <div className="carousel-indicators">
             {slides.map((slide, index) => (
               <button
@@ -284,7 +273,7 @@ const Home = () => {
           
           <div className="map-container">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1580.8931278067341!2d127.02288467028194!3d37.583650573217895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cbcb11f445687%3A0xba9f0bcf185144c4!2z7ISc7Jq47Yq567OE7IucIOyViOyVlOuPmDPqsIAg6rOg66Ck64yA7ZWZ6rWQIOqzte2Vmeq0gA!5e0!3m2!1sko!2skr!4v1685691831690!5m2!1sko!2skr"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1580.8931278067341!2d127.02288467028194!3d37.583650573217895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cbcb11f445687%3A0xba9f0bcf185144c4!2z7ISc7Jq47Yq567OE7IucIOyViOyVlOuPmDPqsIAg6rOg66Ck64yA7ZWZ6rWQIOqzte2Vkeq0gA!5e0!3m2!1sko!2skr!4v1685691831690!5m2!1sko!2skr"
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
