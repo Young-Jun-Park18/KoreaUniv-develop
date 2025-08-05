@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './member.css';
+import './people.css';
 import FadeInOnView from '../../components/fadeineffect/FadeInOnView';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGraduationCap, faEnvelopeOpenText, faFileLines } from '@fortawesome/free-solid-svg-icons';
@@ -80,35 +80,161 @@ const researchStaff = [
   },
 ];
 
-/* Alumni (일반 직원) */
+/* Alumni (졸업생들) */
 const employees = [
   {
-    name: '김형석',
-    role: '3D 그래픽 디자이너',
-    email: 'wellrice@nate.com',
-    position: 'Alumnus',
-    areaOfExpertise: '3D Graphic Design, Unity 엔진',
-    image: '/images/KimHyungSeok.jpg',
+    name: '최 민 혁 (Min-hyeok Choi)',
+    course: 'M.S. 2023',
+    email: 'chlrhalsgur@korea.ac.kr',
+    affiliation: ''
   },
   {
-    name: '최사라',
-    role: 'UI/UX 디자이너',
-    email: 'csl7776@naver.com',
-    position: 'Alumnus',
-    areaOfExpertise: '3D Graphic Design, UI/UX Design',
-    image: '/images/ChoiSaRa.jpg',
+    name: '성 진 원 (Jin Won Seong)',
+    course: 'M.S. 2023',
+    email: 'jin1seong@korea.ac.kr',
+    affiliation: ''
   },
   {
-    name: '박영준',
-    role: '프론트엔드 개발자',
-    email: 'dudwns4619@naver.com',
-    position: 'Alumnus',
-    areaOfExpertise: 'Web/App Front-end 개발',
-    image: '/images/ParkYoungJun.jpg',
+    name: '임 바 다 (Ba Da Lim)',
+    course: 'M.S. 2023',
+    email: 'zzzxxx3166@korea.ac.kr',
+    affiliation: ''
   },
+  {
+    name: '유 수 민 (Su Min Yu)',
+    course: 'M.S. 2022',
+    email: 'sue4869@korea.ac.kr',
+    affiliation: ''
+  },
+  {
+    name: '황 승 규 (Seung Kyu Hwang)',
+    course: 'M.S. 2022',
+    email: 'tvfxqmax200@gmail.com',
+    affiliation: ''
+  },
+  {
+    name: '배 한 준 (Han Jun Bae)',
+    course: 'Ph.D. 2022',
+    email: 'qwerty2901@korea.ac.kr',
+    affiliation: ''
+  },
+  {
+    name: '구 경 현 (Kyung Hyun Koo)',
+    course: 'M.S. 2018',
+    email: 'poyo062@korea.ac.kr',
+    affiliation: ''
+  },
+  {
+    name: '김 도 윤 (Do Yun Kim)',
+    course: 'M.S. 2018',
+    email: 'doyun880@korea.ac.kr',
+    affiliation: '삼성전자'
+  },
+  {
+    name: '김 정 원 (Jung Won Kim)',
+    course: 'M.S. 2018',
+    email: 'bse635@korea.ac.kr',
+    affiliation: '삼성전자'
+  },
+  {
+    name: '장 호 준 (Ho Jun Jang)',
+    course: 'M.S. 2017',
+    email: 'nametom@korea.ac.kr',
+    affiliation: ''
+  },
+  {
+    name: '안 재 형 (Jae Hyung An)',
+    course: 'M.S. 2016',
+    email: 'vovojh@korea.ac.kr',
+    affiliation: '삼성전자'
+  },
+  {
+    name: '김 민 지 (Min-Ji Kim)',
+    course: 'M.S. 2015',
+    email: '777vvv@korea.ac.kr',
+    affiliation: '삼성전자'
+  },
+  {
+    name: '차 두 진 (Du Jin Cha)',
+    course: 'M.S. 2015',
+    email: 'twinsjjh@korea.ac.kr',
+    affiliation: '삼성전자'
+  },
+  {
+    name: '신 동 욱 (Dong-Wook Shin)',
+    course: 'M.S. 2014',
+    email: 'shindw@korea.ac.kr',
+    affiliation: '삼성 테크윈'
+  },
+  {
+    name: '윤 창 현 (Chanhyun Yun)',
+    course: 'M.S. 2014',
+    email: 'yunch@korea.ac.kr',
+    affiliation: '삼성전자'
+  },
+  {
+    name: '이 상 훈 (Sang-Hoon Lee)',
+    course: 'Ph.D 2013',
+    email: 'smile97@korea.ac.kr',
+    affiliation: '삼성전자'
+  },
+  {
+    name: '홍 순 원 (Soon-Won Hong)',
+    course: 'M.S. 2012',
+    email: 'aldig@korea.ac.kr',
+    affiliation: 'LG 전자'
+  },
+  {
+    name: '홍 기 섭 (Ki-Sup Hong)',
+    course: 'M.S. 2011',
+    email: 'mastaks@korea.ac.kr',
+    affiliation: 'LG 전자'
+  },
+  {
+    name: '윤 원 기 (Won-ki Yoon)',
+    course: 'M.S. 2010',
+    email: 'yoonpro@korea.ac.kr',
+    affiliation: '솔루션박스'
+  },
+  {
+    name: '장 재 혁 (Jae-hyeok Chang)',
+    course: 'M.S. 2008',
+    email: 'twinsjjh@korea.ac.kr',
+    affiliation: '삼성전자'
+  },
+  {
+    name: '이 현 준 (Hyun-jun Lee)',
+    course: 'M.S. 2008',
+    email: 'kelly1104@korea.ac.kr',
+    affiliation: '삼성전기'
+  },
+  {
+    name: '정 재 균 (Jae-Kyun Jung)',
+    course: 'M.S. 2008',
+    email: 'kernel@korea.ac.kr',
+    affiliation: 'LG전자'
+  },
+  {
+    name: '신 상 훈 (Sang-hoon Shin)',
+    course: 'M.S. 2004',
+    email: 'kaisshin@korea.ac.kr',
+    affiliation: '박사진학(고려대)'
+  },
+  {
+    name: '김 일 관 (Il-kwan Kim)',
+    course: 'M.S. 2004',
+    email: 'bitinno@korea.ac.kr',
+    affiliation: 'LG전자'
+  },
+  {
+    name: '허 재 성 (Jae-sung Heo)',
+    course: 'M.S. 2003',
+    email: 'jsheo@korea.ac.kr',
+    affiliation: '삼성전자(DS총괄)'
+  }
 ];
 
-function Member() {
+function People() {
   const [activeTab, setActiveTab] = useState('research');
 
   const getHeroTitle = () => {
@@ -125,12 +251,12 @@ function Member() {
   };
 
   const renderMembers = (members, isEmployee = false) => (
-    <div className="member-list">
+    <div className="people-list">
       {members.map((member, idx) => (
         <FadeInOnView key={`${activeTab}-${idx}`}>
-          <div className="member-card">
-            <img src={member.image} alt={member.name} className="member-image" />
-            <div className="member-info">
+          <div className="people-card">
+            <img src={member.image} alt={member.name} className="people-image" />
+            <div className="people-info">
               <p className="role">{member.role}</p>
               <h3>{member.name}</h3>
               <p className="contact">
@@ -155,24 +281,54 @@ function Member() {
     </div>
   );
 
+  const renderAlumni = (alumni) => (
+    <div className="alumni-list">
+      {alumni.map((person, idx) => (
+        <FadeInOnView key={`alumni-${idx}`}>
+          <div className="alumni-card">
+            <div className="alumni-info">
+              <h3 className="alumni-name">{person.name}</h3>
+              <div className="alumni-details">
+                <p className="alumni-course">
+                  <FontAwesomeIcon icon={faGraduationCap} fixedWidth style={{ marginRight: '8px' }} />
+                  <span className="label">Course: </span>{person.course}
+                </p>
+                <p className="alumni-email">
+                  <FontAwesomeIcon icon={faEnvelopeOpenText} fixedWidth style={{ marginRight: '8px' }} />
+                  <span className="label">Contact: </span>{person.email}
+                </p>
+                {person.affiliation && (
+                  <p className="alumni-affiliation">
+                    <FontAwesomeIcon icon={faFileLines} fixedWidth style={{ marginRight: '8px' }} />
+                    <span className="label">Affiliation: </span>{person.affiliation}
+                  </p>
+                )}
+              </div>
+            </div>
+          </div>
+        </FadeInOnView>
+      ))}
+    </div>
+  );
+
   const renderCEOProfile = () => (
     <div className="ceo-content">
       <FadeInOnView>
         <div className="ceo-profile-section">
-          <div className="ceo-member-card">
+          <div className="ceo-people-card">
             <div className="ceo-left-part">
               <img 
                 src="/images/ceo.jpg" 
                 alt="교수" 
-                className="ceo-member-image"
+                className="ceo-people-image"
               />
               <div className="ceo-name-info">
-                <p className="ceo-member-role">교수</p>
-                <h3 className="ceo-member-name">최 린</h3>
+                <p className="ceo-people-role">교수</p>
+                <h3 className="ceo-people-name">최 린</h3>
               </div>
             </div>
             
-            <div className="ceo-member-info">
+            <div className="ceo-people-info">
               <div className="ceo-education">
                 <h4 className="ceo-education-title">학력</h4>
                 <div className="ceo-education-content">
@@ -185,9 +341,9 @@ function Member() {
               <div className="ceo-contact-section">
                 <h4 className="ceo-contact-title">연락처</h4>
                 <div className="ceo-contact-content">
-                  <p>• <strong>Tel</strong>: 02-2088-2771</p>
-                  <p>• <strong>Email</strong>: lchoi@korea.ac.kr</p>
-                  <p>• <strong>KU</strong>: https://it.korea.ac.kr/</p>
+                  <p>• Tel: 02-2088-2771</p>
+                  <p>• Email: lchoi@korea.ac.kr</p>
+                  <p>• KU: https://it.korea.ac.kr/</p>
                 </div>
               </div>
             </div>
@@ -243,7 +399,7 @@ function Member() {
   );
 
   return (
-    <div className="scroll-section section-member">
+    <div className="scroll-section section-people">
       <div className="section-hero">
         <div className="hero-overlay">
           <h1 className="hero-text">
@@ -272,13 +428,18 @@ function Member() {
         </div>
       </div>
 
-      <div className="member-content">
+      <div className="people-content">
         {activeTab === 'ceo' && renderCEOProfile()}
         {activeTab === 'research' && renderMembers(researchStaff, false)}
-        {activeTab === 'employee' && renderMembers(employees, true)}
+        {activeTab === 'employee' && renderAlumni(employees)}
       </div>
+
+      {/* Back to Top */}
+      <a href="#" className="people-back-to-top">
+        ↑
+      </a>
     </div>
   );
 }
 
-export default Member;
+export default People;

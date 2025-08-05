@@ -1,5 +1,5 @@
 /* 메인 영역 */
-.scroll-section.section-member {
+.scroll-section.section-people {
   display: flex;
   flex-direction: column;
   width: 100vw; /* Full viewport width */
@@ -106,8 +106,8 @@
   transform-origin: right;
 }
 
-/* ✅ 멤버 콘텐츠 영역 */
-.member-content {
+/* ✅ 피플 콘텐츠 영역 */
+.people-content {
   width: 100%;
   padding: 4rem 2rem;
   background-color: #fff;
@@ -134,8 +134,8 @@
   margin-right: auto;
 }
 
-/* CEO 멤버 카드 - hover 효과와 그림자 제거 */
-.ceo-member-card {
+/* CEO 피플 카드 - hover 효과와 그림자 제거 */
+.ceo-people-card {
   width: 100%;
   display: flex;
   align-items: flex-start;
@@ -157,7 +157,7 @@
   border-right: 1px solid rgba(124, 0, 26, 0.1);
 }
 
-.ceo-member-image {
+.ceo-people-image {
   width: 180px;
   height: 240px;
   object-fit: cover;
@@ -169,14 +169,14 @@
   text-align: center;
 }
 
-.ceo-name-info .ceo-member-role {
+.ceo-name-info .ceo-people-role {
   font-size: 1.1rem;
   font-weight: 600;
   color: #7C001A;
   margin-bottom: 0.4rem;
 }
 
-.ceo-name-info .ceo-member-name {
+.ceo-name-info .ceo-people-name {
   font-size: 2.2rem;
   font-weight: 900;
   color: black;
@@ -184,7 +184,7 @@
 }
 
 /* 우측 정보 섹션 */
-.ceo-member-info {
+.ceo-people-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -394,8 +394,8 @@
   text-stroke: 2px #7C001A;
 }
 
-/* === Research Staff & Employee 멤버 리스트 스타일 === */
-.member-list {
+/* === Research Staff & Employee 피플 리스트 스타일 === */
+.people-list {
   width: 100%;
   max-width: 1200px; /* Constrain content width */
   margin-left: auto;
@@ -406,7 +406,7 @@
 }
 
 /* 카드 개별 - hover 효과와 그림자 제거 */
-.member-card {
+.people-card {
   width: 100%;
   display: flex;
   align-items: flex-start;
@@ -417,7 +417,7 @@
   border: 2px solid rgba(124, 0, 26, 0.3);
 }
 
-.member-image {
+.people-image {
   width: 180px;
   height: 240px;
   object-fit: cover;
@@ -425,7 +425,7 @@
   flex-shrink: 0;
 }
 
-.member-info {
+.people-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -433,26 +433,87 @@
   gap: 0.5rem;
 }
 
-.member-info h3 {
+.people-info h3 {
   font-size: 2.8rem;
   font-weight: 900;
   color: black;
   margin-bottom: 1.3rem;
 }
 
-.member-info .role {
+.people-info .role {
   font-size: 1.1rem;
   font-weight: 600;
   color: #7C001A;
   margin-bottom: 0.4rem;
 }
 
-.member-info .contact {
+.people-info .contact {
   font-size: 0.95rem;
   color: #444;
   line-height: 1.4;
   white-space: pre-line;
   margin-bottom: 0.8rem;
+}
+
+/* === Alumni 스타일 === */
+.alumni-list {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); /* 한 줄에 1명씩 */
+  gap: 1.5rem;
+}
+
+.alumni-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 2px solid rgba(124, 0, 26, 0.3);
+  transition: all 0.3s ease;
+}
+
+.alumni-card:hover {
+  border-color: rgba(124, 0, 26, 0.6);
+  transform: translateY(-2px);
+}
+
+.alumni-info {
+  width: 100%;
+}
+
+.alumni-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #7C001A;;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.alumni-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.alumni-course,
+.alumni-email,
+.alumni-affiliation {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.4;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.alumni-course .label,
+.alumni-email .label,
+.alumni-affiliation .label {
+  font-weight: 600;
+  color: #111;
+  margin-right: 1rem; /* Course:와 M.S. 2023 사이에 한 칸 추가 */
 }
 
 /* 태블릿 반응형 */
@@ -469,21 +530,21 @@
     font-size: 1rem;
   }
 
-  .ceo-member-card {
+  .ceo-people-card {
     gap: 2rem;
     padding: 1.5rem;
   }
 
-  .ceo-member-image {
+  .ceo-people-image {
     width: 140px;
     height: 180px;
   }
 
-  .ceo-name-info .ceo-member-name {
+  .ceo-name-info .ceo-people-name {
     font-size: 1.8rem;
   }
 
-  .ceo-name-info .ceo-member-role {
+  .ceo-name-info .ceo-people-role {
     font-size: 1rem;
   }
 
@@ -501,17 +562,21 @@
     padding: 2rem;
   }
 
-  .member-image {
+  .people-image {
     width: 150px;
     height: 200px;
   }
 
-  .member-info h3 {
+  .people-info h3 {
     margin-bottom: 1rem;
   }
 
-  .member-info p {
+  .people-info p {
     margin-bottom: 0.4rem;
+  }
+
+  .alumni-list {
+    grid-template-columns: 1fr; /* 태블릿에서도 1열 */
   }
 }
 
@@ -536,7 +601,7 @@
     padding: 0 0.3rem;
   }
 
-  .member-content {
+  .people-content {
     padding: 2rem 1rem;
     overflow-y: hidden; /* Prevent nested vertical scrolling */
   }
@@ -547,7 +612,7 @@
     text-align: center;
   }
 
-  .ceo-member-card {
+  .ceo-people-card {
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
@@ -562,16 +627,16 @@
     width: 100%;
   }
 
-  .ceo-member-image {
+  .ceo-people-image {
     width: 150px;
     height: 200px;
   }
 
-  .ceo-name-info .ceo-member-name {
+  .ceo-name-info .ceo-people-name {
     font-size: 1.8rem;
   }
 
-  .ceo-member-info {
+  .ceo-people-info {
     width: 100%;
     gap: 1.2rem;
     text-align: center;
@@ -641,11 +706,11 @@
   }
 
   /* Research Staff & Employee 모바일 스타일 */
-  .member-list {
+  .people-list {
     overflow-y: hidden; /* Prevent nested vertical scrolling */
   }
 
-  .member-card {
+  .people-card {
     flex-direction: column;
     text-align: center;
     align-items: center;
@@ -653,12 +718,12 @@
     padding: 1.2rem;
   }
 
-  .member-image {
+  .people-image {
     width: 150px;
     height: 200px;
   }
 
-  .member-info {
+  .people-info {
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -666,17 +731,17 @@
     width: 100%;
   }
 
-  .member-info h3 {
+  .people-info h3 {
     font-size: 2rem;
     margin-bottom: 0.6rem;
   }
 
-  .member-info .role {
+  .people-info .role {
     font-size: 1rem;
     margin-bottom: 0.3rem;
   }
 
-  .member-info .contact {
+  .people-info .contact {
     font-size: 0.9rem;
     line-height: 1.4;
     margin-bottom: 0.3rem;
@@ -684,11 +749,56 @@
     word-break: break-word;
   }
 
-  .member-info .contact:last-child {
+  .people-info .contact:last-child {
     margin-bottom: 0;
+  }
+
+  /* Alumni 모바일 스타일 */
+  .alumni-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .alumni-card {
+    padding: 1rem;
+  }
+  
+  .alumni-name {
+    font-size: 1.2rem;
+  }
+  
+  .alumni-course,
+  .alumni-email,
+  .alumni-affiliation {
+    font-size: 0.85rem;
   }
 
   .label {
     display: none;
   }
+}
+
+/* ===== BACK TO TOP ===== */
+.people-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #7C001A;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.people-back-to-top:hover {
+  background-color: #5a0013;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  color: white;
+  text-decoration: none;
 }

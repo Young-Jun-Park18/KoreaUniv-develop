@@ -7,7 +7,7 @@ import ScrollToTop from './components/scrolltop/ScrollToTop';
 // pages폴더 import
 import Home from './pages/home/home';
 import Courses from './pages/courses/courses';
-import Member from './pages/member/member';
+import People from './pages/people/people'; // Member → People로 변경
 import Publications from './pages/publications/publications';
 import Research from './pages/research/research';
 
@@ -20,7 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Courses />} />
-        <Route path="/members" element={<Member />} />
+        <Route path="/people" element={<People />} /> {/* /members → /people로 변경 */}
         <Route path="/publications" element={<Publications />} />
         <Route path="/research" element={<Research />} />
       </Routes>
