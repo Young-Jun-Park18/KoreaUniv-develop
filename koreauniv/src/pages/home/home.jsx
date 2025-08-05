@@ -191,23 +191,36 @@ const Home = () => {
             ))}
           </div>
 
-          {/* Carousel Indicators */}
+          {/* Carousel Indicators - 접근성 개선 */}
           <div className="carousel-indicators">
-            {slides.map((_, index) => (
+            {slides.map((slide, index) => (
               <button
                 key={index}
+                id={`slide-indicator-${index}`}
+                name={`slide-indicator-${index}`}
                 className={index === currentSlide ? 'active' : ''}
                 onClick={() => goToSlide(index)}
-                aria-label={`Slide ${index + 1}`}
+                aria-label={`슬라이드 ${index + 1}로 이동: ${slide.title}`}
+                title={`슬라이드 ${index + 1}: ${slide.title}`}
               />
             ))}
           </div>
 
-          {/* Carousel Controls */}
-          <button className="carousel-control prev" onClick={prevSlide}>
+          {/* Carousel Controls - 접근성 개선 */}
+          <button 
+            className="carousel-control prev" 
+            onClick={prevSlide}
+            aria-label="이전 슬라이드"
+            title="이전 슬라이드"
+          >
             <span>&lt;</span>
           </button>
-          <button className="carousel-control next" onClick={nextSlide}>
+          <button 
+            className="carousel-control next" 
+            onClick={nextSlide}
+            aria-label="다음 슬라이드"
+            title="다음 슬라이드"
+          >
             <span>&gt;</span>
           </button>
         </div>
@@ -288,12 +301,12 @@ const Home = () => {
         </section>
       </div>
 
-      {/* Footer - Full Width */}
-      <footer className="footer">
-        <div className="footer-content">
-          <hr className="footer-divider" />
-          <h3 className="footer-title">Indoor Positioning Laboratory</h3>
-          <p className="footer-text">
+      {/* Home Footer - Full Width */}
+      <footer className="home-footer">
+        <div className="home-footer-content">
+          <hr className="home-footer-divider" />
+          <h3 className="home-footer-title">Indoor Positioning Laboratory</h3>
+          <p className="home-footer-text">
             Industry-Academy Building 236, Korea University, 145 Anam-ro, Seongbuk-gu, Seoul, Republic of Korea. 02841
             <br />Professor : lchoi@korea.ac.kr · swj8905@korea.ac.kr
             <br />Tel : +82-2-3290-3896
