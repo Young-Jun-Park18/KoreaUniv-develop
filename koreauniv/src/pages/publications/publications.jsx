@@ -5,6 +5,24 @@ function Publications() {
   const [activeTab, setActiveTab] = useState('journal');
   const [currentYear, setCurrentYear] = useState('2015 - Present');
 
+  // 탭이 변경될 때 즉시 년도 업데이트
+  useEffect(() => {
+    const newData = getCurrentData();
+    if (newData.length > 0) {
+      const firstYear = newData[0].year;
+      setCurrentYear(firstYear);
+      
+      // 애니메이션 효과
+      const yearDisplay = document.getElementById('publicationsCurrentYearDisplay');
+      if (yearDisplay) {
+        yearDisplay.classList.add('active');
+        setTimeout(() => {
+          yearDisplay.classList.remove('active');
+        }, 300);
+      }
+    }
+  }, [activeTab]);
+
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll('.publications-year-section');
@@ -12,7 +30,7 @@ function Publications() {
       const windowHeight = window.innerHeight;
       const triggerPoint = scrollTop + windowHeight * 0.4;
 
-      let activeYear = '2015 - Present';
+      let activeYear = getCurrentData()[0]?.year || '2015 - Present';
 
       sections.forEach(section => {
         const rect = section.getBoundingClientRect();
@@ -42,7 +60,7 @@ function Publications() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [currentYear]);
+  }, [currentYear, activeTab]);
   
   // journal
   const journalPublications = [
@@ -1205,6 +1223,10 @@ function Publications() {
     }
   };
 
+  const handleTabChange = (newTab) => {
+    setActiveTab(newTab);
+  };
+
   return (
     <div className="page-wrapper">
       <div className="publications-timeline-page">
@@ -1214,25 +1236,25 @@ function Publications() {
             <h1 className="publications-hero-text">{getHeroTitle()}</h1>
             <h2 className="publications-hero-subtitle">Indoor Positioning Laboratory</h2>
             <p className="publications-hero-description">
-              Explore our research contributions in indoor positioning, sensor networks, and related fields through our published journals, conference papers, and patents.
+              Explore our research contributions in indoor positioning, sensor networks, and related fields.
             </p>
           </div>
           <div className="publications-hero-button-container">
             <button
               className={`publications-hero-button ${activeTab === 'journal' ? 'active' : ''}`}
-              onClick={() => setActiveTab('journal')}
+              onClick={() => handleTabChange('journal')}
             >
               <span>Journal</span>
             </button>
             <button
               className={`publications-hero-button ${activeTab === 'conference' ? 'active' : ''}`}
-              onClick={() => setActiveTab('conference')}
+              onClick={() => handleTabChange('conference')}
             >
               <span>Conference</span>
             </button>
             <button
               className={`publications-hero-button ${activeTab === 'patents' ? 'active' : ''}`}
-              onClick={() => setActiveTab('patents')}
+              onClick={() => handleTabChange('patents')}
             >
               <span>Patents</span>
             </button>
