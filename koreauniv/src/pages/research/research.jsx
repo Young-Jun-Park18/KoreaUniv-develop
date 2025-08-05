@@ -557,9 +557,6 @@ const Research = () => {
       </a>
 
       {/* Research Footer - Full Width */}
-      <footer className="research-footer"></footer>
-
-      {/* Research Footer - Full Width */}
       <footer className="research-footer">
         <div className="research-footer-content">
           <hr className="research-footer-divider" />

@@ -300,7 +300,12 @@ const Home = () => {
           </h6>
         </section>
       </div>
-
+            
+      {/* Back to Top 버튼 */}
+      <a href="#" className="home-back-to-top">
+        ↑
+      </a>
+      
       {/* Home Footer - Full Width */}
       <footer className="home-footer">
         <div className="home-footer-content">
