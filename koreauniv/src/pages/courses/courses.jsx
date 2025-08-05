@@ -126,6 +126,23 @@ const Courses = () => {
     return activeTab === 'undergraduate' ? 'Undergraduate Courses' : 'Graduate Courses';
   };
 
+  // Hero 섹션의 텍스트를 탭에 따라 동적으로 반환하는 함수
+  const getHeroContent = () => {
+    if (activeTab === 'undergraduate') {
+      return {
+        title: 'Undergraduate Courses',
+        subtitle: '학부 교과목',
+        description: '컴퓨터 과학의 기초부터 응용까지 체계적으로 학습할 수 있는 학부 교과목들입니다.'
+      };
+    } else {
+      return {
+        title: 'Graduate Courses',
+        subtitle: '대학원 교과목',
+        description: '최신 연구 동향과 고급 주제를 다루는 대학원 교과목들입니다.'
+      };
+    }
+  };
+
   const handleCourseSelect = (course) => {
     setSelectedCourse(course);
     // 히스토리에 상태 추가 (뒤로가기 가능하게)
@@ -148,6 +165,8 @@ const Courses = () => {
     console.log(`Opening: ${downloadUrl}`);
   };
 
+  const heroContent = getHeroContent();
+
   return (
     <div className="page-wrapper">
       <div className="courses-page">
@@ -155,11 +174,6 @@ const Courses = () => {
         <section className="courses-hero-section">
           <div className="courses-hero-overlay">
             <h1 className="courses-hero-text">Courses</h1>
-            <h3 className="courses-hero-subtitle">고려대학교 실내측위 연구실 교과목</h3>
-            <p className="courses-hero-description">
-              컴퓨터 시스템, 실내 위치 인식, 무선 네트워크, 시스템 보안 등 다양한 분야의 교과목을 제공합니다.<br />
-              학부과정과 대학원과정으로 나누어 체계적이고 심화된 교육을 실시하고 있습니다.
-            </p>
           </div>
           <div className="courses-hero-button-container">
             <button
@@ -277,6 +291,19 @@ const Courses = () => {
           )}
         </div>
       </div>
+
+      {/* Footer - Full Width */}
+      <footer className="footer">
+        <div className="footer-content">
+          <hr className="footer-divider" />
+          <h3 className="footer-title">Indoor Positioning Laboratory</h3>
+          <p className="footer-text">
+            Industry-Academy Building 236, Korea University, 145 Anam-ro, Seongbuk-gu, Seoul, Republic of Korea. 02841
+            <br />Professor : lchoi@korea.ac.kr · swj8905@korea.ac.kr
+            <br />Tel : +82-2-3290-3896
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
