@@ -236,6 +236,30 @@ function Publications() {
           lang: 'en',
           tags: [{ text: 'International', type: 'primary' }],
         },
+        {
+          title: 'An effective tool for recommending opinion leaders in SNS',
+          desc: 'Byung Joon Park, Seok-Won Hong and Lynn Choi<br>The INFORMATION-AN INTERNATIONAL INTERDISCIPLINARY JOURNAL',
+          lang: 'en',
+          tags: [{ text: 'International', type: 'primary' }],
+        },
+        {
+          title: 'A+MAC: A Streamlined Variable Duty-Cycle MAC Protocol for Wireless Sensor Networks',
+          desc: 'Sang Hoon Lee, Byung Joon Park and Lynn Choi<br>The SENSOR LETTERS',
+          lang: 'en',
+          tags: [{ text: 'International', type: 'primary' }],
+        },
+        {
+          title: 'Stability and Cost: Path Quality Metrics for Mobile Adhoc Networks',
+          desc: 'Sang Hoon Lee, Yong Soo Bae, Byung Joon Park, and Lynn Choi<br>The INFORMATION JOURNAL',
+          lang: 'en',
+          tags: [{ text: 'International', type: 'primary' }],
+        },
+        {
+          title: 'On-Demand Radio Wave Sensor for Wireless Sensor Networks: Towards a Zero Idle Listening and Zero Sleep Delay MAC Protocol',
+          desc: 'Sang Hoon Lee, Yong Soo Bae and Lynn Choi<br>Journal of Communications and Networks',
+          lang: 'en',
+          tags: [{ text: 'International', type: 'primary' }],
+        },
       ],
     },
     {
@@ -403,58 +427,6 @@ function Publications() {
         {
           title: 'Interprocedural Array Data-Flow Analysis for Cache Coherence',
           desc: 'Lynn Choi, P. C. Yew<br>Languages and Compilers for Parallel Computing, Lecture Notes in Computer Science, Springer-Verlag Press, pages 81-95, 1995',
-          lang: 'en',
-          tags: [{ text: 'International', type: 'primary' }],
-        },
-      ],
-    },
-    {
-      year: '2021',
-      items: [
-        {
-          title: 'Low-Memory Indoor Positioning System for Standalone Embedded Hardware',
-          desc: 'Han Jun Bae and Lynn Choi<br>Electronics (Special Issue: Real-Time Control of Embedded Systems), Vol 10, No.9, 1059, 29 April 2021',
-          lang: 'en',
-          tags: [{ text: 'International', type: 'primary' }],
-        },
-      ],
-    },
-    {
-      year: '2020',
-      items: [
-        {
-          title: 'Filter cache: filtering useless cache blocks for a small but efficient shared last-level cache',
-          desc: 'Han Jun Bae and Lynn Choi<br>The Journal of Supercomputing, Vol 76, No.10, pp 7521-7544, OCT 2020',
-          lang: 'en',
-          tags: [{ text: 'International', type: 'primary' }],
-        },
-      ],
-    },
-    // 누락된 논문들 추가
-    {
-      year: 'undated',
-      items: [
-        {
-          title: 'An effective tool for recommending opinion leaders in SNS',
-          desc: 'Byung Joon Park, Seok-Won Hong and Lynn Choi<br>The INFORMATION-AN INTERNATIONAL INTERDISCIPLINARY JOURNAL',
-          lang: 'en',
-          tags: [{ text: 'International', type: 'primary' }],
-        },
-        {
-          title: 'A+MAC: A Streamlined Variable Duty-Cycle MAC Protocol for Wireless Sensor Networks',
-          desc: 'Sang Hoon Lee, Byung Joon Park and Lynn Choi<br>The SENSOR LETTERS',
-          lang: 'en',
-          tags: [{ text: 'International', type: 'primary' }],
-        },
-        {
-          title: 'Stability and Cost: Path Quality Metrics for Mobile Adhoc Networks',
-          desc: 'Sang Hoon Lee, Yong Soo Bae, Byung Joon Park, and Lynn Choi<br>The INFORMATION JOURNAL',
-          lang: 'en',
-          tags: [{ text: 'International', type: 'primary' }],
-        },
-        {
-          title: 'On-Demand Radio Wave Sensor for Wireless Sensor Networks: Towards a Zero Idle Listening and Zero Sleep Delay MAC Protocol',
-          desc: 'Sang Hoon Lee, Yong Soo Bae and Lynn Choi<br>Journal of Communications and Networks',
           lang: 'en',
           tags: [{ text: 'International', type: 'primary' }],
         },
