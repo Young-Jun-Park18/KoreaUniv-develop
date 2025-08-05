@@ -551,6 +551,18 @@ const Research = () => {
           </div>
         )}
       </div>
+      {/* Research Footer - Full Width */}
+      <footer className="research-footer">
+        <div className="research-footer-content">
+          <hr className="research-footer-divider" />
+          <h3 className="research-footer-title">Indoor Positioning Laboratory</h3>
+          <p className="research-footer-text">
+            Industry-Academy Building 236, Korea University, 145 Anam-ro, Seongbuk-gu, Seoul, Republic of Korea. 02841
+            <br />Professor : lchoi@korea.ac.kr · swj8905@korea.ac.kr
+            <br />Tel : +82-2-3290-3896
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
