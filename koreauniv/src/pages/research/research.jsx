@@ -392,16 +392,6 @@ const Research = () => {
         <section className="research-hero-section">
           <div className="research-hero-overlay">
             <h1 className="research-hero-text">Introduction</h1>
-            <h3 className="research-hero-subtitle">고려대학교 실내측위 연구실</h3>
-            <p className="research-hero-description">
-              고려대학교 컴퓨터시스템 연구실은 IoT, 실내 위치 인식, 무선 애드 혹 저전력 통신 프로토콜, 멀티코어 CPU 칩 설계 등 컴퓨터 시스템
-              전반에서의 다양한 아키텍처 및 알고리즘 분야를 폭넓게 연구하고 있다.<br /><br />
-              본 연구실의 지도 교수인 최린 교수는 Intel 사에서 고성능 64 비트 마이크로프로세서인 Itanium 프로세서 개발 팀에서 코어 파이프라인의
-              설계 및 검증을 다 년간 수행한 개발 경험이 있으며 University of Illinois at Urbana-Champaign 대학 및
-              University of California at Irvine 대학에서 슈퍼컴퓨터, 병렬 프로세서 구조, 병렬 컴파일러, 고성능 마이크로프로세서
-              구조 연구 등 컴퓨터 시스템 분야에서의 연구 및 개발 경험을 바탕으로 연구를 지도해 나가고 있다. 본 연구실에서 현재 수행하고 있는 연구 내용은
-              다음과 같다.
-            </p>
           </div>
           <div className="research-hero-button-container">
             <button
@@ -422,23 +412,6 @@ const Research = () => {
         {/* Research Area Content */}
         {activeTab === 'area' && (
           <div className="research-content">
-            {/* Introduction Section */}
-            <section className="research-intro-section">
-              <div className="research-intro-content">
-                <h2 className="research-intro-title">Introduction</h2>
-                <h3 className="research-intro-subtitle">고려대학교 실내측위 연구실</h3>
-                <p className="research-intro-description">
-                  고려대학교 컴퓨터시스템 연구실은 IoT, 실내 위치 인식, 무선 애드 혹 저전력 통신 프로토콜, 멀티코어 CPU 칩 설계 등 컴퓨터 시스템
-                  전반에서의 다양한 아키텍처 및 알고리즘 분야를 폭넓게 연구하고 있다.<br /><br />
-                  본 연구실의 지도 교수인 최린 교수는 Intel 사에서 고성능 64 비트 마이크로프로세서인 Itanium 프로세서 개발 팀에서 코어 파이프라인의
-                  설계 및 검증을 다 년간 수행한 개발 경험이 있으며 University of Illinois at Urbana-Champaign 대학 및
-                  University of California at Irvine 대학에서 슈퍼컴퓨터, 병렬 프로세서 구조, 병렬 컴파일러, 고성능 마이크로프로세서
-                  구조 연구 등 컴퓨터 시스템 분야에서의 연구 및 개발 경험을 바탕으로 연구를 지도해 나가고 있다. 본 연구실에서 현재 수행하고 있는 연구 내용은
-                  다음과 같다.
-                </p>
-              </div>
-            </section>
-
             {/* Research Overview */}
             <section className="research-overview">
               <div className="research-overview-content">
