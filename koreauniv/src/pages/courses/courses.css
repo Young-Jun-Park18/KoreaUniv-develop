@@ -211,7 +211,7 @@
 
 .course-card-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   margin-bottom: 1.5rem;
 }
@@ -226,14 +226,7 @@
   font-family: 'Monaco', 'Menlo', monospace;
 }
 
-.course-semester {
-  background: #f1f5f9;
-  color: #475569;
-  padding: 0.3rem 0.8rem;
-  border-radius: 10px;
-  font-size: 0.85rem;
-  font-weight: 600;
-}
+
 
 .course-title {
   font-size: 1.5rem;

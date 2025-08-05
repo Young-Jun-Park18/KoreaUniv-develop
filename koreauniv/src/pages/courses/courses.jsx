@@ -28,7 +28,6 @@ const Courses = () => {
       title: 'Digital System Design',
       description: '디지털 시스템 설계의 기본 원리와 방법론을 학습합니다.',
       professor: '최린',
-      semester: '1학기',
       materials: [
         // KECE207 실제 파일들 (원본 HTML 기준)
         '1.Digital_Systems_and_Binary_Numbers.ppt',
@@ -45,7 +44,6 @@ const Courses = () => {
       title: 'Computer Architecture',
       description: '컴퓨터 구조의 기본 개념과 설계 원리를 학습합니다.',
       professor: '최린',
-      semester: '2학기',
       materials: [
         // KECE343 실제 파일들 (원본 HTML 기준)
         '1-Introduction.ppt',
@@ -65,7 +63,6 @@ const Courses = () => {
       title: 'Operating System',
       description: '운영체제의 구조와 동작 원리를 학습합니다.',
       professor: '최린',
-      semester: '1학기',
       materials: [
         // KECE340 실제 파일들 (원본 HTML 기준)
         '1.OS_Overview.ppt',
@@ -91,7 +88,6 @@ const Courses = () => {
       title: 'Microprocessor Microarchitecture',
       description: '마이크로프로세서의 마이크로아키텍처 설계 및 최적화 기법을 학습합니다.',
       professor: '최린',
-      semester: '1학기',
       materials: [
         // ECE519 실제 파일들 (원본 HTML 기준)
         'Microarchitecture_-_1._Branch_Prediction.ppt',
@@ -110,7 +106,6 @@ const Courses = () => {
       title: 'Ubiquitous Networks',
       description: '유비쿼터스 환경에서의 네트워크 기술과 응용을 연구합니다.',
       professor: '최린',
-      semester: '2학기',
       materials: [
         // ECE656 실제 파일들 (원본 HTML 기준)
         '1.OS_Overview.ppt'
@@ -223,7 +218,6 @@ const Courses = () => {
                     <div key={course.id} className="course-card" onClick={() => handleCourseSelect(course)}>
                       <div className="course-card-header">
                         <div className="course-code">{course.code}</div>
-                        <div className="course-semester">{course.semester}</div>
                       </div>
                       <h3 className="course-title">{course.title}</h3>
                       <p className="course-description">{course.description}</p>
