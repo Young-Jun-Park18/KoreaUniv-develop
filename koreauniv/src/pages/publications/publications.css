@@ -303,28 +303,6 @@
   font-family: 'Pretendard-Regular', sans-serif;
 }
 
-.publications-card-hover-indicator {
-  position: absolute;
-  bottom: 20px;
-  right: 25px;
-  opacity: 0;
-  transition: all 0.3s ease;
-  font-size: 0.85rem;
-  color: var(--brand-blue);
-  font-weight: 600;
-  background: #f8fafc;
-  padding: 6px 12px;
-  border-radius: 15px;
-  border: 1px solid #e2e8f0;
-  font-family: 'Pretendard-Regular', sans-serif;
-}
-
-.publications-card-floating-category:hover .publications-card-hover-indicator {
-  opacity: 1;
-  transform: translateX(-5px);
-  border-color: var(--brand-blue);
-}
-
 /* ===== FOOTER ===== */
 .publications-footer {
   min-height: 17rem;

@@ -1485,7 +1485,6 @@ const getCurrentData = () => {
                             className="publications-card-desc"
                             dangerouslySetInnerHTML={{ __html: item.desc }}
                           />
-                          <div className="publications-card-hover-indicator">자세히 보기 →</div>
                         </div>
                       </div>
                     ))}
