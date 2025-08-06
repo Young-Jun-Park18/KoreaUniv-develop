@@ -25,10 +25,10 @@
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 5;
-  background-image: url('/images/image_19.png');
+  background-image: url('/images/publicationsBg.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center;
   min-height: 25rem;
   z-index: 5;
 }
@@ -439,6 +439,7 @@
 }
 
 @media (max-width: 480px) {
+  
   .publications-hero-text {
     font-size: 1.8rem;
   }
@@ -556,24 +557,6 @@
   }
 }
 
-@media (max-width: 320px) {
-  .publications-hero-button {
-    font-size: 0.7rem;
-    padding: 0 0.2rem;
-  }
-
-  .publications-card-floating-category {
-    padding: 15px;
-  }
-
-  .publications-card-title {
-    font-size: 0.9rem;
-  }
-
-  .publications-card-desc {
-    font-size: 0.8rem;
-  }
-}
 
 /* ===== LANGUAGE SPECIFIC FONTS ===== */
 :lang(en) {

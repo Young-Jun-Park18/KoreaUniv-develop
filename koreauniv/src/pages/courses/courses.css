@@ -32,7 +32,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.35);
   z-index: 1;
 }
 
@@ -524,7 +524,11 @@
   }
 }
 
+
+
+
 @media (max-width: 480px) {
+
   .courses-hero-text {
     font-size: 1.8rem;
   }
@@ -690,6 +694,10 @@
   .courses-hero-section {
     background-image: url('/images/mobileBg.jpg');
   }
+
+  .courses-hero-section::before {
+  background: rgba(0, 0, 0, 0.52);
+}
 
 }
 
