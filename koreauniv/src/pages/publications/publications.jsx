@@ -68,6 +68,17 @@ function Publications() {
 
   
   const journalPublications = [
+      {
+      year: '2025',
+      items: [
+        {
+          title: 'Universal Vector Calibration for Orientation-Invariant 3D Sensor Data',
+          desc: 'Wonjoon Son and Lynn Choi<br>Sensors, Vol. 25, No. 15, 4609, 1 August 2025.',
+          lang: 'en',
+          tags: [{ text: 'International', type: 'primary' }],
+        },
+      ],
+    },
     {
       year: '2021',
       items: [
@@ -76,6 +87,12 @@ function Publications() {
           desc: 'Han Jun Bae and Lynn Choi<br>Electronics (Special Issue: Real-Time Control of Embedded Systems), Vol 10, No.9, 1059, 29 April 2021',
           lang: 'en',
           tags: [{ text: 'International', type: 'primary' }],
+        },
+        {
+          title: '실제 이동에 따른 자기장 랜덤성을 반영한 LSTM 기반 실내 위치 인식 시스템',
+          desc: '배한준, 최 린<br>한국차세대컴퓨팅학회 논문지 2021년 1월, 페이지 30-38, 2021년',
+          lang: 'en',
+          tags: [{ text: 'Domestic', type: 'warning' }],
         },
       ],
     },
@@ -442,6 +459,80 @@ function Publications() {
 
   // -----------------conferencePublications --------------
   const conferencePublications = [
+    {
+      year: '2025',
+      items: [
+        {
+          title: 'Scalable and Stable WiFi Localization (SSWLoc): Through On-Demand Map Extraction and Adaptive Similarity Weighting Based on Signal Strength',
+          desc: 'Min Hyeok Choi and Lynn Choi<br>In the Proceedings of 2025 IEEE Consumer Communications & Networking Conference (CCNC), 10-13 Jan 2025, Las Vegas, USA',
+          lang: 'ko',
+          tags: [{ text: 'International', type: 'primary' }],
+        },
+        {
+          title: '제로맵 실내측위 기술: 도면 기반 실내측위 시스템 및 3D 디지털 트윈 자동 생성 플랫폼',
+          desc: '손원준, 최 린<br>대한토목학회 2025 KSCE Convention, 2025년 11월',
+          lang: 'ko',
+          tags: [{ text: 'Domestic', type: 'warning' }],
+        },
+      ],
+    },
+    {
+      year: '2024',
+      items: [
+        {
+          title: '측위 결과 기반 사물 및 보행자 이동 방향 추정 및 자이로스코프 센서 누적 오차 보정에 관한 연구',
+          desc: '최민혁, 최 린<br>한국통신학회 2024 한국통신학회 추계종합학술발표회, 2024년 11월.',
+          lang: 'ko',
+          tags: [{ text: 'Domestic', type: 'warning' }],
+        },
+        {
+          title: 'Unity 기반 3D 실내 내비게이션',
+          desc: '윤덕원, 최 린<br>한국통신학회 2024 한국통신학회 추계종합학술발표회, 2024년 11월.',
+          lang: 'ko',
+          tags: [{ text: 'Domestic', type: 'warning' }],
+        },
+        {
+          title: '초정밀 지자기 실내측위 기반 해군 함정의 실시간 디지털 트윈 서비스 및 AR 글래스를 이용한 대테러 작전 수행 시스템 연구',
+          desc: '손원준, 최 린<br>한국군사과학기술학회 2024 종합학술대회 2024년 6월.',
+          lang: 'ko',
+          tags: [{ text: 'Domestic', type: 'warning' }],
+        },
+      ],
+    },
+    {
+      year: '2023',
+      items: [
+        {
+          title: 'Indoor Smart Navigation for the Transportation Vulnerable using Geomagnetic Field Based Indoor Positioning System',
+          desc: 'Won Joon Son, Jin Won Seong, Young Woong Ko and Lynn Choi<br>In the Proceedings of 2023 International Conference of the Eastern Asia Society for Transportation Studies (ICNGC), 4-7 Sep 2023, Shah Alam, Malaysia',
+          lang: 'ko',
+          tags: [{ text: 'International', type: 'primary' }],
+        },
+        {
+          title: '3차원 스캐닝 어플리케이션을 활용한 3차원 실내 모델링 기법 제안 및 평가',
+          desc: '임바다, 최 린<br>한국통신학회 2023 한국통신학회 추계종합학술발표회, 2023년 11월.',
+          lang: 'ko',
+          tags: [{ text: 'Domestic', type: 'warning' }],
+        },
+        {
+          title: '교통 약자를 위한 역사 내 스마트 내비게이션',
+          desc: '성진원, 손원준, 최 린<br>한국통신학회 2023 한국통신학회 추계종합학술발표회, 2023년 11월.',
+          lang: 'ko',
+          tags: [{ text: 'Domestic', type: 'warning' }],
+        },
+      ],
+    },
+    {
+      year: '2022',
+      items: [
+        {
+          title: '초음파를 이용한 엘리베이터 문의 개방 여부 판단',
+          desc: '유수민, 최 린<br>한국차세대컴퓨팅학회 2022 한국차세대컴퓨팅학회 춘계학술대회 2022년 5월.',
+          lang: 'ko',
+          tags: [{ text: 'Domestic', type: 'warning' }],
+        },
+      ],
+    },
     {
       year: '2021',
       items: [
@@ -1136,34 +1227,133 @@ function Publications() {
   // ----------------- patents -----------------
   const patents = [
     {
-      year: '2021',
+      year: '2025',
       items: [
         {
-          title: '자기장 지도 획득 시스템, 장치 및 방법',
-          desc: '출원번호: 10-2021-0003463 (KR)<br>Inventors: 최린, 황승규<br>출원일: 2021년 1월 11일',
+          title: '사용자의 위치를 추정하기 위한 방법, 장치 및 기록 매체',
+          desc: '출원번호 : 10-2025-0095228 (KR)<br>Inventors : 최린,손원준<br>출원일 : 2025년 7월 15일',
           lang: 'ko',
           tags: [{ text: 'Patent', type: 'success' }],
         },
         {
-          title: '기압과 자기장을 이용한 사용자가 위치한 층 식별 장치 및 방법',
-          desc: '출원번호: 10-2021-0003480 (KR)<br>Inventors: 최린, 배한준, 황승규<br>출원일: 2021년 1월 11일',
+          title: '사용자의 이동 방향을 추정하기 위한 방법, 장치 및 기록 매체',
+          desc: '출원번호 : 10-2025-0036678 (KR)<br>Inventors : 최린,손원준<br>출원일 : 2025년 3월 21일',
           lang: 'ko',
           tags: [{ text: 'Patent', type: 'success' }],
         },
         {
-          title: '인공 신경망을 이용한 자기장 기반 위치 추정 모델 생성 장치 및 방법',
-          desc: '등록번호: 10-2243917 (KR)<br>Inventors: 최린, 장호준<br>등록일: 2021년 4월 19일',
+          title: '실내 내비게이션 서비스 방법 및 실내 내비게이션 서비스 시스템',
+          desc: '출원번호 : 10-2025-0009641 (KR)<br>Inventors : 최린,손원준,윤덕원<br>출원일 : 2025년 1월 22일',
           lang: 'ko',
           tags: [{ text: 'Patent', type: 'success' }],
         },
       ],
     },
     {
-      year: '2020',
+      year: '2024',
       items: [
         {
+          title: '실내 측위를 위한 저전력 방안 및 맵 데이터 계층적 분할 로드 방안',
+          desc: '등록번호 : 10-2747637 (KR)<br>Inventors : 최린,배한준<br>등록일 : 2024년 12월 23일',
+          lang: 'ko',
+          tags: [{ text: 'Patent', type: 'success' }],
+        },
+        {
+          title: 'Wi-Fi 기반 실내 측위 방법, 장치 및 프로그램',
+          desc: '출원번호 : 10-2024-0147120 (KR), PCT/KR2024/016364 (PCT)<br>Inventors : 최린,최민혁,손원준<br>출원일 : 2024년 10월 25일',
+          lang: 'ko',
+          tags: [{ text: 'Patent', type: 'success' }],
+        },
+        {
+          title: '실내 측위를 위한 맵 압축 방안',
+          desc: '등록번호 : 10-2695998 (KR)<br>Inventors : 최린,배한준<br>등록일 : 2024년 8월 12일',
+          lang: 'ko',
+          tags: [{ text: 'Patent', type: 'success' }],
+        },
+        {
+          title: '자기장 지도 획득 시스템, 장치 및 방법',
+          desc: '등록번호 : 10-2690988 (KR)<br>Inventors : 최린,황승규<br>등록일 : 2024년 7월 29일',
+          lang: 'ko',
+          tags: [{ text: 'Patent', type: 'success' }],
+        },
+      ],
+    },
+    {
+      year: '2023',
+      items: [
+        {
+          title: '기압과 자기장을 이용한 사용자가 위치한 층 식별 장치 및 방법',
+          desc: '등록번호 : 10-2507196 (KR)<br>Inventors : 최린,배한준,황승규<br>등록일 : 2023년 3월 2일',
+          lang: 'ko',
+          tags: [{ text: 'Patent', type: 'success' }],
+        },
+        {
+          title: 'Map compression method for indoor positioning',
+          desc: '출원번호 : 22846882.3 (USA)<br>Inventors : 최린,배한준<br>출원일 : 2023년 1월 30일',
+          lang: 'ko',
+          tags: [{ text: 'Patent', type: 'success' }],
+        },
+        {
+          title: 'Map compression method for indoor positioning',
+          desc: '출원번호 : 18/018,153 (USA) (USA)<br>Inventors : 최린,배한준<br>출원일 : 2023년 1월 26일',
+          lang: 'ko',
+          tags: [{ text: 'Patent', type: 'success' }],
+        },
+      ],
+    },
+    {
+      year: '2022',
+      items: [
+        {
+          title: 'Low-power method and map data hierarchical split loading method for indoor positioning',
+          desc: '출원번호 : 22799837.4 (EU)<br>Inventors : 최린,배한준<br>출원일 : 2022년 11월 14일',
+          lang: 'ko',
+          tags: [{ text: 'Patent', type: 'success' }],
+        },
+        {
+          title: 'Low-power method and map data hierarchical split loading method for indoor positioning',
+          desc: '출원번호 : 17/923,826 (USA)<br>Inventors : 최린,배한준<br>출원일 : 2022년 11월 7일',
+          lang: 'ko',
+          tags: [{ text: 'Patent', type: 'success' }],
+        },
+        {
+          title: 'Device and method for generating geomagnetic sensor based location estimation model using artificial neural networks',
+          desc: '등록번호 : 11448494 (USA)<br>Inventors : 최린,장호준<br>등록일 : 2022년 9월 20일',
+          lang: 'ko',
+          tags: [{ text: 'Patent', type: 'success' }],
+        },
+        {
+          title: 'Device and method for floor recognition using atmospheric pressure and geomagnetic field',
+          desc: '출원번호 : PCT/KR2022/000301 (PCT)<br>Inventors : 최린,배한준,황승규<br>출원일 : 2022년 1월 7일',
+          lang: 'ko',
+          tags: [{ text: 'Patent', type: 'success' }],
+        },
+        {
+          title: 'Low-power method and map data hierarchical split loading method for indoor positioning',
+          desc: '출원번호 : PCT/KR2022/000062 (PCT)<br>Inventors : 최린,배한준<br>출원일 : 2022년 1월 4일',
+          lang: 'ko',
+          tags: [{ text: 'Patent', type: 'success' }],
+        },
+        {
+          title: 'Map compression method for indoor positioning',
+          desc: '출원번호 : PCT/KR2022/000063 (PCT)<br>Inventors : 최린,배한준<br>출원일 : 2022년 1월 4일',
+          lang: 'ko',
+          tags: [{ text: 'Patent', type: 'success' }],
+        },
+      ],
+    },
+    {
+      year: '2021',
+      items: [
+        {
+          title: '인공 신경망을 이용한 자기장 기반 위치 추정 모델 생성 장치 및 방법',
+          desc: '등록번호: 10-2243917 (KR)<br>Inventors: 최린, 장호준<br>등록일: 2021년 4월 19일',
+          lang: 'ko',
+          tags: [{ text: 'Patent', type: 'success' }],
+        },
+        {
           title: '자기장 기반 위치측정방법 및 위치측정장치',
-          desc: '출원번호: 10-2020-0043282 (KR)<br>Inventors: 최린, 손원준<br>출원일: 2020년 4월 9일',
+          desc: '등록번호 : 10-2337003 (KR)<br>Inventors : 최린,손원준<br>등록일 : 2021년 12월 3일',
           lang: 'ko',
           tags: [{ text: 'Patent', type: 'success' }],
         },
