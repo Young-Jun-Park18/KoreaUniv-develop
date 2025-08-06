@@ -167,7 +167,6 @@
   width: min(90%, 900px);
   height: 75%;
   border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .image-container {
@@ -194,7 +193,6 @@
   height: 75%;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 /* 슬라이드 헤더 및 제목 스타일 */
@@ -208,7 +206,6 @@
   padding: 1.5rem 2rem;
   border-radius: 15px;
   margin-bottom: 2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .slide-title {
@@ -781,6 +778,7 @@
     width: 35px;
     height: 35px;
     font-size: 1rem;
+    margin-top: 50px;
   }
 
   .carousel-control.prev {

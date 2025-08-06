@@ -9,74 +9,65 @@ const Home = () => {
     {
       type: 'video',
       src: 'https://www.youtube.com/embed/-lI_BdjyUqY?si=kDU6XSvLLeBZ1g4r',
-      title: '새로운 실내 측위 기술 소개 영상'
+      title: '제로맵 엔진 기반 실시간 3D 디지털 트윈 관제'
     },
     {
       type: 'video',
       src: 'https://www.youtube.com/embed/Z_yduvIs0ss?si=kDU6XSvLLeBZ1g4r',
-      title: '실내 측위 기술 데모 영상'
+      title: '도면 기반 3D 디지털 트윈 자동 생성'
     },
     {
       type: 'video',
       src: 'https://www.youtube.com/embed/k-OBdaatTNc?si=kDU6XSvLLeBZ1g4r&start=28',
-      title: '교통약자를 위한 실내 측위 기술 소개'
+      title: '지구자기장 기반 실내 3D 내비게이션'
     },
     {
       type: 'video',
       src: 'https://www.youtube.com/embed/_a3YOjTsJnI?si=POClzdmv06MaqcXu',
-      title: '실내 측위 기술 데모'
+      title: '수원역 실내 3D 내비게이션'
     },
     {
       type: 'video',
       src: 'https://www.youtube.com/embed/_2ag0gWkJLc?si=PKKeH9IlWAGxgqbP',
-      title: '실내 측위 시스템 소개'
+      title: 'SK미래관 실시간 3D 디지털 트윈 관제 데모'
     },
     {
       type: 'image',
       src: '/images/main0_0.png',
-      title: '[ 고려대 뉴스 ] LG 화학 플랜트에서 1미터 이내 측위 오차의 세계 최고 수준 실내측위 시스템 구축',
+      title: 'LG 화학 여수 플랜트, 제로맵 실내측위 시스템 구축',
       description: 'LG 화학 플랜트에서 1미터 이내 측위 오차의 세계 최고 수준 실내측위 시스템 구축 최린 교수팀, 독자적인 경량화 측위 엔진 기술 적용',
-      link: 'https://www.korea.ac.kr/user/boardList.do?boardId=474633&command=albumView&page=1&boardSeq=495709&id=university_060108000000'
+      link: 'https://www.asiatime.co.kr/article/20230615500331#_enliple#_mobwcvr'
     },
     {
       type: 'image',
       src: '/images/main1_1.jpg',
-      title: '[ 고려대 뉴스 ] 최린 교수님, 2022 대한민국 산업기술진흥 유공자 선정',
+      title: '대한민국 산업기술대전 산업기술진흥유공 대통령 표창',
       description: '전기전자공학부 최린 교수가 \'2022 대한민국 산업기술 R&D 대전\'에서 기술개발부문에서 산업기술진흥유공 정부포상자(훈격: 대통령표창)로 선정.',
-      link: 'https://www.korea.ac.kr/user/boardList.do?boardId=474633&siteId=university&page=2&search=&column=&boardType=02&listType=&id=university_060108000000&parent=&boardSeq=494187&command=albumView'
+      link: 'https://www.yna.co.kr/view/RPR20221208004100353'
     },
     {
       type: 'image',
       src: '/images/main1_2.jpg',
-      title: '[ 고려대 뉴스 ] 세계 최초 수도권 지하철/KTX 역사 실내측위 시스템 및 실내 내비게이션 앱 개발 착수',
-      description: '최린 교수 연구팀, 딥러닝 기반의 지자기 실내측위 기술을 이용 지하철 역사 내 교통약자 위한 맞춤형스마트 내비게이션 개발 계획',
-      link: 'https://www.korea.ac.kr/user/boardList.do?boardId=474633&siteId=university&page=1&boardType=02&listType=&id=university_060108000000&parent=&boardSeq=493672&command=albumView&totalYn='
+      title: '세계 최초 수도권 지하철/KTX 역사 실내측위 시스템 및 실내 내비게이션 앱 개발 착수',
+      description: '최린 교수 연구팀, 딥러닝 기반의 지자기 실내측위 기술을 이용 지하철 역사 내 교통약자 위한 맞춤형스마트 내비게이션 개발 계획'
     },
     {
       type: 'image',
       src: '/images/main1_3.jpg',
-      title: '[ 고려대 뉴스 ] NET 신기술 인증',
+      title: 'NET 신기술 인증',
       description: '딥러닝 기술 사용 자기장 기반 실내측위, NET 신기술 인증',
-      link: '/news1'
-    },
-    {
-      type: 'image',
-      src: '/images/main1_4.jpg',
-      title: '[ 고려대 뉴스 ] 스마트폰만으로 대형 실내 공간에서 실내 측위 가능',
-      description: '최린 교수팀 "딥러닝 기반 지자기 기반 실내측위 기술" NET 신기술인증받아 공항, 쇼핑몰, 박물관, 공장 등 다양한 실내 공간에서 시범 사이트 구축 추진',
-      link: 'https://www.korea.ac.kr/user/boardList.do?boardId=474633&siteId=university&page=1&search=&column=&boardType=02&listType=&id=university_060108000000&parent=&boardSeq=489015&command=albumView'
     },
     {
       type: 'image',
       src: '/images/main555.jpeg',
-      title: '[ 정보 통신 신문 ] 스마트폰만으로 실내 공간 위치 정밀 확인',
+      title: '스마트폰만으로 실내 공간 위치 정밀 확인',
       description: '최린 교수 연구팀은 \'딥러닝 기반 지구자기장(지자기) 실내 측위 기술\'을 개발, 산업통상자원부 산하 국가기술표준원의 NET 신기술 인증을 획득했다고 최근 밝혔다. 이 기술은 2020년 2차 신기술 인증 수여식에서 대표적 신기술로 소개되기도 했다.',
       link: 'http://www.koit.co.kr/news/articleView.html?idxno=79886'
     },
     {
       type: 'image',
       src: '/images/main6.jpeg',
-      title: '[ 중앙 일보 ] 실내에서 3D 네비게이션을?…고려대 연구진 실내측위 기술 개발',
+      title: '[ 중앙 일보 ] 고려대 연구진 실내측위 기술 개발',
       description: '연구진은 딥러닝의 순환신경망(Recurrent Neural Networks) 기술을 사용해 실내 지구자기장의 분포 패턴을 기계학습했다. 이를 이용해 사람 또는 사물의 실내 위치를 추적하는 방식을 고안했다. 비콘이나 AP와 같은 추가적인 장비의 설치 없이 스마트폰만으로 대형 실내 공간에서 50~80 cm 수준의 측위가 가능하다.',
       link: 'https://www.joongang.co.kr/article/23892177#home'
     }
@@ -165,7 +156,7 @@ const Home = () => {
           {/* Featured Carousel Section */}
           <section className="featured-carousel-section">
             <div className="section-header">
-              <h2 className="section-title">What We Do.</h2>
+              <h2 className="section-title">What We Do</h2>
             </div>
 
             <div className="carousel-container">
