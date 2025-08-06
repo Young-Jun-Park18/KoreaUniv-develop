@@ -152,10 +152,6 @@ const Home = () => {
         <div className="home-content">
           {/* Featured Carousel Section */}
           <section className="featured-carousel-section">
-            <div className="section-header">
-              <h2 className="section-title">What We Do</h2>
-            </div>
-
             <div className="carousel-container">
               <div className="carousel-inner">
                 {slides.map((slide, index) => (
@@ -226,7 +222,7 @@ const Home = () => {
           {/* Projects Section */}
           <section className="projects-section">
             <div className="section-header">
-              <h2 className="section-title">Projects</h2>
+              <h2 className="section-title">projects</h2>
             </div>
             
             <div className="projects-grid">
@@ -249,7 +245,7 @@ const Home = () => {
           {/* Information Section */}
           <section className="info-section">
             <div className="section-header">
-              <h2 className="section-title">Information</h2>
+              <h2 className="section-title">information</h2>
             </div>
             
             <div className="info-grid">
@@ -277,12 +273,12 @@ const Home = () => {
           {/* Contact Section */}
           <section className="contact-section">
             <div className="section-header">
-              <h2 className="section-title">Contact</h2>
+              <h2 className="section-title">contact</h2>
             </div>
             
             <div className="map-container">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1580.8931278067341!2d127.02288467028194!3d37.583650573217895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cbcb11f445687%3A0xba9f0bcf185144c4!2z7ISc7Jq47Yq567OE7IucIOyViOyVlOuPmDPqsIAg6rOg66Ck64yA7ZWZ6rWQIOqzt-2VkeuvvOyLmg!5e0!3m2!1sko!2skr!4v1685691831690!5m2!1sko!2skr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1580.8931278067341!2d127.02288467028194!3d37.583650573217895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cbcb11f445687%3A0xba9f0bcf185144c4!2z7ISc7Jq47Yq567OE7IucIOyViOyVlOuPmDPqsIAg6rOg66Ck64yA7ZWZ6rWQIOqzt-2VgeuvvOyLmg!5e0!3m2!1sko!2skr!4v1685691831690!5m2!1sko!2skr"
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
