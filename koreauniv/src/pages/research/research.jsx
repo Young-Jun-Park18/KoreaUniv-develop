@@ -539,7 +539,9 @@ const Research = () => {
                             </div>
                             <h3 className="research-project-card-title">{item.title}</h3>
                             <p className="research-project-card-date">{item.date}</p>
-                            <div className="research-project-card-hover-indicator">자세히 보기 →</div>
+                            {yearBlock.year === 'Current' && (
+                              <div className="research-project-card-hover-indicator">자세히 보기 →</div>
+                            )}
                           </a>
                         </div>
                       ))}
