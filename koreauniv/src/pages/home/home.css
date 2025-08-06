@@ -87,19 +87,45 @@
   border-radius: 8px;
 }
 
-/* 슬라이드 제목 스타일 */
-.slide-title {
-  color: white;
-  font-weight: bold;
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
-  margin-bottom: 2rem;
-  text-align: center;
+/* 슬라이드 헤더 및 제목 스타일 */
+.slide-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: min(80%, 1000px);
   background-color: rgba(0, 0, 0, 0.7);
   padding: 1rem 2rem;
   border-radius: 8px;
   backdrop-filter: blur(10px);
-  width: min(80%, 1000px);
+  margin-bottom: 2rem;
+}
+
+.slide-title {
+  color: white;
+  font-weight: bold;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  margin: 0;
   line-height: 1.4;
+  flex: 1;
+  padding-right: 1rem;
+}
+
+.view-details-btn {
+  background-color: #7C001A;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.view-details-btn:hover {
+  background-color: #5A0013;
+  color: white;
+  text-decoration: none;
 }
 
 /* 기존 캐러셀 캡션 스타일 제거 */
@@ -479,11 +505,24 @@
     height: 70%;
   }
 
+  .slide-header {
+    width: 85%;
+    padding: 0.8rem 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
   .slide-title {
     font-size: clamp(1.4rem, 2.5vw, 1.6rem);
-    margin-bottom: 1.5rem;
-    padding: 0.8rem 1.5rem;
-    width: 85%;
+    padding-right: 0;
+  }
+
+  .view-details-btn {
+    align-self: flex-end;
+    font-size: 0.8rem;
+    padding: 6px 12px;
   }
 
   .carousel-caption h3 {
@@ -531,11 +570,24 @@
     height: 65%;
   }
 
+  .slide-header {
+    width: 90%;
+    padding: 0.6rem 1rem;
+    margin-bottom: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
   .slide-title {
     font-size: 1.1rem;
-    margin-bottom: 1rem;
-    padding: 0.6rem 1rem;
-    width: 90%;
+    padding-right: 0;
+  }
+
+  .view-details-btn {
+    align-self: flex-end;
+    font-size: 0.75rem;
+    padding: 5px 10px;
   }
 
   .carousel-caption h3 {

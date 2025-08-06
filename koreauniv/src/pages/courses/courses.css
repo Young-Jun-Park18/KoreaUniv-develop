@@ -17,10 +17,10 @@
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 5;
-  background-image: url('/images/image_19.png');
+  background-image: url('/images/coursesBg.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center;
   min-height: 25rem;
   z-index: 5;
 }
@@ -32,7 +32,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.55);
   z-index: 1;
 }
 
@@ -686,6 +686,11 @@
     font-size: 0.85rem;
     line-height: 1.5;
   }
+
+  .courses-hero-section {
+    background-image: url('/images/mobileBg.jpg');
+  }
+
 }
 
 /* ===== ACCESSIBILITY IMPROVEMENTS ===== */

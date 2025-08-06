@@ -161,7 +161,9 @@ const Home = () => {
               >
                 {slide.type === 'video' ? (
                   <div className="video-container">
-                    <h3 className="slide-title">{slide.title}</h3>
+                    <div className="slide-header">
+                      <h3 className="slide-title">{slide.title}</h3>
+                    </div>
                     <iframe
                       src={slide.src}
                       title={slide.title}
@@ -172,7 +174,14 @@ const Home = () => {
                   </div>
                 ) : (
                   <div className="image-container">
-                    <h3 className="slide-title">{slide.title}</h3>
+                    <div className="slide-header">
+                      <h3 className="slide-title">{slide.title}</h3>
+                      {slide.link && (
+                        <a href={slide.link} className="view-details-btn">
+                          View Details →
+                        </a>
+                      )}
+                    </div>
                     <img src={slide.src} alt={slide.title} />
                   </div>
                 )}
