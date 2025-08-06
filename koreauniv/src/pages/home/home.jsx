@@ -222,7 +222,7 @@ const Home = () => {
           {/* Projects Section */}
           <section className="projects-section">
             <div className="section-header">
-              <h2 className="section-title">projects</h2>
+              <h2 className="section-title">Projects</h2>
             </div>
             
             <div className="projects-grid">
@@ -245,7 +245,7 @@ const Home = () => {
           {/* Information Section */}
           <section className="info-section">
             <div className="section-header">
-              <h2 className="section-title">information</h2>
+              <h2 className="section-title">Information</h2>
             </div>
             
             <div className="info-grid">
@@ -273,7 +273,7 @@ const Home = () => {
           {/* Contact Section */}
           <section className="contact-section">
             <div className="section-header">
-              <h2 className="section-title">contact</h2>
+              <h2 className="section-title">Contact</h2>
             </div>
             
             <div className="map-container">
