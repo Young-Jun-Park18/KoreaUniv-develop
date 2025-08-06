@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import fdIcon from "../../assets/fd_icon.avif";
 import "./navBar.css";
 
 const NavBar = () => {
@@ -39,6 +40,7 @@ const NavBar = () => {
     <div id="header">
       {/* PC/태블릿용 */}
       <div className="headerInner">
+        {/* 좌측 그룹 */}
         <div className="leftGroup">
           <img src="/images/mark_.png" alt="Logo" className="logo-img" />
           <div className="pgName">
@@ -48,14 +50,24 @@ const NavBar = () => {
             </Link>
           </div>
         </div>
+
+        {/* 중앙 내비게이션 */}
         <div className="navBar">
           <ul className="navList">
             <li className="navElement"><Link to="/">Home</Link></li>
             <li className="navElement"><Link to="/research">Research</Link></li>
-            <li className="navElement"><Link to="/people">People</Link></li> {/* Members → People로 변경 */}
+            <li className="navElement"><Link to="/people">People</Link></li>
             <li className="navElement"><Link to="/publications">Publications</Link></li>
             <li className="navElement"><Link to="/courses">Courses</Link></li>
           </ul>
+        </div>
+
+        {/* 우측 그룹 - Fifth Dimension */}
+        <div className="rightGroup">
+          <a href="https://fifthdimension.co.kr/" target="_blank" rel="noopener noreferrer" className="fd-link">
+            <img src={fdIcon} alt="Fifth Dimension" className="fd-icon" />
+            <div className="fd-name">Fifth Dimension</div>
+          </a>
         </div>
       </div>
 
@@ -68,9 +80,9 @@ const NavBar = () => {
           </div>
         </Link>
         <button
-          ref={buttonRef} // ✅ 버튼 ref 지정
+          ref={buttonRef}
           className={`hamburger ${menuOpen ? "active" : ""}`}
-          onClick={() => setMenuOpen(prev => !prev)} // ✅ 토글
+          onClick={() => setMenuOpen(prev => !prev)}
         >
           <FontAwesomeIcon icon={faBars} />
         </button>
@@ -80,9 +92,18 @@ const NavBar = () => {
       <div ref={menuRef} className={`mobileMenu ${menuOpen ? "show" : ""}`}>
         <Link to="/" onClick={handleLinkClick}>Home</Link>
         <Link to="/research" onClick={handleLinkClick}>Research</Link>
-        <Link to="/people" onClick={handleLinkClick}>People</Link> {/* Members → People로 변경 */}
+        <Link to="/people" onClick={handleLinkClick}>People</Link>
         <Link to="/publications" onClick={handleLinkClick}>Publications</Link>
         <Link to="/courses" onClick={handleLinkClick}>Courses</Link>
+        <a 
+          href="https://fifthdimension.co.kr/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          onClick={handleLinkClick}
+          className="fd-mobile-link"
+        >
+          Fifth Dimension
+        </a>
       </div>
     </div>
   );

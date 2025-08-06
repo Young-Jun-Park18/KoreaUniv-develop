@@ -18,11 +18,11 @@ a {
   top: 0;
   width: 100%;
   z-index: 100;
-  background-color: white; /* 기본 배경 */
+  background-color: white;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
 
-/* PC/태블릿 공통 헤더 */
+/* PC/태블릿 공통 헤더 - 3개 영역으로 분할 */
 .headerInner {
   width: 90%;
   margin: auto;
@@ -32,10 +32,12 @@ a {
   height: 10vh;
 }
 
+/* 좌측 그룹 */
 .leftGroup {
   display: flex;
   align-items: center;
   gap: 15px;
+  flex: 1;
 }
 
 .logo-img {
@@ -73,6 +75,13 @@ a {
 
 .logo-link:hover .lab-title {
   color: #7C001A;
+}
+
+/* 중앙 내비게이션 */
+.navBar {
+  flex: 2;
+  display: flex;
+  justify-content: center;
 }
 
 .navBar .navList {
@@ -117,6 +126,46 @@ a {
   font-weight: 700;
 }
 
+/* 우측 그룹 - Fifth Dimension 스타일 */
+.rightGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.fd-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #003153;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.fd-link:hover {
+  color: #001F3F;
+}
+
+.fd-link:hover .fd-icon {
+  filter: brightness(0) saturate(100%) invert(12%) sepia(100%) saturate(3000%) hue-rotate(200deg) brightness(80%) contrast(100%);
+}
+
+.fd-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(21%) sepia(21%) saturate(3168%) hue-rotate(183deg) brightness(95%) contrast(94%);
+  transition: filter 0.3s ease;
+}
+
+.fd-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: inherit;
+}
+
 /* 기본적으로 모바일 전용 요소 숨김 */
 .mobileNav,
 .mobileMenu {
@@ -130,7 +179,7 @@ a {
   }
 
   .lab-subtitle {
-    display: none; /* 태블릿에서 부제목 숨김 */
+    display: none;
   }
 
   .navBar .navList {
@@ -146,6 +195,15 @@ a {
   .leftGroup {
     gap: 12px;
   }
+
+  .fd-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .fd-name {
+    font-size: 20px;
+  }
 }
 
 /* ========== 중간 태블릿 (481px ~ 768px) ========== */
@@ -157,6 +215,15 @@ a {
   
   .lab-title {
     font-size: 16px;
+  }
+
+  .fd-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .fd-name {
+    font-size: 18px;
   }
 }
 
@@ -253,6 +320,21 @@ a {
   }
 
   .mobileMenu a:active {
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  /* Fifth Dimension 모바일 링크 스타일 */
+  .fd-mobile-link {
+    color: #003153 !important;
+    font-weight: 600;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 15px;
+    margin-top: 5px;
+  }
+
+  .fd-mobile-link:active {
+    color: #001F3F !important;
     font-weight: 700;
     font-size: 18px;
   }
