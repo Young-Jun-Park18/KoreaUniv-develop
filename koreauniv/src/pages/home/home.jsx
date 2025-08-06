@@ -80,7 +80,7 @@ const Home = () => {
       title: 'LG화학 여수 화학 단지 측위시스템 Pilot 구축',
       client: 'LG CNS',
       period: '2022.11.22 ~ 2022.12.31',
-      image: '/images/main2_1.png',
+      image: '/images/lgBg.jpg',
       link: '/project'
     },
     {
@@ -88,7 +88,7 @@ const Home = () => {
       title: '산학연 주관 미래도전 국방기술 연구개발',
       client: '국방 과학 연구소',
       period: '2022.11.25 ~ 2025.10.31',
-      image: '/images/main2_2.jpg',
+      image: '/images/labBg2.png',
       link: '/project_2'
     },
     {
@@ -96,7 +96,7 @@ const Home = () => {
       title: '도시철도 역사내 맞춤형 스마트 내비게이션 개발',
       client: '산업자원부',
       period: '2022.05.01~2023.12.31',
-      image: '/images/main2_3.png',
+      image: '/images/ktxBg.jpg',
       link: '/project_3'
     },
     {
@@ -104,7 +104,7 @@ const Home = () => {
       title: '디지털기반 건축 시공 및 안전감리 기술 개발',
       client: '국토교통부',
       period: '2022.04.01~2026.12.31',
-      image: '/images/main2_4.png',
+      image: '/images/transportBg.jpg',
       link: '/project_4'
     },
     {
@@ -112,7 +112,7 @@ const Home = () => {
       title: '위치기반 마케팅 플랫폼 개발을 위한 실내 측위 시스템 구축',
       client: 'TA9',
       period: '2021.08.13~2023~12.31',
-      image: '/images/main2_5.jpg',
+      image: '/images/ta9Bg.png',
       link: '/project'
     },
     {
@@ -120,7 +120,7 @@ const Home = () => {
       title: '자기장 기반 실내측위 기술의 포스코 현장 성능 검증',
       client: '포스코',
       period: '2021.02.01~2021.11.26',
-      image: '/images/main2_6.jpg',
+      image: '/images/poscoBg.png',
       link: '/project'
     }
   ];
@@ -230,10 +230,6 @@ const Home = () => {
           <section className="projects-section">
             <div className="section-header">
               <h2 className="section-title">Projects</h2>
-              <h3 className="section-subtitle">연구 프로젝트</h3>
-              <p className="section-description">
-                진행 중인 주요 연구 프로젝트들을 소개합니다
-              </p>
             </div>
             
             <div className="projects-grid">
@@ -257,10 +253,6 @@ const Home = () => {
           <section className="info-section">
             <div className="section-header">
               <h2 className="section-title">Information</h2>
-              <h3 className="section-subtitle">연구실 정보</h3>
-              <p className="section-description">
-                연구 분야와 연락처 정보를 확인하세요
-              </p>
             </div>
             
             <div className="info-grid">
@@ -289,10 +281,6 @@ const Home = () => {
           <section className="contact-section">
             <div className="section-header">
               <h2 className="section-title">Contact</h2>
-              <h3 className="section-subtitle">오시는 길</h3>
-              <p className="section-description">
-                고려대학교 산학관 236호로 방문해주세요
-              </p>
             </div>
             
             <div className="map-container">
