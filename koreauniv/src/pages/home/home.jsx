@@ -165,11 +165,7 @@ const Home = () => {
           {/* Featured Carousel Section */}
           <section className="featured-carousel-section">
             <div className="section-header">
-              <h2 className="section-title">Research Highlights</h2>
-              <h3 className="section-subtitle">연구 성과 및 뉴스</h3>
-              <p className="section-description">
-                실내 측위 기술 연구의 주요 성과와 최신 뉴스를 확인하세요
-              </p>
+              <h2 className="section-title">What We Do.</h2>
             </div>
 
             <div className="carousel-container">
@@ -193,14 +189,9 @@ const Home = () => {
                         />
                       </div>
                     ) : (
-                      <div className="image-container">
+                      <div className="image-container" onClick={() => slide.link && window.open(slide.link, '_blank')}>
                         <div className="slide-header">
                           <h3 className="slide-title">{slide.title}</h3>
-                          {slide.link && (
-                            <a href={slide.link} className="view-details-btn">
-                              View Details →
-                            </a>
-                          )}
                         </div>
                         <img src={slide.src} alt={slide.title} />
                       </div>

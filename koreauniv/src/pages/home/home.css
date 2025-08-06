@@ -181,6 +181,12 @@
   padding: 2rem;
   box-sizing: border-box;
   background: linear-gradient(135deg, rgba(124, 0, 26, 0.05), rgba(0, 0, 0, 0.02));
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.image-container:hover {
+  transform: scale(1.02);
 }
 
 .image-container img {
@@ -194,7 +200,7 @@
 /* 슬라이드 헤더 및 제목 스타일 */
 .slide-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: min(85%, 900px);
   background: rgba(255, 255, 255, 0.95);
@@ -211,8 +217,7 @@
   font-size: clamp(1.1rem, 2.5vw, 1.4rem);
   margin: 0;
   line-height: 1.4;
-  flex: 1;
-  padding-right: 1rem;
+  text-align: center;
 }
 
 .view-details-btn {
@@ -587,20 +592,12 @@
     width: 85%;
     padding: 1.2rem 1.5rem;
     margin-bottom: 1.5rem;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+    justify-content: center;
   }
 
   .slide-title {
     font-size: clamp(1.2rem, 2.5vw, 1.4rem);
-    padding-right: 0;
-  }
-
-  .view-details-btn {
-    align-self: flex-end;
-    font-size: 0.85rem;
-    padding: 8px 16px;
+    text-align: center;
   }
 
   .section-title {
@@ -772,20 +769,12 @@
     width: 90%;
     padding: 1rem;
     margin-bottom: 1rem;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.8rem;
+    justify-content: center;
   }
 
   .slide-title {
     font-size: 1rem;
-    padding-right: 0;
-  }
-
-  .view-details-btn {
-    align-self: flex-end;
-    font-size: 0.75rem;
-    padding: 6px 12px;
+    text-align: center;
   }
 
   .carousel-control {
