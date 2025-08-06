@@ -143,11 +143,8 @@ const Home = () => {
         {/* Hero Carousel Section */}
         <section className="home-hero-section">
           <div className="home-hero-overlay">
+            <p className="home-hero-subtitle">Korea University</p>
             <h1 className="home-hero-text">Indoor Positioning Laboratory</h1>
-            <p className="home-hero-subtitle">실내 측위 연구실</p>
-            <p className="home-hero-description">
-              최신 기술과 혁신적인 연구로 실내 위치 측정의 새로운 패러다임을 제시합니다
-            </p>
           </div>
         </section>
 

@@ -15,17 +15,19 @@
   overflow-x: hidden;
 }
 
-/* ===== HERO SECTION ===== */
 .home-hero-section {
   position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 5;
-  background-image: url('/images/homeBg.jpg'); /* Hero 배경 이미지 추가 필요 */
+  width: 100vw;
+  height: 100vh; /* 세로 전체 화면 */
+  margin-left: calc(-50vw + 50%); /* 가로 전체 화면 */
+  background-image: url('/images/homeBg2.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 35rem;
+  background-attachment: fixed; /* 스크롤 시 고정 효과 (선택사항) */
   z-index: 5;
+  /* aspect-ratio 제거 - 전체 화면을 위해 */
+  /* min-height 제거 - height: 100vh가 대신함 */
 }
 
 .home-hero-section::before {
@@ -701,7 +703,7 @@
 @media (max-width: 480px) {
   .home-hero-section {
     min-height: 20rem;
-    background-image: url('/images/mobileBg.jpg'); /* 모바일 전용 배경 */
+    background-image: url('/images/homeBg2.png'); /* 모바일 전용 배경 */
   }
 
   .home-hero-section::before {
