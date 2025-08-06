@@ -1,10 +1,10 @@
-import React, { useState } from 'react'; // useEffect 제거
+import React, { useState } from 'react';
 import './home.css';
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // 슬라이드 데이터 - 맨 앞과 두 번째에 새 영상 추가
+  // 슬라이드 데이터
   const slides = [
     {
       type: 'video',
@@ -134,8 +134,6 @@ const Home = () => {
     }
   ];
 
-  // 자동 슬라이드 useEffect 제거됨
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
@@ -149,154 +147,190 @@ const Home = () => {
   };
 
   return (
-    <div className="home-wrapper">
-      {/* Hero Carousel Section - Full Width */}
-      <section className="hero-carousel-section">
-        <div className="carousel-container">
-          <div className="carousel-inner">
-            {slides.map((slide, index) => (
-              <div
-                key={index}
-                className={`carousel-item ${index === currentSlide ? 'active' : ''}`}
-              >
-                {slide.type === 'video' ? (
-                  <div className="video-container">
-                    <div className="slide-header">
-                      <h3 className="slide-title">{slide.title}</h3>
-                    </div>
-                    <iframe
-                      src={slide.src}
-                      title={slide.title}
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-                  </div>
-                ) : (
-                  <div className="image-container">
-                    <div className="slide-header">
-                      <h3 className="slide-title">{slide.title}</h3>
-                      {slide.link && (
-                        <a href={slide.link} className="view-details-btn">
-                          View Details →
-                        </a>
-                      )}
-                    </div>
-                    <img src={slide.src} alt={slide.title} />
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* Carousel Indicators - 막대 모양으로 변경 */}
-          <div className="carousel-indicators">
-            {slides.map((slide, index) => (
-              <button
-                key={index}
-                id={`slide-indicator-${index}`}
-                name={`slide-indicator-${index}`}
-                className={index === currentSlide ? 'active' : ''}
-                onClick={() => goToSlide(index)}
-                aria-label={`슬라이드 ${index + 1}로 이동: ${slide.title}`}
-                title={`슬라이드 ${index + 1}: ${slide.title}`}
-              />
-            ))}
-          </div>
-
-          {/* Carousel Controls - 접근성 개선 */}
-          <button 
-            className="carousel-control prev" 
-            onClick={prevSlide}
-            aria-label="이전 슬라이드"
-            title="이전 슬라이드"
-          >
-            <span>&lt;</span>
-          </button>
-          <button 
-            className="carousel-control next" 
-            onClick={nextSlide}
-            aria-label="다음 슬라이드"
-            title="다음 슬라이드"
-          >
-            <span>&gt;</span>
-          </button>
-        </div>
-      </section>
-
-      {/* Content Sections with Container */}
-      <div className="content-container">
-        {/* Projects Section */}
-        <section className="projects-section">
-          <h1 className="section-title">Projects</h1>
-          <h4 className="section-subtitle">Indoor Positioning Laboratory Projects</h4>
-          
-          <div className="projects-grid">
-            {projects.map((project) => (
-              <div key={project.id} className="project-card">
-                <img src={project.image} alt={project.title} className="project-image" />
-                <div className="project-content">
-                  <h4 className="project-title">{project.title}</h4>
-                  <h6 className="project-client">{project.client}</h6>
-                  <h6 className="project-period">{project.period}</h6>
-                  <a href={project.link} className="project-btn">
-                    View Details &gt;
-                  </a>
-                </div>
-              </div>
-            ))}
+    <div className="page-wrapper">
+      <div className="home-page">
+        {/* Hero Carousel Section */}
+        <section className="home-hero-section">
+          <div className="home-hero-overlay">
+            <h1 className="home-hero-text">Indoor Positioning Laboratory</h1>
+            <p className="home-hero-subtitle">실내 측위 연구실</p>
+            <p className="home-hero-description">
+              최신 기술과 혁신적인 연구로 실내 위치 측정의 새로운 패러다임을 제시합니다
+            </p>
           </div>
         </section>
 
-        {/* Information Section */}
-        <section className="info-section">
-          <h1 className="section-title">Information</h1>
-          <h4 className="section-subtitle">Indoor Positioning Laboratory Information</h4>
-          
-          <div className="info-grid">
-            <div className="info-card">
-              <h3 className="info-title">Research</h3>
-              <a href="/research" className="info-btn">Indoor Localization</a>
-              <a href="/research" className="info-btn">Internet of Things</a>
-              <a href="/research" className="info-btn">Computer Architecture</a>
-              <a href="/research" className="info-btn">Internet Security</a>
+        {/* Main Content */}
+        <div className="home-content">
+          {/* Featured Carousel Section */}
+          <section className="featured-carousel-section">
+            <div className="section-header">
+              <h2 className="section-title">Research Highlights</h2>
+              <h3 className="section-subtitle">연구 성과 및 뉴스</h3>
+              <p className="section-description">
+                실내 측위 기술 연구의 주요 성과와 최신 뉴스를 확인하세요
+              </p>
+            </div>
+
+            <div className="carousel-container">
+              <div className="carousel-inner">
+                {slides.map((slide, index) => (
+                  <div
+                    key={index}
+                    className={`carousel-item ${index === currentSlide ? 'active' : ''}`}
+                  >
+                    {slide.type === 'video' ? (
+                      <div className="video-container">
+                        <div className="slide-header">
+                          <h3 className="slide-title">{slide.title}</h3>
+                        </div>
+                        <iframe
+                          src={slide.src}
+                          title={slide.title}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
+                      </div>
+                    ) : (
+                      <div className="image-container">
+                        <div className="slide-header">
+                          <h3 className="slide-title">{slide.title}</h3>
+                          {slide.link && (
+                            <a href={slide.link} className="view-details-btn">
+                              View Details →
+                            </a>
+                          )}
+                        </div>
+                        <img src={slide.src} alt={slide.title} />
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              {/* Carousel Indicators */}
+              <div className="carousel-indicators">
+                {slides.map((slide, index) => (
+                  <button
+                    key={index}
+                    id={`slide-indicator-${index}`}
+                    name={`slide-indicator-${index}`}
+                    className={index === currentSlide ? 'active' : ''}
+                    onClick={() => goToSlide(index)}
+                    aria-label={`슬라이드 ${index + 1}로 이동: ${slide.title}`}
+                    title={`슬라이드 ${index + 1}: ${slide.title}`}
+                  />
+                ))}
+              </div>
+
+              {/* Carousel Controls */}
+              <button 
+                className="carousel-control prev" 
+                onClick={prevSlide}
+                aria-label="이전 슬라이드"
+                title="이전 슬라이드"
+              >
+                <span>&lt;</span>
+              </button>
+              <button 
+                className="carousel-control next" 
+                onClick={nextSlide}
+                aria-label="다음 슬라이드"
+                title="다음 슬라이드"
+              >
+                <span>&gt;</span>
+              </button>
+            </div>
+          </section>
+
+          {/* Projects Section */}
+          <section className="projects-section">
+            <div className="section-header">
+              <h2 className="section-title">Projects</h2>
+              <h3 className="section-subtitle">연구 프로젝트</h3>
+              <p className="section-description">
+                진행 중인 주요 연구 프로젝트들을 소개합니다
+              </p>
             </div>
             
-            <div className="info-card">
-              <h3 className="info-title">Notice</h3>
-              <img src="/images/236_.png" alt="Location" className="location-image" />
-              <h6 className="contact-info">
-                #236, Industry-Academy Building, 145 Anam-ro, Korea University, Seongbuk-gu,
-                Seoul 136-713, Republic of Korea<br /><br />
-                Tel: +82-2-3290-3896<br />
-                E-Mail: swj8905@korea.ac.kr
-              </h6>
+            <div className="projects-grid">
+              {projects.map((project) => (
+                <div key={project.id} className="project-card">
+                  <img src={project.image} alt={project.title} className="project-image" />
+                  <div className="project-content">
+                    <h4 className="project-title">{project.title}</h4>
+                    <h6 className="project-client">{project.client}</h6>
+                    <h6 className="project-period">{project.period}</h6>
+                    <a href={project.link} className="project-btn">
+                      View Details &gt;
+                    </a>
+                  </div>
+                </div>
+              ))}
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Contact Section */}
-        <section className="contact-section">
-          <h1 className="section-title">Contact</h1>
-          <h4 className="section-subtitle">Indoor Positioning Laboratory Information</h4>
-          
-          <div className="map-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1580.8931278067341!2d127.02288467028194!3d37.583650573217895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cbcb11f445687%3A0xba9f0bcf185144c4!2z7ISc7Jq47Yq567OE7IucIOyViOyVlOuPmDPqsIAg6rOg66Ck64yA7ZWZ6rWQIOqzte2Vkeq0gA!5e0!3m2!1sko!2skr!4v1685691831690!5m2!1sko!2skr"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Korea University Location"
-            />
-          </div>
-          
-          <h6 className="contact-details">
-            #236, Industry-Academy Building, 145 Anam-ro, Korea University, Seongbuk-gu,
-            Seoul 136-713, Republic of Korea<br /><br />
-            Tel: +82-2-3290-3896<br />
-            E-Mail: swj8905@korea.ac.kr
-          </h6>
-        </section>
+          {/* Information Section */}
+          <section className="info-section">
+            <div className="section-header">
+              <h2 className="section-title">Information</h2>
+              <h3 className="section-subtitle">연구실 정보</h3>
+              <p className="section-description">
+                연구 분야와 연락처 정보를 확인하세요
+              </p>
+            </div>
+            
+            <div className="info-grid">
+              <div className="info-card">
+                <h3 className="info-title">Research</h3>
+                <a href="/research" className="info-btn">Indoor Localization</a>
+                <a href="/research" className="info-btn">Internet of Things</a>
+                <a href="/research" className="info-btn">Computer Architecture</a>
+                <a href="/research" className="info-btn">Internet Security</a>
+              </div>
+              
+              <div className="info-card">
+                <h3 className="info-title">Notice</h3>
+                <img src="/images/236_.png" alt="Location" className="location-image" />
+                <h6 className="contact-info">
+                  #236, Industry-Academy Building, 145 Anam-ro, Korea University, Seongbuk-gu,
+                  Seoul 136-713, Republic of Korea<br /><br />
+                  Tel: +82-2-3290-3896<br />
+                  E-Mail: swj8905@korea.ac.kr
+                </h6>
+              </div>
+            </div>
+          </section>
+
+          {/* Contact Section */}
+          <section className="contact-section">
+            <div className="section-header">
+              <h2 className="section-title">Contact</h2>
+              <h3 className="section-subtitle">오시는 길</h3>
+              <p className="section-description">
+                고려대학교 산학관 236호로 방문해주세요
+              </p>
+            </div>
+            
+            <div className="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1580.8931278067341!2d127.02288467028194!3d37.583650573217895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cbcb11f445687%3A0xba9f0bcf185144c4!2z7ISc7Jq47Yq567OE7IucIOyViOyVlOuPmDPqsIAg6rOg66Ck64yA7ZWZ6rWQIOqzt-2VkeuvvOyLmg!5e0!3m2!1sko!2skr!4v1685691831690!5m2!1sko!2skr"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Korea University Location"
+              />
+            </div>
+            
+            <h6 className="contact-details">
+              #236, Industry-Academy Building, 145 Anam-ro, Korea University, Seongbuk-gu,
+              Seoul 136-713, Republic of Korea<br /><br />
+              Tel: +82-2-3290-3896<br />
+              E-Mail: swj8905@korea.ac.kr
+            </h6>
+          </section>
+        </div>
       </div>
             
       {/* Back to Top 버튼 */}
@@ -304,7 +338,7 @@ const Home = () => {
         ↑
       </a>
       
-      {/* Home Footer - Full Width */}
+      {/* Home Footer */}
       <footer className="home-footer">
         <div className="home-footer-content">
           <hr className="home-footer-divider" />
