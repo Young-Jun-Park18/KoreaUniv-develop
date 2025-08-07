@@ -94,8 +94,8 @@ const Home = () => {
     {
       id: 3,
       title: '도시철도 역사내 맞춤형 스마트 내비게이션 개발',
-      client: '산업자원부',
-      period: '2022.05.01~2023.12.31',
+      client: '산업통상자원부 / 한국철도공사',
+      period: '2022.11~2024.02',
       image: '/images/ktxBg.jpg',
       link: '/project3',
     },

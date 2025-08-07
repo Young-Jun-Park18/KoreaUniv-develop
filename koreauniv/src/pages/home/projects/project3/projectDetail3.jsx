@@ -10,7 +10,7 @@ const ProjectDetail3 = () => {
           <h1 className="project-detail-3-title">
             교통약자를 위한 도시철도 역사내 맞춤형 스마트 내비게이션 개발
           </h1>
-          <p className="project-detail-3-period">2022.05.01 ~ 2023.12.31</p>
+          <p className="project-detail-3-period">2022.11 ~ 2024.02</p>
         </div>
       </section>
 
