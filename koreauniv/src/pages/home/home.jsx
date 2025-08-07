@@ -81,7 +81,7 @@ const Home = () => {
       client: '국토교통부',
       period: '2022.04.01~2026.12.31',
       image: '/images/transportBg.jpg',
-      link: '/project1'
+      link: '/project1',
     },
     {
       id: 2,
@@ -89,7 +89,7 @@ const Home = () => {
       client: '국방 과학 연구소',
       period: '2022.11.25 ~ 2025.10.31',
       image: '/images/labBg2.png',
-      link: '/project2'
+      link: '/project2',
     },
     {
       id: 3,
@@ -97,7 +97,7 @@ const Home = () => {
       client: '산업자원부',
       period: '2022.05.01~2023.12.31',
       image: '/images/ktxBg.jpg',
-      link: '/project3'
+      link: '/project3',
     },
     {
       id: 4,

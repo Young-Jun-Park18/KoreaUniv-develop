@@ -68,39 +68,47 @@ const Research = () => {
       year: 'Current',
       items: [
         {
-          title: 'LG화학 여수 화학 단지 측위시스템 Pilot 구축',
-          date: '2022.11.22 ~ 2022.12.31',
-          link: '/project_1',
-          tags: [
-            { text: 'Pilot', type: 'primary' },
-            { text: 'LG화학', type: '' }
-          ]
-        },
-        {
-          title: '미래도전국방기술 연구 개발',
-          date: '2022.11.25 ~ 2025.10.31',
-          link: '/project_2',
+          title: '미래도전국방기술 연구개발사업 수행 중',
+          date: '(2022.11 ~ 2025.10) 초정밀 실내측위 기반 해군 함정의 실시간 디지털 트윈 서비스 및 AR 글래스를 이용한 대테러 작전 수행 시스템 연구',
+          link: '/project2',
           tags: [
             { text: 'R&D', type: 'primary' },
-            { text: '산학연', type: '' }
+            { text: '국방과학연구소', type: '' },
+            { text: '대한민국 해군', type: '' }
           ]
         },
         {
           title: '교통약자를 위한 도시철도 역사내 맞춤형 스마트 내비게이션 개발',
-          date: '2022.05.01 ~ 2023.12.31',
-          link: '/project_3',
+          date: '(2022.05 ~ 2023.12) 수원역 대합실 및 KTX, 지하철 1호선 플랫폼을 대상으로 실내측위 시스템을 구축하고 교통약자 맞춤형 실내 길안내 서비스 (2D) 개발',
+          link: '/project3',
           tags: [
+            { text: '지구자기장 기반 (3세대)', type: 'warning' },
             { text: 'R&D', type: 'primary' },
-            { text: '지구자기장 기반', type: 'warning' }
+            { text: '산업통상자원부', type: '' },
+            { text: '한국철도공사', type: '' }
           ]
         },
         {
-          title: '디지털기반 건축시공 및 안전감리 기술개발',
-          date: '2022.04.01 ~ 2026.12.31',
-          link: '/project_4',
+          title: '디지털기반 건축시공 및 안전감리 기술개발 사업 수행 중',
+          date: '(2022.04 ~ 2026.12) 건설 현장 내 작업자 안전을 위한 제로맵 실내 측위 기술 개발',
+          link: '/project1',
           tags: [
+            { text: '제로맵 기반(3세대)', type: 'warning' },
             { text: 'R&D', type: 'primary' },
             { text: '국토교통부', type: '' }
+          ]
+        },
+      ]
+    },
+    {
+      year: 'Past',
+      items: [
+        {
+          title: 'LG화학 여수 화학 단지 측위시스템 Pilot 구축',
+          date: '2022.11.22 ~ 2022.12.31',
+          tags: [
+            { text: 'Pilot', type: 'primary' },
+            { text: 'LG화학', type: '' }
           ]
         },
         {
@@ -111,12 +119,7 @@ const Research = () => {
             { text: 'R&D', type: 'primary' },
             { text: '마케팅', type: '' }
           ]
-        }
-      ]
-    },
-    {
-      year: 'Past',
-      items: [
+        },
         {
           title: '블록체인 기반 KU Mobile ID 체계 수립 및 구축',
           date: '2019.03.01 ~ 2021.12.31',
