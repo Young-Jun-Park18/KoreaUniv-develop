@@ -57,7 +57,7 @@ const researchStaff = [
   {
     name: '이해원',
     role: '연구원',
-    email: 'heewon9715@korea.ac.kr',
+    email: 'heewon9715@gmail.com',
     position: 'Research Intern',
     researchAreas: '3D 디지털 트윈 구축 자동화',
     image: '/images/LeeHaeWon.jpg',
