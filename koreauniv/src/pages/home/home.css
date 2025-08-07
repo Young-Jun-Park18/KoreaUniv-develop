@@ -25,10 +25,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed; /* 스크롤 시 고정 효과 (선택사항) */
+  /* background-attachment: fixed 제거 - 모바일 스크롤 문제 해결 */
   z-index: 5;
-  /* aspect-ratio 제거 - 전체 화면을 위해 */
-  /* min-height 제거 - height: 100vh가 대신함 */
 }
 
 .home-hero-section::before {
@@ -847,10 +845,25 @@
   }
 }
 
+/* 데스크톱에서만 fixed attachment 적용 */
+@media (min-width: 769px) {
+  .home-hero-section {
+    background-attachment: fixed;
+  }
+}
+
+
 /* Mobile (768px 이하) */
 @media (max-width: 768px) {
   .home-hero-section {
-    min-height: 25rem;
+    /* 모바일에서 더 안정적인 스크롤을 위한 설정 */
+    transform: translateZ(0); /* 하드웨어 가속 활성화 */
+    will-change: scroll-position;
+  }
+
+  .home-page {
+    -webkit-overflow-scrolling: touch; /* iOS 스크롤 최적화 */
+    transform: translateZ(0); /* 하드웨어 가속 */
   }
 
   .home-hero-text {
@@ -1347,4 +1360,11 @@
 
 .popup-content::-webkit-scrollbar-thumb:hover {
   background: #5a0013;
+}
+
+/* iOS Safari 전용 최적화 */
+@supports (-webkit-touch-callout: none) {
+  .home-hero-section {
+    background-attachment: scroll !important; /* iOS에서 강제로 scroll로 설정 */
+  }
 }
