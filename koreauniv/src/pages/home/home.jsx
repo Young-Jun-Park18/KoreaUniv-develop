@@ -1,8 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './home.css';
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [showPopup, setShowPopup] = useState(false);
+
+  // 페이지 로드시 팝업 표시
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPopup(true);
+    }, 100); // 0.1초 후 팝업 표시
+
+    return () => clearTimeout(timer);
+  }, []);
 
   // 슬라이드 데이터
   const slides = [
@@ -106,7 +116,7 @@ const Home = () => {
       period: '2022.11.22 ~ 2022.12.31',
       image: '/images/lgBg.jpg',
       link: 'https://www.asiatime.co.kr/article/20230615500331#_enliple#_mobwcvr',
-      external: true // 외부 링크임을 표시
+      external: true
     },
     {
       id: 5,
@@ -136,8 +146,120 @@ const Home = () => {
     setCurrentSlide(index);
   };
 
+  const closePopup = () => {
+    setShowPopup(false);
+  };
+
   return (
     <div className="page-wrapper">
+      {/* 모집 팝업 */}
+      {showPopup && (
+        <div className="popup-overlay">
+          <div className="popup-container">
+            <button className="popup-close" onClick={closePopup}>×</button>
+            
+            <div className="popup-content">
+              <div className="popup-header">
+                <div className="popup-image-container">
+                  <img 
+                    src="/images/tiger.png"  // 기존에 잘 보이는 이미지로 임시 테스트
+                    alt="Korea University Tiger" 
+                    className="popup-image"
+                    onError={(e) => {
+                      console.log('Image failed to load:', e.target.src);
+                      // tiger.png로 fallback 시도
+                      if (e.target.src.includes('236_.png')) {
+                        e.target.src = '/images/tiger.png';
+                      } else {
+                        e.target.style.display = 'none';
+                      }
+                    }}
+                    onLoad={() => console.log('Image loaded successfully')}
+                  />
+                </div>
+              </div>
+              
+              <div className="popup-title-section">
+                <h2 className="popup-title">공과대학원 컴퓨터시스템 연구실 대학원생 & 연구원 모집</h2>
+              </div>
+
+              <div className="popup-body">
+                <p className="popup-description">
+                  고려대학교 컴퓨터시스템 연구실은 어떠한 장비 없이 휴대폰만으로 세계 최고의 측위 성능 (KOLAS 공인시험 성적 82cm) 을 갖는 실내 측위 기술을 독자적으로 개발 (2020년 산업자원부 NET 신기술 인증) 하여, 지하철 / KTX 역사 내비게이션, 스마트 공장의 작업자 안전, 백화점 / 쇼핑몰에서의 위치 기반 마케팅, 박물관 안내 및 내비게이션, 해군 함정에서의 lively 형태의 디지털 트윈 서비스, 병원에서의 환자 / 의료진 위치 추적, 건설 현장에서의 작업자 안전, 화재 / 재난 상황에서의 실시간 위치 추적 및 구조, 코로나 / 메르스 등 전염병 전파 경로 실시간 분석, 출입 및 보안 관제 등 다양한 위치 기반 서비스와 신기술에 대한 상용화를 추진 중에 있습니다.<br></br><br></br> 실내측위 기술과 LBS (위치 기반 서비스) 시장은 향후 반도체 시장에 버금가는 파급력을 가진 4차 산업의 핵심 플랫폼 기술로써 고려대학교 컴퓨터시스템 연구실은 실내측위 분야에서 세계 대회 1, 2, 3등 연구팀 대비 10배 이상의 측위 성능을 갖는 압도적인 기술력을 보유하고 있습니다. 세계 최고의 독자적인 신기술 개발에 참여를 원하는 우수한 대학원생과 Postdoc 연구원을 모집하고 있으니 적극적인 참여를 바랍니다.
+                </p>
+
+                <div className="popup-sections">
+                  <div className="popup-section">
+                    <h3 className="section-title">연구 분야</h3>
+                    <ul>
+                      <li>강화학습 기반 실내측위 신기술 개발</li>
+                      <li>딥러닝 및 실내 지구자기장 기반 초정밀 실내측위 기술 개발</li>
+                      <li>블루투스, Wi-Fi를 이용한 차세대 RF 실내측위 기술 개발</li>
+                      <li>스마트폰 모션 센서 기반의 사물 및 보행자 추측 알고리즘 개발</li>
+                      <li>자기장 센서를 이용한 주차 센서 개발</li>
+                      <li>3D 실내 내비게이션 서비스 개발</li>
+                      <li>위치 기반 서비스를 위한 안드로이드, 아이폰 App 개발</li>
+                    </ul>
+                  </div>
+
+                  <div className="popup-section">
+                    <h3 className="section-title">모집 분야</h3>
+                    <ul>
+                      <li>석사 / 박사 / 석박통합과정</li>
+                      <li>Postdoc 연구원</li>
+                      <li>석사 및 학사 연구원</li>
+                      <li>Android 및 iOS 개발 경험자 : 1명</li>
+                      <li>DB 및 서버 개발 경험자 : 1명</li>
+                    </ul>
+                  </div>
+
+                  <div className="popup-section">
+                    <h3 className="section-title">자격 요건</h3>
+                    <ul>
+                      <li>전 학년 평점 평균 3.0/4.5 이상</li>
+                      <li>전자공학, 컴퓨터 공학 및 IT 관련 학과 전공자</li>
+                      <li>연구원의 경우 군 병역 필 및 면제 혹은 그에 상응하는 자</li>
+                    </ul>
+                  </div>
+
+                  <div className="popup-section">
+                    <h3 className="section-title">대우 조건</h3>
+                    <ul>
+                      <li>석사 및 박사 과정 : 등록금 전액 및 연구실적에 따른 별도의 성과금 지급</li>
+                      <li>Postdoc 연구원 및 개발 직원 : 연봉 4000 ~ 6000만 원에 상응하는 금액 지급</li>
+                      <li>자율 출퇴근 - 주 1회 연구실 미팅 진행</li>
+                      <li>국내 외 학회참가 및 교육 지원</li>
+                      <li>행정담당 연구원 별도 근무 중</li>
+                    </ul>
+                  </div>
+
+                  <div className="popup-section">
+                    <h3 className="section-title">지원 방법</h3>
+                    <ul>
+                      <li>석사 / 박사 / 석박통합 과정 일정은 고려대학교 일반대학원 전형일정 참조</li>
+                      <li>학위과정 진행 전 연구실에서 인턴 / 연구원 근무 가능 (상시)</li>
+                      <li>연구원 / 직원 채용 지원 필요 서류 :<br/>
+                        - 자기소개서<br/>
+                        - 성적증명서<br/>
+                        - 졸업증명서 (졸업예정 증명서)<br/>
+                        - 별도의 서류제출 원할 시 추가 첨부
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="popup-contact">
+                  <h3 className="section-title">담당자</h3>
+                  <p>손원준</p>
+                  <p>Email: swj8905@korea.ac.kr</p>
+                  <p>Tel: +82-2-3290-3896</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="home-page">
         {/* Hero Carousel Section */}
         <section className="home-hero-section">
@@ -232,7 +354,6 @@ const Home = () => {
                     <h4 className="project-title">{project.title}</h4>
                     <h6 className="project-client">{project.client}</h6>
                     <h6 className="project-period">{project.period}</h6>
-                    {/* 외부 링크는 새창으로, 내부 링크는 같은 탭에서 열기 */}
                     <a 
                       href={project.link} 
                       className="project-btn"
