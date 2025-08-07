@@ -56,7 +56,6 @@ const Projects = () => {
         {
           title: '위치기반 마케팅 플랫폼 개발을 위한 실내 측위 시스템 구축',
           date: '2021.08.13 ~ 2023.12.31',
-          link: '/project_5',
           tags: [
             { text: 'R&D', type: 'primary' },
             { text: '마케팅', type: '' }
@@ -65,7 +64,6 @@ const Projects = () => {
         {
           title: '블록체인 기반 KU Mobile ID 체계 수립 및 구축',
           date: '2019.03.01 ~ 2021.12.31',
-          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=4061',
           tags: [
             { text: '블록체인', type: 'warning' },
             { text: 'KU', type: '' }
@@ -74,7 +72,6 @@ const Projects = () => {
         {
           title: '스마트 공장 안전 및 관제 시스템을 위한 지구 자기장 기반 실내측위 기술의 포스코 현장 성능 검증',
           date: '2021.02.01 ~ 2021.11.26',
-          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=4239',
           tags: [
             { text: '포스코', type: '' },
             { text: '지구자기장 기반', type: 'warning' }
@@ -83,7 +80,6 @@ const Projects = () => {
         {
           title: '장애인 실내 길안내 내비게이션 서비스',
           date: '2020.07.01 ~ 2020.12.31',
-          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=4053',
           tags: [
             { text: '내비게이션', type: 'primary' },
             { text: '장애인', type: '' }
@@ -92,7 +88,6 @@ const Projects = () => {
         {
           title: '실내 측위를 위한 저전력 웨어러블 소형 태그 보드 설계 및 시작품 제작',
           date: '2019.06.01 ~ 2020.08.31',
-          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=4048',
           tags: [
             { text: '웨어러블', type: 'warning' },
             { text: '설계', type: '' }
@@ -101,7 +96,6 @@ const Projects = () => {
         {
           title: '미래창조과학부 정보통신산업진흥원',
           date: '2015.06.01 ~ 2020.12.31',
-          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2982',
           tags: [
             { text: 'R&D', type: 'primary' },
             { text: '미래창조과학부', type: '' }
@@ -110,7 +104,6 @@ const Projects = () => {
         {
           title: '원퍼스트, 현대 모비스',
           date: '2018.06.01 ~ 2019.05.31',
-          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=3724',
           tags: [
             { text: '현대 모비스', type: '' }
           ]
@@ -118,7 +111,6 @@ const Projects = () => {
         {
           title: '한국연구재단 선도연구과제',
           date: '2017.03.01 ~ 2020.02.28',
-          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2984',
           tags: [
             { text: 'R&D', type: 'primary' },
             { text: '한국연구재단', type: '' }
@@ -127,7 +119,6 @@ const Projects = () => {
         {
           title: '현대엘리베이터',
           date: '2016.08.01 ~ 2017.12.31',
-          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2983',
           tags: [
             { text: '현대엘리베이터', type: '' }
           ]
@@ -135,7 +126,6 @@ const Projects = () => {
         {
           title: '미래창조과학부 X-Project',
           date: '2015.12.01 ~ 2016.11.31',
-          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2981',
           tags: [
             { text: 'R&D', type: 'primary' },
             { text: 'X-Project', type: '' }
@@ -144,7 +134,6 @@ const Projects = () => {
         {
           title: '정보통신산업진흥원',
           date: '2015.06.01 ~ 2018.12.31',
-          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=4094',
           tags: [
             { text: 'R&D', type: 'primary' },
             { text: '정보통신산업진흥원', type: '' }
@@ -153,7 +142,6 @@ const Projects = () => {
         {
           title: '정보통신산업진흥원',
           date: '2013.05.01 ~ 2014.04.30',
-          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2980',
           tags: [
             { text: 'R&D', type: 'primary' },
             { text: '정보통신산업진흥원', type: '' }
@@ -162,7 +150,6 @@ const Projects = () => {
         {
           title: '한국IT서비스산업협회',
           date: '2010.03.01 ~ 2014.02.28',
-          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2979',
           tags: [
             { text: '협회', type: '' }
           ]
@@ -170,7 +157,6 @@ const Projects = () => {
         {
           title: '한국연구재단',
           date: '2010.05.01 ~ 2013.04.30',
-          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2978',
           tags: [
             { text: 'R&D', type: 'primary' },
             { text: '한국연구재단', type: '' }
@@ -179,7 +165,6 @@ const Projects = () => {
         {
           title: 'ETRI',
           date: '2009.10.01 ~ 2010.03.31',
-          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2976',
           tags: [
             { text: 'ETRI', type: '' }
           ]
@@ -187,7 +172,6 @@ const Projects = () => {
         {
           title: '삼성전자',
           date: '2009.09.01 ~ 2009.12.31',
-          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2977',
           tags: [
             { text: '삼성전자', type: '' }
           ]
@@ -195,7 +179,6 @@ const Projects = () => {
         {
           title: 'ETRI',
           date: '2008.12.05 ~ 2009.03.31',
-          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2975',
           tags: [
             { text: 'ETRI', type: '' }
           ]
@@ -203,7 +186,6 @@ const Projects = () => {
         {
           title: '삼성전자',
           date: '2007.01.01 ~ 2007.12.31',
-          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2974',
           tags: [
             { text: '삼성전자', type: '' }
           ]
@@ -211,7 +193,6 @@ const Projects = () => {
         {
           title: '한국과학재단',
           date: '2007.09.01 ~ 2012.08.31',
-          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2973',
           tags: [
             { text: 'R&D', type: 'primary' },
             { text: '한국과학재단', type: '' }
@@ -220,7 +201,6 @@ const Projects = () => {
         {
           title: 'ETRI',
           date: '2006.08.01 ~ 2007.03.01',
-          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2972',
           tags: [
             { text: 'ETRI', type: '' }
           ]
@@ -228,7 +208,6 @@ const Projects = () => {
         {
           title: '한국소프트웨어진흥원',
           date: '2005.03.01 ~ 2006.02.01',
-          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2971',
           tags: [
             { text: 'R&D', type: 'primary' },
             { text: '한국소프트웨어진흥원', type: '' }
@@ -237,7 +216,6 @@ const Projects = () => {
         {
           title: '한국학술진흥재단',
           date: '2003.12.01 ~ 2005.11.01',
-          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2970',
           tags: [
             { text: 'R&D', type: 'primary' },
             { text: '한국학술진흥재단', type: '' }
@@ -246,7 +224,6 @@ const Projects = () => {
         {
           title: '한국학술진흥재단',
           date: '2003.12.01 ~ 2004.11.01',
-          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_yUcq93&document_srl=933',
           tags: [
             { text: 'R&D', type: 'primary' },
             { text: '한국학술진흥재단', type: '' }
@@ -255,7 +232,6 @@ const Projects = () => {
         {
           title: '삼성종합연구소',
           date: '2003.07.01 ~ 2004.06.30',
-          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2968',
           tags: [
             { text: '삼성종합연구소', type: '' }
           ]
@@ -263,7 +239,6 @@ const Projects = () => {
         {
           title: '시스템집적반도체기반기술 개발사업',
           date: '2001.07.01 ~ 2003.06.30',
-          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2965',
           tags: [
             { text: 'R&D', type: 'primary' },
             { text: '시스템집적', type: '' }
@@ -272,7 +247,6 @@ const Projects = () => {
         {
           title: '과학기술부',
           date: '2001.09.01 ~ 2004.08.30',
-          link: 'http://it.korea.ac.kr/engine/index.php?mid=board_TJva06&document_srl=2961',
           tags: [
             { text: 'R&D', type: 'primary' },
             { text: '과학기술부', type: '' }
