@@ -308,83 +308,6 @@
   right: 2rem;
 }
 
-/* ===== PROJECTS SECTION ===== */
-.projects-section {
-  padding: 6rem 2rem;
-  background-color: #fff;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 2rem;
-  margin: 0 auto;
-  max-width: 1000px;
-}
-
-.project-card {
-  background: white;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  border: 1px solid #000;
-  border-radius: 8px; /* 살짝 둥근 모서리 추가 */
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-}
-
-.project-image {
-  width: 100%;
-  height: 16rem;
-  object-fit: contain; /* cover에서 contain으로 변경 */
-  object-position: center; /* 이미지를 중앙에 배치 */
-  background-color: #ffffff; /* 회색에서 흰색으로 변경 */
-  display: block;
-}
-
-.project-content {
-  padding: 1.5rem;
-  text-align: center;
-  border-top: 1px solid gray; /* 이미지와 콘텐츠 사이 구분선 추가 */
-}
-
-.project-title {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 0.8rem;
-  line-height: 1.4;
-}
-
-.project-client,
-.project-period {
-  font-size: 0.9rem;
-  color: var(--text-gray);
-  margin-bottom: 0.4rem;
-}
-
-.project-btn {
-  background-color: var(--brand-red);
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-block;
-  margin-top: 1rem;
-  transition: all 0.3s ease;
-  font-size: 0.9rem;
-}
-
-.project-btn:hover {
-  background-color: #5A0013;
-  color: white;
-  text-decoration: none;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(124, 0, 26, 0.3);
-}
-
 /* ===== INFORMATION SECTION ===== */
 .info-section {
   padding: 6rem 2rem;
@@ -764,9 +687,6 @@
   }
 }
 
-
-
-
 /* ===== POPUP SCROLLBAR STYLING ===== */
 .popup-content::-webkit-scrollbar {
   width: 8px;
@@ -786,8 +706,6 @@
   background: #5a0013;
 }
 
-
-
 /* ===== RESPONSIVE DESIGN ===== */
 
 /* Tablet (1400px 이하) */
@@ -802,13 +720,6 @@
 
   .carousel-container {
     height: 500px;
-  }
-
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 1.5rem;
-    max-width: 800px;
   }
 
   .video-container iframe {
@@ -852,7 +763,6 @@
   }
 }
 
-
 /* Mobile (768px 이하) */
 @media (max-width: 768px) {
   .home-hero-section {
@@ -883,7 +793,6 @@
   }
 
   .featured-carousel-section,
-  .projects-section,
   .info-section,
   .contact-section {
     padding: 4rem 1rem;
@@ -909,21 +818,6 @@
   .carousel-container {
     height: 400px;
     margin: 0 1rem;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
-    gap: 1.5rem;
-    max-width: none;
-  }
-
-  .project-image {
-    height: 14rem;
-  }
-
-  .project-content {
-    padding: 1.3rem;
   }
 
   .info-grid {
@@ -1031,7 +925,6 @@
   }
 
   .featured-carousel-section,
-  .projects-section,
   .info-section,
   .contact-section {
     padding: 3rem 0.5rem;
@@ -1107,34 +1000,6 @@
   .carousel-indicators button {
     width: 20px;
     height: 3px;
-  }
-
-  .projects-grid {
-    gap: 1rem;
-  }
-
-  .project-image {
-    height: 12rem;
-  }
-
-  .project-content {
-    padding: 1rem;
-  }
-
-  .project-title {
-    font-size: 1rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .project-client,
-  .project-period {
-    font-size: 0.85rem;
-    margin-bottom: 0.4rem;
-  }
-
-  .project-btn {
-    padding: 8px 16px;
-    font-size: 0.8rem;
   }
 
   .info-card {
@@ -1277,7 +1142,6 @@
     font-size: 0.85rem;
     margin: 3px 0;
   }
-
 }
 
 /* ===== ANIMATIONS ===== */
@@ -1309,7 +1173,6 @@
   animation: heroFadeIn 1s ease-out;
 }
 
-.project-card,
 .info-card {
   animation: fadeInUp 0.6s ease-out;
 }
@@ -1320,7 +1183,6 @@
 
 /* ===== ACCESSIBILITY IMPROVEMENTS ===== */
 .carousel-control:focus,
-.project-btn:focus,
 .info-btn:focus,
 .view-details-btn:focus {
   outline: 2px solid var(--brand-red);
@@ -1333,7 +1195,6 @@
 }
 
 /* ===== PERFORMANCE OPTIMIZATIONS ===== */
-.project-card,
 .info-card,
 .carousel-item {
   will-change: transform;
@@ -1341,25 +1202,6 @@
 
 .home-hero-section {
   will-change: background-position;
-}
-
-/* ===== POPUP SCROLLBAR STYLING ===== */
-.popup-content::-webkit-scrollbar {
-  width: 8px;
-}
-
-.popup-content::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 4px;
-}
-
-.popup-content::-webkit-scrollbar-thumb {
-  background: var(--brand-red);
-  border-radius: 4px;
-}
-
-.popup-content::-webkit-scrollbar-thumb:hover {
-  background: #5a0013;
 }
 
 /* iOS Safari 전용 최적화 */

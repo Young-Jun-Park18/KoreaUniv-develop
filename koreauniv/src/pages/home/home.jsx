@@ -83,57 +83,6 @@ const Home = () => {
     }
   ];
 
-  // 프로젝트 데이터
-  const projects = [
-    {
-      id: 1,
-      title: '디지털기반 건축 시공 및 안전감리 기술 개발',
-      client: '국토교통부',
-      period: '2022.04.01 ~ 2026.12.31',
-      image: '/images/transportBg.jpg',
-      link: '/project1',
-    },
-    {
-      id: 2,
-      title: '산학연 주관 미래도전 국방기술 연구개발',
-      client: '국방 과학 연구소',
-      period: '2022.11.25 ~ 2025.10.31',
-      image: '/images/labBg.svg',
-      link: '/project2',
-    },
-    {
-      id: 3,
-      title: '도시철도 역사내 맞춤형 스마트 내비게이션 개발',
-      client: '산업통상자원부 / 한국철도공사',
-      period: '2022.11 ~ 2024.02',
-      image: '/images/ktxBg.svg',
-      link: '/project3',
-    },
-    {
-      id: 4,
-      title: 'LG화학 여수 화학 단지 측위시스템 Pilot 구축',
-      client: 'LG CNS',
-      period: '2022.11.22 ~ 2022.12.31',
-      image: '/images/lgBg.svg',
-      link: 'https://www.asiatime.co.kr/article/20230615500331#_enliple#_mobwcvr',
-      external: true
-    },
-    {
-      id: 5,
-      title: '위치기반 마케팅 플랫폼 개발을 위한 실내 측위 시스템 구축',
-      client: 'TA9',
-      period: '2021.08.13 ~ 2023~12.31',
-      image: '/images/ta9Bg.png',
-    },
-    {
-      id: 6,
-      title: '자기장 기반 실내측위 기술의 포스코 현장 성능 검증',
-      client: '포스코',
-      period: '2021.02.01 ~ 2021.11.26',
-      image: '/images/poscoBg.png',
-    }
-  ];
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
@@ -337,34 +286,6 @@ const Home = () => {
               >
                 <span>&gt;</span>
               </button>
-            </div>
-          </section>
-
-          {/* Projects Section */}
-          <section className="projects-section">
-            <div className="section-header">
-              <h2 className="section-title">Projects</h2>
-            </div>
-            
-            <div className="projects-grid">
-              {projects.map((project) => (
-                <div key={project.id} className="project-card">
-                  <img src={project.image} alt={project.title} className="project-image" />
-                  <div className="project-content">
-                    <h4 className="project-title">{project.title}</h4>
-                    <h6 className="project-client">{project.client}</h6>
-                    <h6 className="project-period">{project.period}</h6>
-                    <a 
-                      href={project.link} 
-                      className="project-btn"
-                      target={project.external ? "_blank" : "_self"}
-                      rel={project.external ? "noopener noreferrer" : undefined}
-                    >
-                      View Details &gt;
-                    </a>
-                  </div>
-                </div>
-              ))}
             </div>
           </section>
 
