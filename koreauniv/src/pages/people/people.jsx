@@ -92,7 +92,7 @@ const employees = [
     name: '성 진 원 (Jin Won Seong)',
     course: 'M.S. 2023',
     email: 'jin1seong@korea.ac.kr',
-    affiliation: ''
+    affiliation: '롯데 이노베이트'
   },
   {
     name: '임 바 다 (Ba Da Lim)',
@@ -110,13 +110,13 @@ const employees = [
     name: '황 승 규 (Seung Kyu Hwang)',
     course: 'M.S. 2022',
     email: 'tvfxqmax200@gmail.com',
-    affiliation: ''
+    affiliation: '삼성전자'
   },
   {
     name: '배 한 준 (Han Jun Bae)',
     course: 'Ph.D. 2022',
     email: 'qwerty2901@korea.ac.kr',
-    affiliation: ''
+    affiliation: '삼성전자'
   },
   {
     name: '구 경 현 (Kyung Hyun Koo)',

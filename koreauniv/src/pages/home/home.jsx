@@ -43,7 +43,7 @@ const Home = () => {
     },
     {
       type: 'image',
-      src: '/images/main0_0.png',
+      src: '/images/main0_0.jpg',
       title: 'LG 화학 여수 플랜트, 제로맵 실내측위 시스템 구축',
       description: 'LG 화학 플랜트에서 1미터 이내 측위 오차의 세계 최고 수준 실내측위 시스템 구축 최린 교수팀, 독자적인 경량화 측위 엔진 기술 적용',
       link: 'https://www.asiatime.co.kr/article/20230615500331#_enliple#_mobwcvr'
@@ -98,7 +98,7 @@ const Home = () => {
       title: '산학연 주관 미래도전 국방기술 연구개발',
       client: '국방 과학 연구소',
       period: '2022.11.25 ~ 2025.10.31',
-      image: '/images/labBg2.png',
+      image: '/images/labBg.svg',
       link: '/project2',
     },
     {
@@ -106,7 +106,7 @@ const Home = () => {
       title: '도시철도 역사내 맞춤형 스마트 내비게이션 개발',
       client: '산업통상자원부 / 한국철도공사',
       period: '2022.11 ~ 2024.02',
-      image: '/images/ktxBg.jpg',
+      image: '/images/ktxBg.svg',
       link: '/project3',
     },
     {
@@ -114,7 +114,7 @@ const Home = () => {
       title: 'LG화학 여수 화학 단지 측위시스템 Pilot 구축',
       client: 'LG CNS',
       period: '2022.11.22 ~ 2022.12.31',
-      image: '/images/lgBg.jpg',
+      image: '/images/lgBg.svg',
       link: 'https://www.asiatime.co.kr/article/20230615500331#_enliple#_mobwcvr',
       external: true
     },
