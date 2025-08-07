@@ -81,7 +81,7 @@ const Home = () => {
       client: '국토교통부',
       period: '2022.04.01~2026.12.31',
       image: '/images/transportBg.jpg',
-      link: '/project_4'
+      link: '/project1'
     },
     {
       id: 2,

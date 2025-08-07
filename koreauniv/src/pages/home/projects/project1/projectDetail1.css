@@ -1,0 +1,284 @@
+/* projectDetail1.css */
+
+:root {
+  --project-detail-1-brand-red: #7C001A;
+  --project-detail-1-brand-gradient: linear-gradient(120deg, #7C001A 70%, #FF6B6B 100%);
+  --project-detail-1-brand-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --project-detail-1-text-gray: #7E7E7E;
+  --project-detail-1-light-gray: #F9F9F9;
+  --project-detail-1-border-gray: #EBEBEB;
+}
+
+/* ===== GLOBAL STYLES ===== */
+.project-detail-1-page {
+  min-height: 100vh;
+  width: 100%;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+.project-detail-1-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ===== TITLE SECTION ===== */
+.project-detail-1-title-section {
+  padding: 16vh 0 2rem;
+  background: white;
+  text-align: center;
+}
+
+.project-detail-1-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.project-detail-1-period {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--project-detail-1-text-gray);
+}
+
+/* ===== MAIN CONTENT ===== */
+.project-detail-1-content {
+  background: white;
+}
+
+/* ===== SECTION HEADER STYLES ===== */
+.project-detail-1-section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 0 2rem;
+}
+
+.project-detail-1-section-title {
+  color: #111;
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-detail-1-section-title::after {
+  content: '.';
+  color: var(--project-detail-1-brand-red);
+}
+
+/* ===== TASK SYSTEM SECTION ===== */
+.project-detail-1-task-system-section {
+  padding: 6rem 0;
+  background: var(--project-detail-1-light-gray);
+}
+
+/* ===== TECHNOLOGY OVERVIEW SECTION ===== */
+.project-detail-1-tech-overview-section {
+  padding: 6rem 0;
+  background: white;
+}
+
+/* ===== IMAGES CONTAINER ===== */
+.project-detail-1-images-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.project-detail-1-section-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: var(--project-detail-1-brand-shadow);
+  transition: transform 0.3s ease;
+}
+
+.project-detail-1-section-image:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== FOOTER ===== */
+.project-detail-1-footer {
+  min-height: 17rem;
+  background-color: #1E1E1E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.project-detail-1-footer-divider {
+  border: none;
+  border-top: 2px solid #ffffff;
+  margin-bottom: 1rem;
+}
+
+.project-detail-1-footer-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-family: 'Open-sans', sans-serif;
+}
+
+.project-detail-1-footer-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+  color: #ffffff;
+  margin: 0;
+  font-family: 'Open-sans', sans-serif;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet (1400px 이하) */
+@media (max-width: 1400px) {
+  .project-detail-1-title-section {
+    padding: 16vh 0 1.5rem;
+  }
+
+  .project-detail-1-title {
+    font-size: 2rem;
+  }
+
+  .project-detail-1-period {
+    font-size: 1.2rem;
+  }
+
+  .project-detail-1-section-title {
+    font-size: 2.5rem;
+  }
+
+  .project-detail-1-images-container {
+    gap: 2.5rem;
+  }
+}
+
+/* Mobile (768px 이하) */
+@media (max-width: 768px) {
+  .project-detail-1-container {
+    padding: 0 1rem;
+  }
+
+  .project-detail-1-title-section {
+    padding: 4rem 0 3rem;
+  }
+
+  .project-detail-1-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-detail-1-period {
+    font-size: 1.1rem;
+  }
+
+  .project-detail-1-task-system-section,
+  .project-detail-1-tech-overview-section {
+    padding: 4rem 0;
+  }
+
+  .project-detail-1-section-header {
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+  }
+
+  .project-detail-1-section-title {
+    font-size: 2rem;
+  }
+
+  .project-detail-1-images-container {
+    gap: 2rem;
+  }
+
+  .project-detail-1-footer {
+    padding: 1.8rem 0;
+  }
+
+  .project-detail-1-footer-title {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 0.8rem;
+  }
+
+  .project-detail-1-footer-text {
+    text-align: center;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}
+
+/* Mobile Small (480px 이하) */
+@media (max-width: 480px) {
+  .project-detail-1-container {
+    padding: 0 0.5rem;
+  }
+
+  .project-detail-1-title-section {
+    padding: 16vh 0 2rem;
+  }
+
+  .project-detail-1-title {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+
+  .project-detail-1-period {
+    font-size: 1rem;
+  }
+
+  .project-detail-1-task-system-section,
+  .project-detail-1-tech-overview-section {
+    padding: 3rem 0;
+  }
+
+  .project-detail-1-section-title {
+    font-size: 1.8rem;
+  }
+
+  .project-detail-1-images-container {
+    gap: 1.5rem;
+  }
+
+  .project-detail-1-footer-title {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 0.8rem;
+  }
+
+  .project-detail-1-footer-text {
+    text-align: center;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes project-detail-1-fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-detail-1-section-image {
+  animation: project-detail-1-fadeInUp 0.6s ease-out;
+}
+
+.project-detail-1-section-header {
+  animation: project-detail-1-fadeInUp 0.8s ease-out;
+}
