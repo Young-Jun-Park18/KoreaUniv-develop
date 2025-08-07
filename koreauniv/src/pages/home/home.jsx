@@ -89,7 +89,7 @@ const Home = () => {
       client: '국방 과학 연구소',
       period: '2022.11.25 ~ 2025.10.31',
       image: '/images/labBg2.png',
-      link: '/project_2'
+      link: '/project2'
     },
     {
       id: 3,

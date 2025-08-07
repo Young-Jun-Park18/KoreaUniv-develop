@@ -1,0 +1,493 @@
+/* projectDetail2.css */
+
+:root {
+  --project-detail-2-brand-red: #7C001A;
+  --project-detail-2-brand-gradient: linear-gradient(120deg, #7C001A 70%, #FF6B6B 100%);
+  --project-detail-2-brand-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --project-detail-2-text-gray: #7E7E7E;
+  --project-detail-2-light-gray: #F9F9F9;
+  --project-detail-2-border-gray: #EBEBEB;
+}
+
+/* ===== GLOBAL STYLES ===== */
+.project-detail-2-page {
+  min-height: 100vh;
+  width: 100%;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+.project-detail-2-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ===== TITLE SECTION ===== */
+.project-detail-2-title-section {
+  padding: 16vh 0 2rem;
+  background: white;
+  text-align: center;
+}
+
+.project-detail-2-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.project-detail-2-period {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--project-detail-2-text-gray);
+}
+
+/* ===== MAIN CONTENT ===== */
+.project-detail-2-content {
+  background: white;
+}
+
+/* ===== SECTION HEADER STYLES ===== */
+.project-detail-2-section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 0 2rem;
+}
+
+.project-detail-2-section-title {
+  color: #111;
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-detail-2-section-title::after {
+  content: '.';
+  color: var(--project-detail-2-brand-red);
+}
+
+/* ===== PROJECT IMAGE SECTION ===== */
+.project-detail-2-image-section {
+  padding: 2rem 0;
+  background: white;
+}
+
+.project-detail-2-main-image {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: var(--project-detail-2-brand-shadow);
+  display: block;
+  margin: 0 auto;
+}
+
+/* ===== PROJECT OVERVIEW SECTION ===== */
+.project-detail-2-overview-section {
+  padding: 6rem 0;
+  background: var(--project-detail-2-light-gray);
+}
+
+.project-detail-2-overview-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.project-detail-2-overview-intro {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: center;
+  margin-bottom: 4rem;
+  font-weight: 500;
+}
+
+.project-detail-2-research-phases {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.project-detail-2-phase-card {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: var(--project-detail-2-brand-shadow);
+  transition: transform 0.3s ease;
+}
+
+.project-detail-2-phase-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-detail-2-phase-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--project-detail-2-border-gray);
+  text-align: center;
+}
+
+.project-detail-2-phase-title {
+  color: var(--project-detail-2-brand-red);
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.project-detail-2-phase-subtitle {
+  color: #333;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.project-detail-2-phase-content {
+  color: #555;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.project-detail-2-phase-content p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.project-detail-2-phase-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== NECESSITY ITEMS STYLING ===== */
+.project-detail-2-necessity-item {
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.project-detail-2-necessity-item:last-child {
+  margin-bottom: 0;
+}
+
+.project-detail-2-necessity-subtitle {
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--project-detail-2-border-gray);
+}
+
+/* ===== KEY FEATURES SECTION ===== */
+.project-detail-2-key-features-section {
+  padding: 6rem 0;
+  background: white;
+}
+
+.project-detail-2-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.project-detail-2-feature-card {
+  background: white;
+  border: 2px solid var(--project-detail-2-border-gray);
+  border-radius: 20px;
+  padding: 2.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.project-detail-2-feature-card:hover {
+  border-color: var(--project-detail-2-brand-red);
+  transform: translateY(-5px);
+  box-shadow: var(--project-detail-2-brand-shadow);
+}
+
+.project-detail-2-feature-title {
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.project-detail-2-feature-description {
+  color: var(--project-detail-2-text-gray);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* ===== FOOTER ===== */
+.project-detail-2-footer {
+  min-height: 17rem;
+  background-color: #1E1E1E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.project-detail-2-footer-divider {
+  border: none;
+  border-top: 2px solid #ffffff;
+  margin-bottom: 1rem;
+}
+
+.project-detail-2-footer-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-family: 'Open-sans', sans-serif;
+}
+
+.project-detail-2-footer-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+  color: #ffffff;
+  margin: 0;
+  font-family: 'Open-sans', sans-serif;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet (1400px 이하) */
+@media (max-width: 1400px) {
+  .project-detail-2-title-section {
+    padding: 16vh 0 1.5rem;
+  }
+
+  .project-detail-2-title {
+    font-size: 2rem;
+  }
+
+  .project-detail-2-period {
+    font-size: 1.2rem;
+  }
+
+  .project-detail-2-image-section {
+    padding: 1.5rem 0;
+  }
+
+  .project-detail-2-section-title {
+    font-size: 2.5rem;
+  }
+
+  .project-detail-2-phase-card {
+    padding: 2.5rem;
+  }
+
+  .project-detail-2-phase-title {
+    font-size: 1.8rem;
+  }
+
+  .project-detail-2-phase-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile (768px 이하) */
+@media (max-width: 768px) {
+  .project-detail-2-container {
+    padding: 0 1rem;
+  }
+
+  .project-detail-2-title-section {
+    padding: 4rem 0 3rem;
+  }
+
+  .project-detail-2-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-detail-2-period {
+    font-size: 1.1rem;
+  }
+
+  .project-detail-2-image-section,
+  .project-detail-2-overview-section {
+    padding: 1rem 0 4rem;
+  }
+
+  .project-detail-2-section-header {
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+  }
+
+  .project-detail-2-section-title {
+    font-size: 2rem;
+  }
+
+  .project-detail-2-overview-intro {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+
+  .project-detail-2-research-phases {
+    gap: 2rem;
+  }
+
+  .project-detail-2-phase-card {
+    padding: 2rem;
+    border-radius: 15px;
+  }
+
+  .project-detail-2-phase-title {
+    font-size: 1.5rem;
+  }
+
+  .project-detail-2-phase-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .project-detail-2-phase-content p {
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .project-detail-2-necessity-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .project-detail-2-features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-detail-2-feature-card {
+    padding: 2rem;
+  }
+
+  .project-detail-2-footer {
+    padding: 1.8rem 0;
+  }
+
+  .project-detail-2-footer-title {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 0.8rem;
+  }
+
+  .project-detail-2-footer-text {
+    text-align: center;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}
+
+/* Mobile Small (480px 이하) */
+@media (max-width: 480px) {
+  .project-detail-2-container {
+    padding: 0 0.5rem;
+  }
+
+  .project-detail-2-title-section {
+    padding: 16vh 0 2rem;
+  }
+
+  .project-detail-2-title {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+
+  .project-detail-2-period {
+    font-size: 1rem;
+  }
+
+  .project-detail-2-image-section,
+  .project-detail-2-overview-section {
+    padding: 1rem 0 3rem;
+  }
+
+  .project-detail-2-section-title {
+    font-size: 1.8rem;
+  }
+
+  .project-detail-2-overview-intro {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .project-detail-2-phase-card {
+    padding: 1.5rem;
+  }
+
+  .project-detail-2-phase-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .project-detail-2-phase-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .project-detail-2-phase-subtitle {
+    font-size: 1rem;
+  }
+
+  .project-detail-2-phase-content p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-detail-2-necessity-subtitle {
+    font-size: 1rem;
+  }
+
+  .project-detail-2-feature-card {
+    padding: 1.5rem;
+  }
+
+  .project-detail-2-feature-title {
+    font-size: 1.1rem;
+  }
+
+  .project-detail-2-feature-description {
+    font-size: 0.9rem;
+  }
+
+  .project-detail-2-footer-title {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 0.8rem;
+  }
+
+  .project-detail-2-footer-text {
+    text-align: center;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes project-detail-2-fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-detail-2-phase-card,
+.project-detail-2-feature-card {
+  animation: project-detail-2-fadeInUp 0.6s ease-out;
+}
+
+.project-detail-2-section-header {
+  animation: project-detail-2-fadeInUp 0.8s ease-out;
+}

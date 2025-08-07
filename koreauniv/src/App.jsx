@@ -11,6 +11,7 @@ import People from './pages/people/people'; // Member → People로 변경
 import Publications from './pages/publications/publications';
 import Research from './pages/research/research';
 
+import ProjectDetail2 from './pages/home/projects/project2/projectDetail2';
 import ProjectDetail3 from './pages/home/projects/project3/projectDetail3';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/people" element={<People />} /> {/* /members → /people로 변경 */}
         <Route path="/publications" element={<Publications />} />
         <Route path="/research" element={<Research />} />
+        <Route path="/project2" element={<ProjectDetail2 />} />
         <Route path="/project3" element={<ProjectDetail3 />} />
       </Routes>
     </>
