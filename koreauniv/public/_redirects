@@ -1,1 +1,6 @@
-/*    /index.html   200
+# 정적 파일들은 직접 서빙
+/course_materials/* /course_materials/:splat 200
+/images/* /images/:splat 200
+
+# React Router용 catch-all (SPA)
+/* /index.html 200
