@@ -61,7 +61,7 @@ const Research = () => {
         {/* Hero Section with Background Image */}
         <section className="research-hero-section">
           <div className="research-hero-overlay">
-            <h1 className="research-hero-text">Research</h1>
+            <h1 className="research-hero-text">Research Area</h1>
           </div>
         </section>
 
