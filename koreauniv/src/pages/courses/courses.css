@@ -186,9 +186,11 @@
 
 .courses-grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   padding: 0 2rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .course-card {
@@ -225,8 +227,6 @@
   font-size: 0.9rem;
   font-family: 'Monaco', 'Menlo', monospace;
 }
-
-
 
 .course-title {
   font-size: 1.5rem;
@@ -455,8 +455,8 @@
   }
 
   .courses-grid-container {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 1.5rem;
+    max-width: 800px;
   }
 
   .course-card {
@@ -497,6 +497,7 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
     padding: 0 1rem;
+    max-width: none;
   }
 
   .course-card {
@@ -524,11 +525,7 @@
   }
 }
 
-
-
-
 @media (max-width: 480px) {
-
   .courses-hero-text {
     font-size: 1.8rem;
   }

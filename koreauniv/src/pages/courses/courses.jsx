@@ -39,6 +39,17 @@ const Courses = () => {
       ]
     },
     {
+      id: 'KECE208',
+      code: 'KECE208(03)',
+      title: 'Data Structure and Algorithm',
+      description: '데이터의 기본 구조, data abstraction 개념 및 알고리즘 등을 학습합니다.',
+      professor: '최린',
+      materials: [
+        // KECE208 자료들 (필요에 따라 실제 파일명으로 수정)
+        
+      ]
+    },
+    {
       id: 'KECE343',
       code: 'KECE343(00)',
       title: 'Computer Architecture',
