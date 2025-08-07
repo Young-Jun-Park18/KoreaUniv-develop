@@ -77,11 +77,11 @@ const Home = () => {
   const projects = [
     {
       id: 1,
-      title: 'LG화학 여수 화학 단지 측위시스템 Pilot 구축',
-      client: 'LG CNS',
-      period: '2022.11.22 ~ 2022.12.31',
-      image: '/images/lgBg.jpg',
-      link: '/project'
+      title: '디지털기반 건축 시공 및 안전감리 기술 개발',
+      client: '국토교통부',
+      period: '2022.04.01~2026.12.31',
+      image: '/images/transportBg.jpg',
+      link: '/project_4'
     },
     {
       id: 2,
@@ -97,15 +97,16 @@ const Home = () => {
       client: '산업자원부',
       period: '2022.05.01~2023.12.31',
       image: '/images/ktxBg.jpg',
-      link: '/project_3'
+      link: '/project3'
     },
     {
       id: 4,
-      title: '디지털기반 건축 시공 및 안전감리 기술 개발',
-      client: '국토교통부',
-      period: '2022.04.01~2026.12.31',
-      image: '/images/transportBg.jpg',
-      link: '/project_4'
+      title: 'LG화학 여수 화학 단지 측위시스템 Pilot 구축',
+      client: 'LG CNS',
+      period: '2022.11.22 ~ 2022.12.31',
+      image: '/images/lgBg.jpg',
+      link: 'https://www.asiatime.co.kr/article/20230615500331#_enliple#_mobwcvr',
+      external: true // 외부 링크임을 표시
     },
     {
       id: 5,
@@ -113,7 +114,6 @@ const Home = () => {
       client: 'TA9',
       period: '2021.08.13~2023~12.31',
       image: '/images/ta9Bg.png',
-      link: '/project'
     },
     {
       id: 6,
@@ -121,7 +121,6 @@ const Home = () => {
       client: '포스코',
       period: '2021.02.01~2021.11.26',
       image: '/images/poscoBg.png',
-      link: '/project'
     }
   ];
 
@@ -233,7 +232,13 @@ const Home = () => {
                     <h4 className="project-title">{project.title}</h4>
                     <h6 className="project-client">{project.client}</h6>
                     <h6 className="project-period">{project.period}</h6>
-                    <a href={project.link} className="project-btn">
+                    {/* 외부 링크는 새창으로, 내부 링크는 같은 탭에서 열기 */}
+                    <a 
+                      href={project.link} 
+                      className="project-btn"
+                      target={project.external ? "_blank" : "_self"}
+                      rel={project.external ? "noopener noreferrer" : undefined}
+                    >
                       View Details &gt;
                     </a>
                   </div>
@@ -278,7 +283,7 @@ const Home = () => {
             
             <div className="map-container">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1580.8931278067341!2d127.02288467028194!3d37.583650573217895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cbcb11f445687%3A0xba9f0bcf185144c4!2z7ISc7Jq47Yq567OE7IucIOyViOyVlOuPmDPqsIAg6rOg66Ck64yA7ZWZ6rWQIOqzt-2VgeuvvOyLmg!5e0!3m2!1sko!2skr!4v1685691831690!5m2!1sko!2skr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1580.8931278067341!2d127.02288467028194!3d37.583650573217895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cbcb11f445687%3A0xba9f0bcf185144c4!2z7ISc7Jq47Yq567OE7IucIOyViOyVlOuPmDPqsIAg6rOg66Ck64yA7ZWZ6rWQIOqzt-2VheuvvOyLmg!5e0!3m2!1sko!2skr!4v1685691831690!5m2!1sko!2skr"
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
