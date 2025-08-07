@@ -60,6 +60,7 @@ const NavBar = () => {
             <li className="navElement"><Link to="/people">People</Link></li>
             <li className="navElement"><Link to="/publications">Publications</Link></li>
             <li className="navElement"><Link to="/courses">Courses</Link></li>
+            <li className="navElement"><Link to="/news">News</Link></li>
           </ul>
         </div>
 
@@ -97,6 +98,7 @@ const NavBar = () => {
         <Link to="/people" onClick={handleLinkClick}>People</Link>
         <Link to="/publications" onClick={handleLinkClick}>Publications</Link>
         <Link to="/courses" onClick={handleLinkClick}>Courses</Link>
+        <Link to="/news" onClick={handleLinkClick}>News</Link>
         <a 
           href="https://fifthdimension.co.kr/" 
           target="_blank" 

@@ -11,6 +11,7 @@ import People from './pages/people/people'; // Member → People로 변경
 import Publications from './pages/publications/publications';
 import Research from './pages/research/research';
 import Projects from './pages/projects/projects'; // Projects 페이지 추가
+import News from './pages/news/news'; // News 페이지 추가
 
 import ProjectDetail1 from './pages/home/projects/project1/projectDetail1';
 import ProjectDetail2 from './pages/home/projects/project2/projectDetail2';
@@ -29,6 +30,7 @@ function App() {
         <Route path="/publications" element={<Publications />} />
         <Route path="/research" element={<Research />} />
         <Route path="/projects" element={<Projects />} /> {/* Projects 라우트 추가 */}
+        <Route path="/news" element={<News />} /> {/* Projects 라우트 추가 */}        
         <Route path="/project1" element={<ProjectDetail1 />} />
         <Route path="/project2" element={<ProjectDetail2 />} />
         <Route path="/project3" element={<ProjectDetail3 />} />
