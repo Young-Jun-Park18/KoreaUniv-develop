@@ -16,6 +16,27 @@ const Research = () => {
     }
   };
 
+  // URL 파라미터에서 탭 상태 복원
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const tab = urlParams.get('tab');
+    if (tab === 'projects') {
+      setActiveTab('projects');
+    }
+  }, []);
+
+  // 탭 변경 핸들러 (URL 업데이트 포함)
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+    const url = new URL(window.location);
+    if (tab === 'projects') {
+      url.searchParams.set('tab', 'projects');
+    } else {
+      url.searchParams.delete('tab');
+    }
+    window.history.replaceState({}, '', url);
+  };
+
   // 연구 분야 데이터
   const researchAreas = [
     {
@@ -399,13 +420,13 @@ const Research = () => {
           <div className="research-hero-button-container">
             <button
               className={`research-hero-button ${activeTab === 'area' ? 'active' : ''}`}
-              onClick={() => setActiveTab('area')}
+              onClick={() => handleTabChange('area')}
             >
               <span>Research Area</span>
             </button>
             <button
               className={`research-hero-button ${activeTab === 'projects' ? 'active' : ''}`}
-              onClick={() => setActiveTab('projects')}
+              onClick={() => handleTabChange('projects')}
             >
               <span>Projects</span>
             </button>
