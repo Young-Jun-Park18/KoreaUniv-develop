@@ -56,6 +56,7 @@ const NavBar = () => {
           <ul className="navList">
             <li className="navElement"><Link to="/">Home</Link></li>
             <li className="navElement"><Link to="/research">Research</Link></li>
+            <li className="navElement"><Link to="/projects">Projects</Link></li>
             <li className="navElement"><Link to="/people">People</Link></li>
             <li className="navElement"><Link to="/publications">Publications</Link></li>
             <li className="navElement"><Link to="/courses">Courses</Link></li>
@@ -92,6 +93,7 @@ const NavBar = () => {
       <div ref={menuRef} className={`mobileMenu ${menuOpen ? "show" : ""}`}>
         <Link to="/" onClick={handleLinkClick}>Home</Link>
         <Link to="/research" onClick={handleLinkClick}>Research</Link>
+        <Link to="/projects" onClick={handleLinkClick}>Projects</Link>
         <Link to="/people" onClick={handleLinkClick}>People</Link>
         <Link to="/publications" onClick={handleLinkClick}>Publications</Link>
         <Link to="/courses" onClick={handleLinkClick}>Courses</Link>
