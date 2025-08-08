@@ -2,7 +2,7 @@ import React from 'react';
 import './news.css';
 
 const News = () => {
-  // 뉴스 데이터 (기존 home.jsx의 이미지 슬라이드에서 가져온 데이터)
+  // 뉴스 데이터 (링크가 없는 항목들에 대한 처리 개선)
   const newsData = [
     {
       id: 1,
@@ -97,6 +97,7 @@ const News = () => {
       image: '/images/main1_3.jpg',
       title: 'NET 신기술 인증',
       description: '딥러닝 기술 사용 자기장 기반 실내측위, NET 신기술 인증',
+      link: '', // 빈 링크
       date: '2020.12'
     },
     {
@@ -104,6 +105,7 @@ const News = () => {
       image: '/images/main1_2.jpg',
       title: '세계 최초 수도권 지하철/KTX 역사 실내측위 시스템 및 실내 내비게이션 앱 개발 착수',
       description: '최린 교수 연구팀, 딥러닝 기반의 지자기 실내측위 기술을 이용 지하철 역사 내 교통약자 위한 맞춤형스마트 내비게이션 개발 계획',
+      link: '', // 빈 링크
       date: '2022.11'
     },
     {
@@ -122,12 +124,23 @@ const News = () => {
       link: 'https://www.joongang.co.kr/article/23892177#home',
       date: '2020.09'
     }
-
   ];
 
+  // 개선된 링크 처리 함수
   const handleNewsClick = (link) => {
-    if (link) {
-      window.open(link, '_blank', 'noopener noreferrer');
+    if (link && link.trim() !== '') {
+      // 디버깅을 위한 콘솔 로그 추가
+      console.log('Opening link:', link);
+      
+      try {
+        window.open(link, '_blank', 'noopener noreferrer');
+      } catch (error) {
+        console.error('링크 열기 실패:', error);
+        // 대체 방법 시도
+        window.location.href = link;
+      }
+    } else {
+      console.log('링크가 없습니다.');
     }
   };
 
@@ -153,11 +166,14 @@ const News = () => {
               {newsData.map((news) => (
                 <article 
                   key={news.id} 
-                  className={`news-item ${news.link ? 'clickable' : ''}`}
+                  className={`news-item ${news.link && news.link.trim() !== '' ? 'clickable' : ''}`}
                 >
                   <div 
                     className="news-image-container"
                     onClick={() => handleNewsClick(news.link)}
+                    style={{
+                      cursor: news.link && news.link.trim() !== '' ? 'pointer' : 'default'
+                    }}
                   >
                     <img 
                       src={news.image} 
@@ -170,6 +186,9 @@ const News = () => {
                     <h3 
                       className="news-title"
                       onClick={() => handleNewsClick(news.link)}
+                      style={{
+                        cursor: news.link && news.link.trim() !== '' ? 'pointer' : 'default'
+                      }}
                     >
                       {news.title}
                     </h3>
@@ -178,9 +197,17 @@ const News = () => {
                     
                     <div className="news-meta">
                       <time className="news-date">{news.date}</time>
-                      {news.link && (
-                        <div className="news-link-indicator">
-                          <span>기사 보기 →</span>
+                      {news.link && news.link.trim() !== '' ? (
+                        <div 
+                          className="news-link-indicator"
+                          onClick={() => handleNewsClick(news.link)}
+                          style={{ cursor: 'pointer' }}
+                        >
+                          <span>자세히 보기 →</span>
+                        </div>
+                      ) : (
+                        <div className="news-link-indicator-disabled">
+                          <span style={{ color: '#999' }}>링크 준비중</span>
                         </div>
                       )}
                     </div>
