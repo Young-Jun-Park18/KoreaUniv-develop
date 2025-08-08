@@ -84,11 +84,7 @@ const Research = () => {
           <section className="zeromap-section">
             <div className="zeromap-content">
               <h2 className="zeromap-title">2. 제로맵 디지털트윈 기술<span className="title-dot">.</span></h2>
-              
-              <div className="zeromap-image">
-                <img src="/images/research2.png" alt="제로맵 디지털트윈 기술" />
-              </div>
-              
+               
               <div className="zeromap-description">
                 <p>
                   디지털 트윈 기술은 현실의 물리적 객체나 시스템을 가상 공간에 재현하는 기술로서 실제 모습과 유사한 3차원 (3D) 모델을 생성하는 것이 가장 기본적인 작업이다. 3D 모델을 제작하기 위해서는 1단계로, 카메라와 라이다 센서 장비를 이용하여 현장을 물리적으로 스캔하는 작업이 필요하며, 이를 통해 획득한 포인트 클라우드 형태의 모델은 현장 표면의 미세한 굴곡마저 처리되어 수백 MB에서 수십 GB에 이르는 크고 무거운 3D 모델을 생성하게 된다. 따라서 Unity나 Unreal과 같은 3D 엔진에서 구동하기에는 메모리 용량과 계산량 부담으로 시스템 로드가 안되거나 구동 시 성능이 저하되는 문제점을 갖는다. 이러한 문제를 해결하기 위해 3단계로 디자이너의 수작업을 통해, 3D 모델의 품질은 유지하면서 면과 꼭지점 개수를 줄이기 위해 수개월 이상의 시간과 노력이 소요된다. 현재까지의 국내외 대부분의 디지털 트윈 업체들은 이러한 방식을 사용하고 있으며, 따라서 디지털 트윈 생성에는 많은 시간과 비용이 소모되는 문제점을 갖는다.
@@ -97,6 +93,12 @@ const Research = () => {
                   본 <strong>제로맵 디지털 트윈 기술은 현장 방문과 카메라 및 라이다 장비를 이용한 물리적 스캔 없이</strong> 또, <strong>디자이너의 수작업 없이</strong>, <strong>도면만을 입력으로</strong> 실제 현장의 3D 모델을 자동으로 생성한다. 건물의 외벽, 내벽, 문, 창문, 복도, 로비, 에스컬레이터, 엘리베이터, 계단의 배치 등 여러 다양한 형태의 설계 도면 양식을 분석하여 <strong>한 치의 오차도 없는 정밀하면서 고품질의 3D 모델을 자동으로 생성</strong>한다. 자동 생성된 3D 모델은 측위 앱, 실내 측위 시뮬레이션, 실내 3D 내비게이션, 3D 디지털 트윈 관제 서비스에 활용된다.
                 </p>
               </div>
+
+              <div className="zeromap-image-with-caption">
+                <img src="/images/research2.png" alt="제로맵 디지털트윈 기술" />
+                <p className="image-caption">자동 생성된 3D 디지털 트윈 (고려대학교 공학관)</p>
+              </div>
+
             </div>
           </section>
 
@@ -150,7 +152,7 @@ const Research = () => {
           {researchAreas.map((area) => (
             <section key={area.id} id={area.id} className="research-detail">
               <div className="research-detail-content">
-                <h4 className="research-detail-number">Past Research.{area.number}</h4>
+                <h4 className="research-detail-number">Previous Research.{area.number}</h4>
                 <h3 className="research-detail-title">{area.title}</h3>
                 
                 {area.image && (

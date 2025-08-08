@@ -6,11 +6,19 @@ const News = () => {
   const newsData = [
     {
       id: 1,
+      image: '/images/research2.png',
+      title: '핍스디멘션, "도면만으로 3D 모델 생성" 디지털 트윈 新 패러다임',
+      description: '현장 방문과 고가 장비 없이 도면 하나로 3D 모델을 생성, 기존 디지털 트윈 제작 방식의 상식을 뒤집는 새로운 패러다임을 제시.',
+      link: 'https://news.mt.co.kr/mtview.php?no=2025080710252051714',
+      date: '2025.08'
+    },
+    {
+      id: 1,
       image: '/images/main0_0.jpg',
       title: 'LG 화학 여수 플랜트, 제로맵 실내측위 시스템 구축',
       description: 'LG 화학 플랜트에서 1미터 이내 측위 오차의 세계 최고 수준 실내측위 시스템 구축 최린 교수팀, 독자적인 경량화 측위 엔진 기술 적용',
       link: 'https://www.asiatime.co.kr/article/20230615500331#_enliple#_mobwcvr',
-      date: '2023.06.15'
+      date: '2023.06'
     },
     {
       id: 2,
@@ -18,21 +26,21 @@ const News = () => {
       title: '대한민국 산업기술대전 산업기술진흥유공 대통령 표창',
       description: '전기전자공학부 최린 교수가 \'2022 대한민국 산업기술 R&D 대전\'에서 기술개발부문에서 산업기술진흥유공 정부포상자(훈격: 대통령표창)로 선정.',
       link: 'https://www.yna.co.kr/view/RPR20221208004100353',
-      date: '2022.12.08'
+      date: '2022.12'
     },
     {
       id: 3,
       image: '/images/main1_2.jpg',
       title: '세계 최초 수도권 지하철/KTX 역사 실내측위 시스템 및 실내 내비게이션 앱 개발 착수',
       description: '최린 교수 연구팀, 딥러닝 기반의 지자기 실내측위 기술을 이용 지하철 역사 내 교통약자 위한 맞춤형스마트 내비게이션 개발 계획',
-      date: '2022.11.15'
+      date: '2022.11'
     },
     {
       id: 4,
       image: '/images/main1_3.jpg',
       title: 'NET 신기술 인증',
       description: '딥러닝 기술 사용 자기장 기반 실내측위, NET 신기술 인증',
-      date: '2020.12.01'
+      date: '2020.12'
     },
     {
       id: 5,
@@ -40,7 +48,7 @@ const News = () => {
       title: '스마트폰만으로 실내 공간 위치 정밀 확인',
       description: '최린 교수 연구팀은 \'딥러닝 기반 지구자기장(지자기) 실내 측위 기술\'을 개발, 산업통상자원부 산하 국가기술표준원의 NET 신기술 인증을 획득했다고 최근 밝혔다. 이 기술은 2020년 2차 신기술 인증 수여식에서 대표적 신기술로 소개되기도 했다.',
       link: 'http://www.koit.co.kr/news/articleView.html?idxno=79886',
-      date: '2020.11.20'
+      date: '2020.11'
     },
     {
       id: 6,
@@ -48,7 +56,7 @@ const News = () => {
       title: '고려대 연구진 실내측위 기술 개발',
       description: '연구진은 딥러닝의 순환신경망(Recurrent Neural Networks) 기술을 사용해 실내 지구자기장의 분포 패턴을 기계학습했다. 이를 이용해 사람 또는 사물의 실내 위치를 추적하는 방식을 고안했다. 비콘이나 AP와 같은 추가적인 장비의 설치 없이 스마트폰만으로 대형 실내 공간에서 50~80 cm 수준의 측위가 가능하다.',
       link: 'https://www.joongang.co.kr/article/23892177#home',
-      date: '2020.09.15'
+      date: '2020.09'
     }
   ];
 

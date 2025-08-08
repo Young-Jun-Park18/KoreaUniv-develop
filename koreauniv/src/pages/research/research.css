@@ -114,6 +114,31 @@
   box-shadow: var(--brand-shadow);
 }
 
+.zeromap-image-with-caption {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.zeromap-image-with-caption img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: var(--brand-shadow);
+  margin-bottom: 1rem;
+}
+
+.image-caption {
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+  font-style: italic;
+  margin: 0;
+}
+
 .zeromap-description {
   text-align: left;
 }
@@ -357,6 +382,20 @@
     max-width: 100%;
   }
 
+  .zeromap-image-with-caption {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .zeromap-image-with-caption img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .image-caption {
+    font-size: 0.95rem;
+  }
+
   .zeromap-description p {
     font-size: 1rem;
     line-height: 1.5;
@@ -446,6 +485,20 @@
   .zeromap-image img {
     width: 100%;
     max-width: 100%;
+  }
+
+  .zeromap-image-with-caption {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .zeromap-image-with-caption img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .image-caption {
+    font-size: 0.9rem;
   }
 
   .zeromap-description p {
