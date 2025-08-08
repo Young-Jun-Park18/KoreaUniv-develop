@@ -5,18 +5,8 @@ const Research = () => {
   // 연구 분야 데이터
   const researchAreas = [
     {
-      id: 'section1',
-      number: 1,
-      title: '실내 위치 인식 알고리즘',
-      icon: '/images/icon1.png',
-      description: [
-        '실외 환경과는 달리 실내 환경에서는 GPS 수신이 불가능하여 위치 기반 서비스가 아직 상용화되지 못 하고 있습니다. 현재 실내 위치 인식에는 WiFi AP나 블루투스 비콘의 전파 신호 세기를 활용한 지문인식과 삼각 측량 방법이 주로 사용되며, 스마트폰의 모션 센서를 이용한 보행자 추측 항법(PDR), 지자기 센서를 활용하여 자기장 세기를 측정하고 자기장 맵을 구성하여 위치를 추정하는 자기장 기반 위치 인식 등 다양한 방법이 시도되고 있습니다. 그러나 RF 신호의 불안정성으로 인해 전파 신호 기반 위치 인식의 오차가 여전히 상당하게 나타나고 있습니다.',
-        '따라서 본 연구실은 실내 위치 인식과 관련하여 기존의 지문인식 기술과, PDR, 그리고 자기 장 기반 위치 인식은 물론, 서버 중심의 서비스를 위해 \'역 지문인식\'이라는 새로운 알고리즘을 제안하고 있습니다. 지문인식 기술, PDR, 자기장 기반 위치 인식과 함께 이 알고리즘을 활용하여 인식 오차를 줄이기 위한 다양한 알고리즘과 실험을 진행하고 있습니다. 이러한 위치 인식 알고리즘은 연구재단의 X 프로젝트와 현대엘리베이터의 실내 위치 인식 시스템 구현에 적용되고 있으며, 앞으로 1~2년 이내에 상용화 수준의 실내 위치 인식 시스템을 개발하고 구현하는 데 주력하고 있다.'
-      ]
-    },
-    {
       id: 'section2',
-      number: 2,
+      number: 1,
       title: '무선 센서 네트워크에서의 저전력 고성능 통신 프로토콜 연구',
       icon: '/images/icon2.png',
       image: '/images/2_11.png',
@@ -27,7 +17,7 @@ const Research = () => {
     },
     {
       id: 'section3',
-      number: 3,
+      number: 2,
       title: '방화벽 및 라우터에서의 고속 패킷 분류 알고리즘 연구',
       icon: '/images/icon3.png',
       image: '/images/3_1.png',
@@ -38,7 +28,7 @@ const Research = () => {
     },
     {
       id: 'section4',
-      number: 4,
+      number: 3,
       title: '버퍼 오버플로우 공격의 차단 및 복구를 위한 안전한 프로세서 마이크로구조 연구',
       icon: '/images/icon4.png',
       description: [
@@ -67,69 +57,91 @@ const Research = () => {
 
         {/* Research Area Content */}
         <div className="research-content">
-          {/* Research Overview */}
-          <section className="research-overview">
-            <div className="research-overview-content">
-              <h2 className="research-section-title">Research</h2>
-              <h4 className="research-section-subtitle">Indoor Positioning Laboratory Research</h4>
+          {/* Zero Map Technology Section */}
+          <section className="zeromap-section">
+            <div className="zeromap-content">
+              <h2 className="zeromap-title">1. 제로맵 실내측위 기술<span className="title-dot">.</span></h2>
               
-              <div className="research-buttons">
-                <div className="research-button-row">
-                  <div className="research-button-col">
-                    <button 
-                      className="research-button"
-                      onClick={() => scrollToSection('section1')}
-                    >
-                      <div className="research-button-icon">
-                        <img src="/images/icon1.png" alt="Research Icon 1" />
-                      </div>
-                      <div className="research-button-text">
-                        실내 위치 인식 <br />알고리즘
-                      </div>
-                    </button>
-                  </div>
-                  <div className="research-button-col">
-                    <button 
-                      className="research-button"
-                      onClick={() => scrollToSection('section2')}
-                    >
-                      <div className="research-button-icon">
-                        <img src="/images/icon2.png" alt="Research Icon 2" />
-                      </div>
-                      <div className="research-button-text">
-                        무선 센서 네트워크에서의<br />저전력 고성능 통신 프로토콜 연구
-                      </div>
-                    </button>
-                  </div>
-                </div>
-                <div className="research-button-row">
-                  <div className="research-button-col">
-                    <button 
-                      className="research-button"
-                      onClick={() => scrollToSection('section3')}
-                    >
-                      <div className="research-button-icon">
-                        <img src="/images/icon3.png" alt="Research Icon 3" />
-                      </div>
-                      <div className="research-button-text">
-                        방화벽 및 라우터에서의<br />고속 패킷 분류 알고리즘 연구
-                      </div>
-                    </button>
-                  </div>
-                  <div className="research-button-col">
-                    <button 
-                      className="research-button"
-                      onClick={() => scrollToSection('section4')}
-                    >
-                      <div className="research-button-icon">
-                        <img src="/images/icon4.png" alt="Research Icon 4" />
-                      </div>
-                      <div className="research-button-text">
-                        버퍼 오버플로우 공격 차단 및 복구를 위한<br />안전한 프로세서 마이크로구조 연구
-                      </div>
-                    </button>
-                  </div>
-                </div>
+              <div className="zeromap-image">
+                <img src="/images/research1.png" alt="제로맵 실내측위 기술" />
+              </div>
+              
+              <div className="zeromap-description">
+                <p>
+                  본 기술은 세계 최초로 <strong>사전 데이터 (자기장맵, 전파맵) 수집 없이</strong>, 또 비콘이나 AP와 같은 전파발생 <strong>장비나 전기 배선 공사 없이</strong> (인프라 프리), <strong>스마트폰만으로 실내에서 절대 측위 가능한 국내에서 개발된 독자적인 원천 기술</strong>이다.
+                </p>
+                <p>
+                  본 제로맵 측위 기술은 건물의 CAD 설계 도면을 입력으로 건물의 구조와 사용자의 이동 가능 영역을 분석하고, 스마트폰의 실시간 센서 데이터 (자기장, 자이로스코프, 가속도, 기압 등)를 입력으로 사용자의 스마트폰 소지 위치 (손에 들고 있을 때, 주머니 속 등), 보행 및 경로 정보 등을 추정하여 실시간으로 실내에서 층고를 포함한 사용자의 절대 위치를 추정한다.
+                </p>
+                <p>
+                  연구팀은 제로맵 엔진 기술을 적용하여 여수 산업단지에 있는 LG 화학 플랜트 건물 (3000평 규모)에서 LG CNS와 자체 시험 성적 (2023년 4월) 기준 <strong>3차원 측위 오차 80cm</strong> 수준의 측위 성능을 달성하였고, 대한민국 해군 구축함 (1만평 규모) 에서는 공인시험기관을 통한 일반성적 (2025년 7월) 기준, <strong>3차원 측위 오차 65cm</strong>, 또 고려대학교 공과대학 내 10층 규모의 창의관 건물에 적용하여 층고를 포함해서 공인시험 (2025년 5월) 기준 <strong>82cm 오차의 3차원 측위 성능</strong>을 달성하였다. 이는 <strong>세계 대회 입상팀</strong> (IPIN 2024 competition 1위팀 (독일) 5.5 미터, 2위팀 (중국) 6.6 미터, 3위팀 (중국) 30 미터 이상) <strong>대비 7 배에서 30 배 이상의 성능 격차를 갖는 세계 최고 수준의 측위 기술</strong>이다.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Zero Map Digital Twin Technology Section */}
+          <section className="zeromap-section">
+            <div className="zeromap-content">
+              <h2 className="zeromap-title">2. 제로맵 디지털트윈 기술<span className="title-dot">.</span></h2>
+              
+              <div className="zeromap-image">
+                <img src="/images/research2.png" alt="제로맵 디지털트윈 기술" />
+              </div>
+              
+              <div className="zeromap-description">
+                <p>
+                  디지털 트윈 기술은 현실의 물리적 객체나 시스템을 가상 공간에 재현하는 기술로서 실제 모습과 유사한 3차원 (3D) 모델을 생성하는 것이 가장 기본적인 작업이다. 3D 모델을 제작하기 위해서는 1단계로, 카메라와 라이다 센서 장비를 이용하여 현장을 물리적으로 스캔하는 작업이 필요하며, 이를 통해 획득한 포인트 클라우드 형태의 모델은 현장 표면의 미세한 굴곡마저 처리되어 수백 MB에서 수십 GB에 이르는 크고 무거운 3D 모델을 생성하게 된다. 따라서 Unity나 Unreal과 같은 3D 엔진에서 구동하기에는 메모리 용량과 계산량 부담으로 시스템 로드가 안되거나 구동 시 성능이 저하되는 문제점을 갖는다. 이러한 문제를 해결하기 위해 3단계로 디자이너의 수작업을 통해, 3D 모델의 품질은 유지하면서 면과 꼭지점 개수를 줄이기 위해 수개월 이상의 시간과 노력이 소요된다. 현재까지의 국내외 대부분의 디지털 트윈 업체들은 이러한 방식을 사용하고 있으며, 따라서 디지털 트윈 생성에는 많은 시간과 비용이 소모되는 문제점을 갖는다.
+                </p>
+                <p>
+                  본 <strong>제로맵 디지털 트윈 기술은 현장 방문과 카메라 및 라이다 장비를 이용한 물리적 스캔 없이</strong> 또, <strong>디자이너의 수작업 없이</strong>, <strong>도면만을 입력으로</strong> 실제 현장의 3D 모델을 자동으로 생성한다. 건물의 외벽, 내벽, 문, 창문, 복도, 로비, 에스컬레이터, 엘리베이터, 계단의 배치 등 여러 다양한 형태의 설계 도면 양식을 분석하여 <strong>한 치의 오차도 없는 정밀하면서 고품질의 3D 모델을 자동으로 생성</strong>한다. 자동 생성된 3D 모델은 측위 앱, 실내 측위 시뮬레이션, 실내 3D 내비게이션, 3D 디지털 트윈 관제 서비스에 활용된다.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Earth Magnetic Field Based Indoor Positioning Technology Section */}
+          <section className="zeromap-section">
+            <div className="zeromap-content">
+              <h2 className="zeromap-title">3. 지구 자기장 기반 실내측위 기술<span className="title-dot">.</span></h2>
+              
+              <div className="zeromap-image">
+                <img src="/images/research3.png" alt="지구 자기장 기반 실내측위 기술" />
+              </div>
+              
+              <div className="zeromap-description">
+                <p>
+                  실내 지구 자기장의 분포 패턴을 딥러닝의 순환신경망 (Recurrent Neural Network, RNN) 기술을 사용하여 기계학습 함으로써 Wi-Fi AP나 블루투스 비콘 등과 같은 추가적인 장비 설치 없이 스마트폰만을 사용하여 실내에서 1 미터 내외의 측위 성능을 갖는 세계 최고 수준의 실내측위 기술이다 (KOLAS 인증 공인시험 성적 기준 73cm). 연구팀의 기술은 단일 지문이 아니라 보행자가 이동하면서 연속적으로 취득한 지문들의 시퀀스를 이용하기 때문에 이동 거리가 길어지면 지문의 시퀀스가 유니크해지는 특징을 이용하여 현재의 위치를 기존 단일 지문 방식에 비하여 보다 정확하게 추정할 수 있다.
+                </p>
+                <p>
+                  본 기술에는 실시간 측위 성능을 향상시키고 안정적인 측위가 가능하게 하는 다양한 기술이 탑재되어 있다. Vector calibration 알고리즘은 3차원 자기장 벡터를 실시간으로 보정하여 실시간 측위 성능을 증가시키고, 사용자의 이동 방향이나 스마트폰 파지 자세에 상관없이 안정적인 성능이 나올 수 있게 한다. Bias normalization은 스마트폰 기종마다 존재하는 편차를 효과적으로 제거해 스마트폰 기종이 달라도 안정적인 측위 성능을 제공한다. 또한, 딥러닝 기반의 측위 엔진과 별개로 동작하는 instat localization 엔진은 초기 수렴 속도와 측위 성능 및 안정성을 크게 개선시키고 절대 이동 방향을 추정할 수 있게 한다.
+                </p>
+                <p>
+                  본 기술을 통해 2020년 산업통상자원부로부터 NET 신기술인증을 취득하였고, 2022년에는 대한민국산업기술대전에서 대통령 표창을 수여했다.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Multi-floor Positioning Technology Section */}
+          <section className="zeromap-section">
+            <div className="zeromap-content">
+              <h2 className="zeromap-title">4. 계단·엘리베이터·에스컬레이터 복층 측위 기술<span className="title-dot">.</span></h2>
+              
+              <div className="zeromap-image">
+                <img src="/images/research4.png" alt="계단·엘리베이터·에스컬레이터 복층 측위 기술" />
+              </div>
+              
+              <div className="zeromap-description">
+                <p>
+                  복잡한 복층 건물에서는 단층에서의 위치 뿐만 아니라 사용자의 정확한 수직 위치를 파악하는 것이 중요하다. Wi-Fi AP나 블루투스 비콘만을 활용해 층을 인식하는 기존의 기술은 신호의 잡음, 간섭, 반사, 회절 등으로 인해 다른 층에서 발생되는 전파 신호가 수신될 수 있으며 이는 정확한 층 인식을 어렵게 만든다.
+                </p>
+                <p>
+                  본 연구팀이 개발한 기술은 가속도, 자이로스코프, 기압 센서 등을 복합적으로 활용해 사용자가 현재 위치한 층을 정확히 식별하고, 계단, 엘리베이터, 에스컬레이터를 이용해 층을 이동할 때 수직 이동을 실시간으로 감지하고 추정한다. 층을 올라가고 있는지, 내려가고 있는지, 엘리베이터를 타고 있다면 현재 몇 층을 지나치고 있는지까지 정밀하게 파악할 수 있다.
+                </p>
+                <p>
+                  고려대학교 공과대학 내 10층 규모의 창의관 건물에서 공인시험 (2025년 5월) 기준 현재 층 및 층 이동 인식 정확도 100%를 달성하였고, 1.3층, 1.5층, 1.7층과 같이 더 복잡한 층 구조를 갖고 있는 LG 화학 플랜트 건물에서도 자체 시험에서 층 인식 성공률 100%를 달성하였다.
+                </p>
               </div>
             </div>
           </section>
@@ -138,7 +150,7 @@ const Research = () => {
           {researchAreas.map((area) => (
             <section key={area.id} id={area.id} className="research-detail">
               <div className="research-detail-content">
-                <h4 className="research-detail-number">Research.{area.number}</h4>
+                <h4 className="research-detail-number">Past Research.{area.number}</h4>
                 <h3 className="research-detail-title">{area.title}</h3>
                 
                 {area.image && (
