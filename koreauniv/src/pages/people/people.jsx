@@ -65,7 +65,7 @@ const researchStaff = [
   {
     name: '주시원',
     role: '연구원',
-    email: 'swj8905@korea.ac.kr',
+    email: 'joosiwon19@naver.com',
     position: 'Research Intern',
     researchAreas: 'iOS 기반 실내측위 엔진',
     image: '/images/JooSiWon.png',
