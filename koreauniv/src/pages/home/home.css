@@ -120,20 +120,22 @@
   color: #666;
 }
 
-/* ===== FEATURED CAROUSEL SECTION - 확대된 버전 ===== */
+/* ===== FEATURED CAROUSEL SECTION - 전체 화면 버전 ===== */
 .featured-carousel-section {
-  padding: 6rem 0;
+  padding: 0; /* 패딩 완전 제거 */
   background-color: #fff;
+  margin-bottom: 6rem; /* 다음 섹션과의 간격 확보 */
 }
 
 .carousel-container {
   position: relative;
-  width: 100%;
-  max-width: 1400px; /* 1200px에서 1400px로 확대 */
-  height: 800px; /* 600px에서 800px로 확대 */
-  margin: 0 auto;
+  width: 100vw; /* 뷰포트 전체 너비 */
+  max-width: none; /* max-width 제거 */
+  height: 90vh; /* 80vh에서 90vh로 늘림 */
+  margin: 0;
+  margin-left: calc(-50vw + 50%); /* 부모 컨테이너를 벗어나 전체 너비 사용 */
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 0; /* 모서리 둥글기 완전 제거 */
 }
 
 .carousel-inner {
@@ -163,27 +165,29 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 1.5rem; /* 2rem에서 1.5rem로 줄여서 더 많은 공간 확보 */
+  padding: 0; /* 패딩 완전 제거 - 좌우 여백 없음 */
   box-sizing: border-box;
 }
 
 .video-container iframe {
-  width: min(95%, 1200px); /* 90%에서 95%로 확대, 최대 너비도 900px에서 1200px로 확대 */
-  height: 85%; /* 75%에서 85%로 확대 */
-  border-radius: 12px;
+  width: 100%; /* 컨테이너 전체 너비 사용 */
+  max-width: none; /* max-width 제거 */
+  height: 90%; /* 85%에서 90%로 확대 - 세로 더 길게 */
+  border-radius: 0; /* 모서리 둥글기 제거 */
 }
 
-/* 슬라이드 헤더 및 제목 스타일 - 더 큰 크기 */
+/* 슬라이드 헤더도 전체 너비에 맞게 조정 */
 .slide-header {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: min(90%, 1200px); /* 85%에서 90%로 확대, 최대 너비도 900px에서 1200px로 확대 */
+  width: 100%;
+  max-width: none;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
-  padding: 2rem 2.5rem; /* 1.5rem 2rem에서 2rem 2.5rem로 확대 */
-  border-radius: 15px;
-  margin-bottom: 1.5rem; /* 2rem에서 1.5rem로 줄여서 영상에 더 많은 공간 확보 */
+  padding: 1.5rem 2rem; /* 패딩 줄임 */
+  border-radius: 0; /* 모서리 둥글기 제거 */
+  margin-bottom: 0; /* 마진 제거로 더 많은 공간 확보 */
 }
 
 .slide-title {
@@ -698,6 +702,10 @@
 
 /* Tablet (1400px 이하) */
 @media (max-width: 1400px) {
+  .featured-carousel-section {
+    margin-bottom: 5rem; /* 태블릿에서 마진 조정 */
+  }
+
   .home-hero-text {
     font-size: 2.5rem;
   }
@@ -707,22 +715,26 @@
   }
 
   .carousel-container {
-    height: 700px; /* 500px에서 700px로 확대 */
-    max-width: 1200px;
+    height: 85vh; /* 75vh에서 85vh로 늘림 */
+    max-width: none;
+  }
+
+  .video-container {
+    padding: 0; /* 패딩 제거 */
   }
 
   .video-container iframe {
-    width: 93%; /* 92%에서 93%로 확대 */
-    height: 80%; /* 70%에서 80%로 확대 */
+    width: 100%;
+    height: 88%; /* 80%에서 88%로 확대 */
   }
 
   .slide-header {
-    width: 88%; /* 85%에서 88%로 확대 */
-    padding: 1.5rem 2rem; /* 1.2rem 1.5rem에서 확대 */
-    margin-bottom: 1.2rem; /* 1.5rem에서 1.2rem로 조정 */
+    width: 100%;
+    padding: 1.2rem 1.5rem; /* 패딩 줄임 */
+    margin-bottom: 0;
     justify-content: center;
+    border-radius: 0;
   }
-
   .slide-title {
     font-size: clamp(1.4rem, 3vw, 1.7rem); /* 확대 */
     text-align: center;
@@ -754,6 +766,10 @@
     /* 모바일에서 더 안정적인 스크롤을 위한 설정 */
     transform: translateZ(0); /* 하드웨어 가속 활성화 */
     will-change: scroll-position;
+  }
+
+  .featured-carousel-section {
+    margin-bottom: 4rem; /* 모바일에서 마진 조정 */
   }
 
   .home-page {
@@ -801,24 +817,26 @@
   }
 
   .carousel-container {
-    height: 500px; /* 400px에서 500px로 확대 */
-    margin: 0 1rem;
+    height: 80vh; /* 70vh에서 80vh로 늘림 */
+    margin: 0;
+    margin-left: calc(-50vw + 50%);
   }
 
   .video-container {
-    padding: 1rem; /* 패딩 유지 */
+    padding: 0; /* 패딩 완전 제거 */
   }
 
   .video-container iframe {
-    width: 98%; /* 동일 */
-    height: 80%; /* 더 큰 비율 */
+    width: 100%;
+    height: 85%; /* 80%에서 85%로 확대 */
   }
 
   .slide-header {
-    width: 92%; /* 90%에서 92%로 확대 */
-    padding: 1.2rem 1.5rem; /* 1rem에서 확대 */
-    margin-bottom: 1rem;
+    width: 100%;
+    padding: 1rem 1.2rem; /* 패딩 줄임 */
+    margin-bottom: 0;
     justify-content: center;
+    border-radius: 0;
   }
 
   .slide-title {
@@ -960,6 +978,10 @@
     padding: 3rem 0.5rem;
   }
 
+  .featured-carousel-section {
+    margin-bottom: 3rem; /* 소형 모바일에서 마진 조정 */
+  }
+
   .section-header {
     margin-bottom: 2rem;
     padding: 0 0.5rem;
@@ -983,24 +1005,26 @@
   }
 
   .carousel-container {
-    height: 400px; /* 300px에서 400px로 확대 */
-    margin: 0 0.5rem;
+    height: 75vh; /* 65vh에서 75vh로 늘림 */
+    margin: 0;
+    margin-left: calc(-50vw + 50%);
   }
 
   .video-container {
-    padding: 0.8rem; /* 1rem에서 0.8rem로 조정 */
+    padding: 0; /* 1rem에서 0.8rem로 조정 */
   }
 
   .video-container iframe {
-    width: 99%; /* 98%에서 99%로 확대 */
-    height: 75%; /* 65%에서 75%로 확대 */
+    width: 100%;
+    height: 82%; /* 75%에서 82%로 확대 */
   }
 
   .slide-header {
-    width: 95%; /* 90%에서 95%로 확대 */
-    padding: 1rem 1.2rem; /* 확대 */
-    margin-bottom: 0.8rem; /* 1rem에서 0.8rem로 조정 */
+    width: 100%;
+    padding: 0.8rem 1rem; /* 패딩 최소화 */
+    margin-bottom: 0;
     justify-content: center;
+    border-radius: 0;
   }
 
   .slide-title {
