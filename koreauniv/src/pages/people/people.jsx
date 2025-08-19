@@ -83,9 +83,15 @@ const researchStaff = [
 /* Alumni (졸업생들) */
 const employees = [
   {
-    name: '최 민 혁 (Min-hyeok Choi)',
+    name: '최 민 혁 (Min hyeok Choi)',
     course: 'M.S. 2023',
     email: 'chlrhalsgur@korea.ac.kr',
+    affiliation: ''
+  },
+  {
+    name: '윤 덕 원 (Deok Won Yoon)',
+    course: 'M.S. 2023',
+    email: 'ydw1007@korea.ac.kr',
     affiliation: ''
   },
   {
@@ -149,7 +155,7 @@ const employees = [
     affiliation: '삼성전자'
   },
   {
-    name: '김 민 지 (Min-Ji Kim)',
+    name: '김 민 지 (Min Ji Kim)',
     course: 'M.S. 2015',
     email: '777vvv@korea.ac.kr',
     affiliation: '삼성전자'
@@ -161,73 +167,73 @@ const employees = [
     affiliation: '삼성전자'
   },
   {
-    name: '신 동 욱 (Dong-Wook Shin)',
+    name: '신 동 욱 (Dong Wook Shin)',
     course: 'M.S. 2014',
     email: 'shindw@korea.ac.kr',
     affiliation: '삼성 테크윈'
   },
   {
-    name: '윤 창 현 (Chanhyun Yun)',
+    name: '윤 창 현 (Chan Hyun Yun)',
     course: 'M.S. 2014',
     email: 'yunch@korea.ac.kr',
     affiliation: '삼성전자'
   },
   {
-    name: '이 상 훈 (Sang-Hoon Lee)',
+    name: '이 상 훈 (Sang Hoon Lee)',
     course: 'Ph.D 2013',
     email: 'smile97@korea.ac.kr',
     affiliation: '삼성전자'
   },
   {
-    name: '홍 순 원 (Soon-Won Hong)',
+    name: '홍 순 원 (Soon Won Hong)',
     course: 'M.S. 2012',
     email: 'aldig@korea.ac.kr',
     affiliation: 'LG 전자'
   },
   {
-    name: '홍 기 섭 (Ki-Sup Hong)',
+    name: '홍 기 섭 (Ki Sup Hong)',
     course: 'M.S. 2011',
     email: 'mastaks@korea.ac.kr',
     affiliation: 'LG 전자'
   },
   {
-    name: '윤 원 기 (Won-ki Yoon)',
+    name: '윤 원 기 (Won ki Yoon)',
     course: 'M.S. 2010',
     email: 'yoonpro@korea.ac.kr',
     affiliation: '솔루션박스'
   },
   {
-    name: '장 재 혁 (Jae-hyeok Chang)',
+    name: '장 재 혁 (Jae hyeok Chang)',
     course: 'M.S. 2008',
     email: 'twinsjjh@korea.ac.kr',
     affiliation: '삼성전자'
   },
   {
-    name: '이 현 준 (Hyun-jun Lee)',
+    name: '이 현 준 (Hyun jun Lee)',
     course: 'M.S. 2008',
     email: 'kelly1104@korea.ac.kr',
     affiliation: '삼성전기'
   },
   {
-    name: '정 재 균 (Jae-Kyun Jung)',
+    name: '정 재 균 (Jae Kyun Jung)',
     course: 'M.S. 2008',
     email: 'kernel@korea.ac.kr',
     affiliation: 'LG전자'
   },
   {
-    name: '신 상 훈 (Sang-hoon Shin)',
+    name: '신 상 훈 (Sang hoon Shin)',
     course: 'M.S. 2004',
     email: 'kaisshin@korea.ac.kr',
     affiliation: '박사진학(고려대)'
   },
   {
-    name: '김 일 관 (Il-kwan Kim)',
+    name: '김 일 관 (Il kwan Kim)',
     course: 'M.S. 2004',
     email: 'bitinno@korea.ac.kr',
     affiliation: 'LG전자'
   },
   {
-    name: '허 재 성 (Jae-sung Heo)',
+    name: '허 재 성 (Jae sung Heo)',
     course: 'M.S. 2003',
     email: 'jsheo@korea.ac.kr',
     affiliation: '삼성전자(DS총괄)'
