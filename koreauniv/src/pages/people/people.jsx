@@ -15,14 +15,6 @@ const researchStaff = [
     image: '/images/WonJoonSon.jpg',
   },
   {
-    name: '윤덕원',
-    role: '연구원',
-    email: 'ydw1007@korea.ac.kr',
-    position: 'Ph.D. Student',
-    researchAreas: '제로맵 측위 엔진, Visual SLAM',
-    image: '/images/YoonDeokWon.jpeg',
-  },
-  {
     name: '이도훈',
     role: '연구원',
     email: 'luke0911@korea.ac.kr',
