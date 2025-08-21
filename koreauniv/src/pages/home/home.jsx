@@ -264,7 +264,7 @@ const Home = () => {
                 <h3 className="info-title">Notice</h3>
                 <img src="/images/236_.png" alt="Location" className="location-image" />
                 <h6 className="contact-info">
-                  #236, Industry-Academy Building, 145 Anam-ro, Korea University, Seongbuk-gu,
+                  #236, Engineering Building, 145 Anam-ro, Korea University, Seongbuk-gu,
                   Seoul 136-713, Republic of Korea<br /><br />
                   Tel: +82-2-3290-3896<br />
                   E-Mail: swj8905@korea.ac.kr
@@ -290,7 +290,7 @@ const Home = () => {
             </div>
             
             <h6 className="contact-details">
-              #236, Industry-Academy Building, 145 Anam-ro, Korea University, Seongbuk-gu,
+              #236, Engineering Building, 145 Anam-ro, Korea University, Seongbuk-gu,
               Seoul 136-713, Republic of Korea<br /><br />
               Tel: +82-2-3290-3896<br />
               E-Mail: swj8905@korea.ac.kr
@@ -310,7 +310,7 @@ const Home = () => {
           <hr className="home-footer-divider" />
           <h3 className="home-footer-title">Indoor Positioning Laboratory</h3>
           <p className="home-footer-text">
-            Industry-Academy Building 236, Korea University, 145 Anam-ro, Seongbuk-gu, Seoul, Republic of Korea. 02841
+            Engineering Building 236, Korea University, 145 Anam-ro, Seongbuk-gu, Seoul, Republic of Korea. 02841
             <br />Professor : lchoi@korea.ac.kr · swj8905@korea.ac.kr
             <br />Tel : +82-2-3290-3896
           </p>

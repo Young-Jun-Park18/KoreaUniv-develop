@@ -443,7 +443,7 @@ function People() {
           <hr className="people-footer-divider" />
           <h3 className="people-footer-title">Indoor Positioning Laboratory</h3>
           <p className="people-footer-text">
-            Industry-Academy Building 236, Korea University, 145 Anam-ro, Seongbuk-gu, Seoul, Republic of Korea. 02841
+            Engineering Building 236, Korea University, 145 Anam-ro, Seongbuk-gu, Seoul, Republic of Korea. 02841
             <br />Professor : lchoi@korea.ac.kr · swj8905@korea.ac.kr
             <br />Tel : +82-2-3290-3896
           </p>
