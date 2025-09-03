@@ -46,7 +46,7 @@ const Courses = () => {
       professor: '최린',
       materials: [
         // KECE208 자료들 (필요에 따라 실제 파일명으로 수정)
-        'Chapter1.pdf'
+        'Chapter_1.pdf'
       ]
     },
     {
