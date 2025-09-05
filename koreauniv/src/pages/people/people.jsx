@@ -70,6 +70,14 @@ const researchStaff = [
     researchAreas: '실내 위치 기반 서비스',
     image: '/images/KimJunHa.jpg',
   },
+  {
+    name: '김진성',
+    role: '연구원',
+    email: 'kgem0626@gmail.com',
+    position: 'Research Intern',
+    researchAreas: '컴퓨터 비전',
+    image: '/images/KimJinSung.jpg',
+  },
 ];
 
 /* Alumni (졸업생들) */
