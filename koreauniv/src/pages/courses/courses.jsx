@@ -76,7 +76,7 @@ const Courses = () => {
       professor: '최린',
       materials: [
         // KECE340 실제 파일들 (원본 HTML 기준)
-        '1.OS_Overview.ppt',
+        '1.Operating_System_Overview.pdf',
         '10_IO_Disk_Scheduling.ppt',
         '11_File_Management.ppt',
         '12_Virtual_Machine.ppt',
