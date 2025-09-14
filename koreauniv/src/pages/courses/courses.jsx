@@ -77,17 +77,8 @@ const Courses = () => {
       professor: '최린',
       materials: [
         // KECE340 실제 파일들 (원본 HTML 기준)
-        '1.Operating_System_Overview.pdf',
-        '10_IO_Disk_Scheduling.ppt',
-        '11_File_Management.ppt',
-        '12_Virtual_Machine.ppt',
-        '2.Process.ppt',
-        '3.Threads.ppt',
-        '4.Mutual_Exclusion_and_Synchronization.ppt',
-        '5_Deadlock_and_Starvation.ppt',
-        '7_Virtual_Memory.ppt',
-        '8_Uniprocessor_Scheduling.ppt',
-        '9_MP_RT_Scheduling.ppt'
+        '1.Os_Overview.pdf',
+        '2.Process.pdf'
       ]
     }
   ];
