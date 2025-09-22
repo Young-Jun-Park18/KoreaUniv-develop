@@ -41,16 +41,16 @@ const researchStaff = [
   {
     name: '김명권',
     role: '연구원',
-    email: 'kmk00831@gmail.com',
-    position: 'Research Intern',
+    email: 'kmk00831@korea.ac.kr',
+    position: 'M.S. Student',
     researchAreas: '3D 디지털 트윈 관제 서비스',
     image: '/images/KimMyungKwon.jpg',
   },
   {
     name: '이해원',
     role: '연구원',
-    email: 'heewon9715@gmail.com',
-    position: 'Research Intern',
+    email: 'haew@korea.ac.kr',
+    position: 'M.S. Student',
     researchAreas: '3D 디지털 트윈 구축 자동화',
     image: '/images/LeeHaeWon.jpg',
   },
@@ -77,6 +77,22 @@ const researchStaff = [
     position: 'Research Intern',
     researchAreas: '컴퓨터 비전',
     image: '/images/KimJinSung.jpg',
+  },
+  {
+    name: '김보민',
+    role: '연구원',
+    email: 'rlaqhals613@gmail.com',
+    position: 'Research Intern',
+    researchAreas: '3D 실내 내비게이션',
+    image: '/images/KimBoMin.jpg',
+  },
+  {
+    name: '조유진',
+    role: '연구원',
+    email: 'yujinjo1@naver.com',
+    position: 'Research Intern',
+    researchAreas: '3D 디지털 트윈 구축 자동화',
+    image: '/images/JoYuJin.jpg',
   },
 ];
 
